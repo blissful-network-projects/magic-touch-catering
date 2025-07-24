@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,6 +9,7 @@ import {
   XCircleIcon,
   PlusIcon,
   TrashIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
 
 interface CateringItem {
@@ -23,6 +25,7 @@ export default function Header() {
   const [cateringItems, setCateringItems] = useState<CateringItem[]>([]);
   const [dragOver, setDragOver] = useState(false);
   const [showPlanButton, setShowPlanButton] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,7 +49,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Hide header button as soon as user starts scrolling
+      setScrolled(scrollY > 20);
       setShowPlanButton(scrollY < 50);
     };
 
@@ -84,7 +87,6 @@ export default function Header() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', { formData, cateringItems });
     alert('Thank you! We will contact you within 24 hours with a custom quote.');
     setPlannerOpen(false);
@@ -97,110 +99,149 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-2xl border-b border-[#C7A965]/20 z-50">
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-[#C7A965]/20' 
+          : 'bg-gradient-to-b from-white/90 via-white/80 to-white/70 backdrop-blur-md'
+      }`}>
+        {/* Elegant top accent line */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C7A965] via-[#F1E6D1] to-[#C7A965]"></div>
+        
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center justify-center w-40 h-38  from-[#C7A965] to-[#B8A157] p-0.5">
-              <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
-                <img
-                  src="/magic-touch-catering-logo.svg"
-                  alt="Magic Touch Catering"
-                  className="w-20 h-auto filter brightness-0"
-                />
+          {/* Premium Logo Design */}
+          <div className="flex items-center group">
+            <div className="relative">
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#C7A965]/30 to-[#F1E6D1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Logo container with elegant border */}
+              <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5 shadow-lg">
+                <div className="flex items-center justify-center w-full h-full rounded-full bg-white shadow-inner">
+                  <img
+                    src="/magic-touch-catering-logo.svg"
+                    alt="Magic Touch Catering"
+                    className="w-10 h-auto filter brightness-0 group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
               </div>
+            </div>
+            
+            {/* Brand text */}
+            <div className="ml-4 hidden sm:block">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-[#1B1B1B] to-[#3C4A39] bg-clip-text text-transparent">
+                Magic Touch
+              </h1>
+              <p className="text-xs text-[#C7A965] font-medium tracking-[0.2em] uppercase">
+                Catering
+              </p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-white text-sm tracking-wider font-light">
-            <a href="#home" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Home</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#menu" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Menu</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#about" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">About</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#contact" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Contact</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            
-            {/* Plan Catering Button */}
-            <div className={`transition-all duration-300 ml-4 ${
+          {/* Refined Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {[
+              { name: 'Home', href: '#home' },
+              { name: 'Menu', href: '#menu' },
+              { name: 'About', href: '#about' },
+              { name: 'Contact', href: '#contact' }
+            ].map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="relative px-6 py-3 text-[#1B1B1B] font-medium tracking-wide transition-all duration-300 group"
+              >
+                <span className="relative z-10 group-hover:text-[#C7A965] transition-colors duration-300">
+                  {item.name}
+                </span>
+                {/* Elegant hover background */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#F1E6D1] to-[#C7A965]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100"></div>
+                {/* Subtle underline */}
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#C7A965] group-hover:w-8 transition-all duration-300"></div>
+              </a>
+            ))}
+          </nav>
+
+          {/* Premium CTA Button */}
+          <div className="flex items-center gap-4">
+            <div className={`transition-all duration-500 ${
               showPlanButton ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
             }`}>
               <button 
                 onClick={() => setPlannerOpen(true)}
-                className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-lg hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
+                className="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                <ClipboardDocumentListIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="font-medium tracking-wide text-sm">Plan Catering</span>
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                
+                <div className="relative flex items-center gap-2">
+                  <SparklesIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                  <span className="font-semibold tracking-wide text-sm">Plan Event</span>
+                </div>
               </button>
             </div>
-          </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
+            {/* Elegant Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="relative p-3 text-[#1B1B1B] hover:text-[#C7A965] transition-colors duration-300 rounded-full hover:bg-[#F1E6D1]/30"
+              >
+                <div className="relative">
+                  {mobileMenuOpen ? (
+                    <XMarkIcon className="h-6 w-6 transform rotate-90 transition-transform duration-300" />
+                  ) : (
+                    <Bars3Icon className="h-6 w-6 transition-transform duration-300" />
+                  )}
+                </div>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Sophisticated Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-gradient-to-b from-black/95 to-black/90 backdrop-blur-xl border-t border-[#C7A965]/20">
-            <div className="px-6 py-6 space-y-6">
-              {/* Mobile Logo */}
-              <div className="flex items-center justify-center pb-4 border-b border-[#C7A965]/20">
-                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
-                  <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
-                    <img
-                      src="/magic-touch-catering-logo.svg"
-                      alt="Magic Touch Catering"
-                      className="w-14 h-auto filter brightness-0"
-                    />
-                  </div>
+          <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#C7A965]/20 shadow-2xl">
+            <div className="px-6 py-8 space-y-2">
+              {/* Mobile Brand */}
+              <div className="flex items-center justify-center pb-6 mb-6 border-b border-[#C7A965]/20">
+                <div className="text-center">
+                  <h2 className="text-lg font-bold bg-gradient-to-r from-[#1B1B1B] to-[#3C4A39] bg-clip-text text-transparent">
+                    Magic Touch Catering
+                  </h2>
+                  <p className="text-xs text-[#C7A965] font-medium tracking-[0.2em] uppercase mt-1">
+                    Exceptional Events
+                  </p>
                 </div>
               </div>
 
-              {['Home', 'Menu', 'About', 'Contact'].map((item) => (
+              {/* Mobile Navigation Links */}
+              {[
+                { name: 'Home', href: '#home' },
+                { name: 'Menu', href: '#menu' },
+                { name: 'About', href: '#about' },
+                { name: 'Contact', href: '#contact' }
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-3 text-base tracking-wider border-b border-[#C7A965]/10"
+                  key={item.name}
+                  href={item.href}
+                  className="block px-4 py-4 text-[#1B1B1B] hover:text-[#C7A965] font-medium tracking-wide transition-all duration-300 rounded-xl hover:bg-gradient-to-r hover:from-[#F1E6D1]/30 hover:to-[#C7A965]/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
               
-              {/* Mobile Plan Catering Button */}
-              <div className={`transition-all duration-300 mt-4 ${
-                showPlanButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-              }`}>
+              {/* Mobile CTA */}
+              <div className="pt-4">
                 <button 
                   onClick={() => {
                     setPlannerOpen(true);
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-lg hover:shadow-lg transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
                 >
-                  <ClipboardDocumentListIcon className="h-5 w-5" />
-                  <span className="font-medium tracking-wide">Plan Catering</span>
+                  <SparklesIcon className="h-5 w-5" />
+                  <span className="font-semibold tracking-wide">Plan Your Event</span>
                 </button>
               </div>
             </div>
@@ -208,75 +249,81 @@ export default function Header() {
         )}
       </header>
 
-      {/* Catering Planner Popup */}
+      {/* Enhanced Catering Planner Popup */}
       {plannerOpen && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-          <div className="bg-[#1B1B1B] border border-[#C7A965]/20 rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-[#C7A965]/20">
-              <h2 className="text-2xl font-light text-[#F1E6D1] tracking-wide">Create Your Catering Experience</h2>
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl w-full max-w-6xl h-[90vh] overflow-hidden relative shadow-2xl border border-[#C7A965]/20">
+            {/* Premium Header */}
+            <div className="flex items-center justify-between p-8 bg-gradient-to-r from-[#F1E6D1] to-white border-b border-[#C7A965]/20">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1B1B1B] mb-2">Create Your Experience</h2>
+                <p className="text-[#C7A965] font-medium tracking-wide">Luxury Catering Planner</p>
+              </div>
               <button
                 onClick={() => setPlannerOpen(false)}
-                className="text-[#F1E6D1] hover:text-[#C7A965] transition-colors"
+                className="p-2 text-[#1B1B1B] hover:text-[#C7A965] transition-colors rounded-full hover:bg-[#F1E6D1]/50"
               >
-                <XCircleIcon className="h-6 w-6" />
+                <XCircleIcon className="h-8 w-8" />
               </button>
             </div>
 
             <div className="flex h-full">
-              {/* Left Panel - Available Items */}
-              <div className="w-1/3 p-6 border-r border-[#C7A965]/20 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Available Items</h3>
-                <div className="space-y-3">
+              {/* Available Items Panel */}
+              <div className="w-1/3 p-8 border-r border-[#C7A965]/20 overflow-y-auto bg-gradient-to-b from-[#F1E6D1]/20 to-white">
+                <h3 className="text-xl font-bold text-[#1B1B1B] mb-6 flex items-center gap-2">
+                  <SparklesIcon className="h-5 w-5 text-[#C7A965]" />
+                  Available Items
+                </h3>
+                <div className="space-y-4">
                   {availableItems.map((item) => (
                     <div
                       key={item.id}
                       draggable
                       onDragStart={(e) => handleDragStart(e, item)}
-                      className="p-4 bg-[#C7A965]/10 border border-[#C7A965]/20 rounded-lg cursor-move hover:bg-[#C7A965]/20 transition-colors"
+                      className="p-6 bg-white border-2 border-[#C7A965]/20 rounded-2xl cursor-move hover:border-[#C7A965] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                     >
-                      <div className="text-[#F1E6D1] font-medium text-sm">{item.name}</div>
-                      <div className="text-[#C7A965] text-xs mt-1">{item.category}</div>
+                      <div className="text-[#1B1B1B] font-semibold text-sm mb-2">{item.name}</div>
+                      <div className="text-[#C7A965] text-xs font-medium uppercase tracking-wide">{item.category}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Center Panel - Drop Zone */}
-              <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Your Selection</h3>
+              {/* Selection Panel */}
+              <div className="w-1/3 p-8 overflow-y-auto">
+                <h3 className="text-xl font-bold text-[#1B1B1B] mb-6">Your Selection</h3>
                 <div
                   onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
                   onDragLeave={() => setDragOver(false)}
                   onDrop={handleDrop}
-                  className={`min-h-64 border-2 border-dashed rounded-lg p-4 transition-colors ${
-                    dragOver ? 'border-[#C7A965] bg-[#C7A965]/10' : 'border-[#C7A965]/30'
+                  className={`min-h-64 border-3 border-dashed rounded-2xl p-6 transition-all duration-300 ${
+                    dragOver ? 'border-[#C7A965] bg-[#F1E6D1]/30' : 'border-[#C7A965]/30 bg-[#F1E6D1]/10'
                   }`}
                 >
                   {cateringItems.length === 0 ? (
-                    <div className="text-center text-[#F1E6D1]/60 py-12">
-                      <PlusIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                      Drag items here to build your catering package
+                    <div className="text-center text-[#1B1B1B]/60 py-16">
+                      <PlusIcon className="h-16 w-16 mx-auto mb-4 text-[#C7A965]/50" />
+                      <p className="font-medium">Drag items here to build your catering package</p>
                     </div>
                   ) : (
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {cateringItems.map((item) => (
-                        <div key={item.id} className="flex items-center justify-between p-3 bg-[#C7A965]/20 rounded-lg">
+                        <div key={item.id} className="flex items-center justify-between p-4 bg-white rounded-xl border border-[#C7A965]/20 shadow-sm">
                           <div className="flex-1">
-                            <div className="text-[#F1E6D1] text-sm font-medium">{item.name}</div>
-                            <div className="text-[#C7A965] text-xs">{item.category}</div>
+                            <div className="text-[#1B1B1B] text-sm font-semibold">{item.name}</div>
+                            <div className="text-[#C7A965] text-xs font-medium uppercase tracking-wide mt-1">{item.category}</div>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-3">
                             <input
                               type="number"
                               min="1"
                               value={item.quantity}
                               onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                              className="w-16 px-2 py-1 bg-black/30 border border-[#C7A965]/30 rounded text-[#F1E6D1] text-sm"
+                              className="w-16 px-3 py-2 bg-[#F1E6D1] border border-[#C7A965]/30 rounded-lg text-[#1B1B1B] text-sm font-medium focus:border-[#C7A965] focus:outline-none"
                             />
                             <button
                               onClick={() => removeItem(item.id)}
-                              className="text-red-400 hover:text-red-300 transition-colors"
+                              className="text-red-500 hover:text-red-600 transition-colors p-1"
                             >
                               <TrashIcon className="h-4 w-4" />
                             </button>
@@ -288,9 +335,9 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* Right Panel - Contact Form */}
-              <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Event Details</h3>
+              {/* Contact Form Panel */}
+              <div className="w-1/3 p-8 overflow-y-auto bg-gradient-to-b from-white to-[#F1E6D1]/20">
+                <h3 className="text-xl font-bold text-[#1B1B1B] mb-6">Event Details</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <input
@@ -299,7 +346,7 @@ export default function Header() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -309,7 +356,7 @@ export default function Header() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -319,7 +366,7 @@ export default function Header() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -328,7 +375,7 @@ export default function Header() {
                       placeholder="Company/Organization"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -337,7 +384,7 @@ export default function Header() {
                       required
                       value={formData.eventDate}
                       onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -345,7 +392,7 @@ export default function Header() {
                       required
                       value={formData.eventType}
                       onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     >
                       <option value="">Select Event Type *</option>
                       <option value="corporate">Corporate Event</option>
@@ -362,7 +409,7 @@ export default function Header() {
                       required
                       value={formData.guestCount}
                       onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium"
                     />
                   </div>
                   <div>
@@ -371,13 +418,13 @@ export default function Header() {
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm resize-none"
+                      className="w-full px-4 py-4 bg-white border-2 border-[#C7A965]/20 rounded-xl text-[#1B1B1B] placeholder-[#1B1B1B]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm font-medium resize-none"
                     />
                   </div>
                   <button
                     type="submit"
                     disabled={cateringItems.length === 0}
-                    className="w-full px-6 py-3 bg-[#C7A965] text-black rounded-lg hover:bg-[#C7A965]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                    className="w-full px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-white rounded-xl hover:shadow-lg transition-all duration-300 font-bold tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm transform hover:scale-[1.02]"
                   >
                     Request Custom Quote
                   </button>
