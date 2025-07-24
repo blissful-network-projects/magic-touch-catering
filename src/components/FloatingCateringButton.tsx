@@ -1,9 +1,8 @@
+
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
-  Bars3Icon,
-  XMarkIcon,
   ClipboardDocumentListIcon,
   XCircleIcon,
   PlusIcon,
@@ -17,11 +16,11 @@ interface CateringItem {
   quantity: number;
 }
 
-export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function FloatingCateringButton() {
   const [plannerOpen, setPlannerOpen] = useState(false);
   const [cateringItems, setCateringItems] = useState<CateringItem[]>([]);
   const [dragOver, setDragOver] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,6 +41,16 @@ export default function Header() {
     { id: '6', name: 'Wedding Banquet Package', category: 'Wedding' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsVisible(scrollY > 200);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleDragStart = (e: React.DragEvent, item: any) => {
     e.dataTransfer.setData('text/plain', JSON.stringify(item));
   };
@@ -59,8 +68,8 @@ export default function Header() {
   };
 
   const updateQuantity = (id: string, quantity: number) => {
-    setCateringItems(items =>
-      items.map(item =>
+    setCateringItems(items => 
+      items.map(item => 
         item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
       )
     );
@@ -72,99 +81,30 @@ export default function Header() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', { formData, cateringItems });
     alert('Thank you! We will contact you within 24 hours with a custom quote.');
     setPlannerOpen(false);
     setCateringItems([]);
     setFormData({
-      name: '', email: '', phone: '', company: '', eventDate: '',
+      name: '', email: '', phone: '', company: '', eventDate: '', 
       eventType: '', guestCount: '', message: ''
     });
   };
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-2xl border-b border-[#C7A965]/20 z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
-              <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
-                <img
-                  src="/magic-touch-catering-logo.svg"
-                  alt="Magic Touch Catering"
-                  className="max-h-10 w-auto filter brightness-0"
-                />
-              </div>
-            </div>
-            <div className="ml-4 hidden md:block">
-              <h1 className="text-xl font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
-              <p className="text-xs text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-12 text-white text-sm tracking-wider font-light">
-            <a href="#home" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Home</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#menu" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Menu</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#about" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">About</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#contact" className="relative group py-2">
-              <span className="hover:text-[#C7A965] transition-all duration-300">Contact</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-gradient-to-b from-black/95 to-black/90 backdrop-blur-xl border-t border-[#C7A965]/20">
-            <div className="px-6 py-6 space-y-6">
-              {/* Mobile Logo */}
-              <div className="flex items-center justify-center pb-4 border-b border-[#C7A965]/20">
-                <div className="text-center">
-                  <h1 className="text-lg font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
-                  <p className="text-xs text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
-                </div>
-              </div>
-
-              {['Home', 'Menu', 'About', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-3 text-base tracking-wider border-b border-[#C7A965]/10 last:border-b-0"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
+      {/* Floating Button */}
+      <div className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+      }`}>
+        <button 
+          onClick={() => setPlannerOpen(true)}
+          className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-2xl hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
+        >
+          <ClipboardDocumentListIcon className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+          <span className="font-medium tracking-wide text-sm">Plan Catering</span>
+        </button>
+      </div>
 
       {/* Catering Planner Popup */}
       {plannerOpen && (
