@@ -103,28 +103,32 @@ export default function Hero() {
       {/* Content */}
       <div className={`relative z-10 flex flex-col justify-center items-center h-full px-4 text-center transition-all duration-1000 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="max-w-4xl mx-auto">
-          <p className="tracking-[0.4em] text-[var(--color-brand-primary)] text-xs md:text-sm uppercase mb-6 font-light opacity-0 animate-[slideUp_0.8s_ease-out_0.5s_forwards]">
-            Exquisite Culinary Artistry
+          <p className="tracking-[0.4em] text-white text-xs md:text-sm uppercase mb-6 font-semibold opacity-0 animate-[slideUp_0.8s_ease-out_0.5s_forwards] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] bg-gradient-to-r from-[var(--color-brand-primary)] to-[var(--color-brand-accent)] bg-clip-text text-transparent">
+            EXQUISITE CULINARY ARTISTRY
           </p>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-tight mb-8 text-[var(--color-brand-background)] opacity-0 animate-[slideUp_0.8s_ease-out_0.8s_forwards]">
-            Magic Touch
-            <span className="block text-4xl md:text-5xl lg:text-6xl text-[var(--color-brand-accent)] font-light tracking-wider mt-2">
-              Catering
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_0.8s_forwards]">
+            <span className="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] font-extrabold tracking-tight">
+              Magic Touch
+            </span>
+            <span className="block text-3xl md:text-4xl lg:text-5xl text-[var(--color-brand-accent)] font-semibold tracking-[0.15em] mt-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-black/20 backdrop-blur-sm rounded-lg px-6 py-2 inline-block">
+              CATERING
             </span>
           </h1>
           
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--color-brand-primary)] to-transparent mx-auto mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_1.1s_forwards]"></div>
           
-          <p className="max-w-2xl mx-auto text-base md:text-lg text-[var(--color-brand-background)]/90 mb-12 font-light leading-relaxed opacity-0 animate-[slideUp_0.8s_ease-out_1.4s_forwards]">
-            Where culinary excellence meets impeccable service. We transform your most important occasions into extraordinary gastronomic experiences that linger in memory long after the last bite.
-          </p>
+          <div className="max-w-2xl mx-auto mb-12 opacity-0 animate-[slideUp_0.8s_ease-out_1.4s_forwards]">
+            <p className="text-base md:text-lg text-white font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-black/30 backdrop-blur-md rounded-xl px-8 py-6 border border-white/20">
+              Where culinary excellence meets impeccable service. We transform your most important occasions into extraordinary gastronomic experiences that linger in memory long after the last bite.
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.7s_forwards]">
-            <button className="px-8 py-4 rounded-full border border-[var(--color-brand-primary)] text-[var(--color-brand-background)] bg-[var(--color-brand-primary)] hover:bg-transparent hover:text-[var(--color-brand-background)] transition-all duration-500 font-medium tracking-wider text-sm uppercase">
+            <button className="px-8 py-4 rounded-full bg-[var(--color-brand-primary)] text-white hover:bg-[var(--color-brand-accent)] hover:scale-105 transition-all duration-500 font-semibold tracking-wider text-sm uppercase shadow-[0_8px_20px_rgba(91,90,139,0.4)] hover:shadow-[0_12px_30px_rgba(163,155,203,0.5)]">
               Explore Our Artistry
             </button>
-            <button className="px-8 py-4 rounded-full border border-[var(--color-brand-background)]/30 text-[var(--color-brand-background)] hover:border-[var(--color-brand-accent)] hover:text-[var(--color-brand-accent)] transition-all duration-500 font-light tracking-wider text-sm uppercase">
+            <button className="px-8 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-[var(--color-brand-contrast)] hover:scale-105 transition-all duration-500 font-semibold tracking-wider text-sm uppercase backdrop-blur-sm bg-white/10">
               View Portfolio
             </button>
           </div>
