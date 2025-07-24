@@ -101,18 +101,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+            <div className="flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
               <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
                 <img
                   src="/magic-touch-catering-logo.svg"
                   alt="Magic Touch Catering"
-                  className="max-h-14 w-auto filter brightness-0"
+                  className="w-20 h-auto filter brightness-0"
                 />
               </div>
-            </div>
-            <div className="ml-4 hidden md:block">
-              <h1 className="text-2xl font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
-              <p className="text-sm text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
             </div>
           </div>
 
@@ -170,9 +166,14 @@ export default function Header() {
             <div className="px-6 py-6 space-y-6">
               {/* Mobile Logo */}
               <div className="flex items-center justify-center pb-4 border-b border-[#C7A965]/20">
-                <div className="text-center">
-                  <h1 className="text-lg font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
-                  <p className="text-xs text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
+                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+                  <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
+                    <img
+                      src="/magic-touch-catering-logo.svg"
+                      alt="Magic Touch Catering"
+                      className="w-14 h-auto filter brightness-0"
+                    />
+                  </div>
                 </div>
               </div>
 
