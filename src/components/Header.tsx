@@ -101,7 +101,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+            <div className="flex items-center justify-center w-40 h-38  from-[#C7A965] to-[#B8A157] p-0.5">
               <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
                 <img
                   src="/magic-touch-catering-logo.svg"
