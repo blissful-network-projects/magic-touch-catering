@@ -23,7 +23,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="relative py-32 bg-gradient-to-b from-[#1B1B1B] to-[#2A2A2A] overflow-hidden">
+    <section id="about" className="relative py-32 bg-gradient-to-b from-white to-[var(--color-brand-background)] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -35,12 +35,12 @@ export default function About() {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Story</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
+          <p className="text-[var(--color-brand-primary)] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Story</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[var(--color-brand-contrast)] mb-6">
             Crafting Culinary
-            <span className="block text-[#C7A965]">Excellence</span>
+            <span className="block text-[var(--color-brand-primary)]">Excellence</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--color-brand-primary)] to-transparent mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">

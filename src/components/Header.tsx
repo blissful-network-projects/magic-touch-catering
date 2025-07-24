@@ -108,12 +108,12 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-[#C7A965]/20"
-            : "bg-gradient-to-b from-white/90 via-white/80 to-white/70 backdrop-blur-md"
+            ? "bg-[var(--color-brand-background)]/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-[var(--color-brand-primary)]/20"
+            : "bg-gradient-to-b from-[var(--color-brand-background)]/90 via-[var(--color-brand-background)]/80 to-[var(--color-brand-background)]/70 backdrop-blur-md"
         }`}
       >
         {/* Elegant top accent line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C7A965] via-[#F1E6D1] to-[#C7A965]"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--color-brand-primary)] via-[var(--color-brand-accent)] to-[var(--color-brand-primary)]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Scaled Logo */}
@@ -135,7 +135,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-[#1B1B1B] hover:text-[#C7A965] transition-colors duration-300 font-medium"
+                className="text-[var(--color-brand-contrast)] hover:text-[var(--color-brand-primary)] transition-colors duration-300 font-medium"
               >
                 {item.name}
               </a>

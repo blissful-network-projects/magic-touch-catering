@@ -58,18 +58,18 @@ export default function Menu() {
   };
 
   return (
-    <section id="menu" className="relative py-32 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B]">
+    <section id="menu" className="relative py-32 bg-gradient-to-b from-[var(--color-brand-background)] to-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Culinary Artistry</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
+          <p className="text-[var(--color-brand-primary)] text-sm tracking-[0.3em] uppercase mb-4 font-light">Culinary Artistry</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[var(--color-brand-contrast)] mb-6">
             Signature
-            <span className="block text-[#C7A965]">Menu</span>
+            <span className="block text-[var(--color-brand-primary)]">Menu</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 leading-relaxed">
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--color-brand-primary)] to-transparent mx-auto mb-8"></div>
+          <p className="max-w-2xl mx-auto text-[var(--color-brand-contrast)]/70 leading-relaxed">
             Each dish is a masterpiece, crafted with the finest ingredients and presented with artistic flair. Our menus are fully customizable to suit your event's unique requirements.
           </p>
         </div>
@@ -84,8 +84,8 @@ export default function Menu() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-8 py-4 rounded-full border transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-[#C7A965] text-black border-[#C7A965]'
-                  : 'bg-transparent text-[#F1E6D1] border-[#C7A965]/30 hover:border-[#C7A965]'
+                  ? 'bg-[var(--color-brand-primary)] text-white border-[var(--color-brand-primary)]'
+                  : 'bg-transparent text-[var(--color-brand-contrast)] border-[var(--color-brand-secondary)]/30 hover:border-[var(--color-brand-primary)]'
               }`}
             >
               <div className="text-center">

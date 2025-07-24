@@ -74,9 +74,9 @@ export default function Hero() {
           
           {/* Loading dots */}
           <div className="flex justify-center space-x-1 mt-6 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.5s_forwards]">
-            <div className="w-2 h-2 bg-[#C7A965] rounded-full animate-pulse"></div>
-            <div className="w-2 h-2 bg-[#C7A965] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-2 h-2 bg-[#C7A965] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+            <div className="w-2 h-2 bg-[var(--color-brand-primary)] rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-[var(--color-brand-primary)] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-[var(--color-brand-primary)] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
           </div>
         </div>
       </div>
@@ -173,8 +173,8 @@ export default function Hero() {
               onClick={() => setCurrentImageIndex(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentImageIndex 
-                  ? 'bg-[#C7A965] w-8' 
-                  : 'bg-[#F1E6D1]/30 hover:bg-[#F1E6D1]/60'
+                  ? 'bg-[var(--color-brand-primary)] w-8' 
+                  : 'bg-[var(--color-brand-contrast)]/30 hover:bg-[var(--color-brand-contrast)]/60'
               }`}
             />
           ))}
