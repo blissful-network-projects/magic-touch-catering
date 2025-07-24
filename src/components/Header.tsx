@@ -97,60 +97,64 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-black/95 via-black/90 to-black/95 backdrop-blur-3xl border-b border-[#C7A965]/15 z-50 shadow-xl shadow-black/20">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 py-4">
+      <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-2xl border-b border-[#C7A965]/20 z-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src="/magic-touch-catering-logo.svg"
-              alt="Magic Touch Catering"
-              className="h-16 lg:h-20 w-auto transition-all duration-300 hover:scale-105"
-            />
+            <div className="flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+              <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
+                <img
+                  src="/magic-touch-catering-logo.svg"
+                  alt="Magic Touch Catering"
+                  className="w-20 h-auto filter brightness-0"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-white">
-            <a href="#home" className="relative group py-2 px-3">
-              <span className="text-[16px] font-medium tracking-[0.025em] hover:text-[#C7A965] transition-all duration-300 ease-out">Home</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+          <nav className="hidden md:flex items-center gap-8 text-white text-sm tracking-wider font-light">
+            <a href="#home" className="relative group py-2">
+              <span className="hover:text-[#C7A965] transition-all duration-300">Home</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#menu" className="relative group py-2 px-3">
-              <span className="text-[16px] font-medium tracking-[0.025em] hover:text-[#C7A965] transition-all duration-300 ease-out">Menu</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <a href="#menu" className="relative group py-2">
+              <span className="hover:text-[#C7A965] transition-all duration-300">Menu</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className="relative group py-2 px-3">
-              <span className="text-[16px] font-medium tracking-[0.025em] hover:text-[#C7A965] transition-all duration-300 ease-out">About</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <a href="#about" className="relative group py-2">
+              <span className="hover:text-[#C7A965] transition-all duration-300">About</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className="relative group py-2 px-3">
-              <span className="text-[16px] font-medium tracking-[0.025em] hover:text-[#C7A965] transition-all duration-300 ease-out">Contact</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+            <a href="#contact" className="relative group py-2">
+              <span className="hover:text-[#C7A965] transition-all duration-300">Contact</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
             </a>
             
             {/* Plan Catering Button */}
-            <div className={`transition-all duration-500 ml-6 xl:ml-8 ${
-              showPlanButton ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
+            <div className={`transition-all duration-300 ml-4 ${
+              showPlanButton ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
             }`}>
               <button 
                 onClick={() => setPlannerOpen(true)}
-                className="group relative flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-xl hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105 font-semibold text-[15px] tracking-[0.025em] border border-[#C7A965]/20"
+                className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-lg hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
               >
-                <ClipboardDocumentListIcon className="h-5 w-5 group-hover:rotate-6 transition-transform duration-300" />
-                <span>Plan Catering</span>
+                <ClipboardDocumentListIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="font-medium tracking-wide text-sm">Plan Catering</span>
               </button>
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white p-3 rounded-xl hover:bg-white/10 transition-all duration-300 border border-white/10"
+              className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             >
               {mobileMenuOpen ? (
-                <XMarkIcon className="h-5 w-5" />
+                <XMarkIcon className="h-6 w-6" />
               ) : (
-                <Bars3Icon className="h-5 w-5" />
+                <Bars3Icon className="h-6 w-6" />
               )}
             </button>
           </div>
@@ -158,22 +162,26 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-3xl border-t border-[#C7A965]/15 shadow-2xl">
-            <div className="px-8 py-8 space-y-8">
+          <div className="md:hidden bg-gradient-to-b from-black/95 to-black/90 backdrop-blur-xl border-t border-[#C7A965]/20">
+            <div className="px-6 py-6 space-y-6">
               {/* Mobile Logo */}
-              <div className="flex items-center justify-center pb-6 border-b border-[#C7A965]/15">
-                <img
-                  src="/magic-touch-catering-logo.svg"
-                  alt="Magic Touch Catering"
-                  className="h-12 w-auto"
-                />
+              <div className="flex items-center justify-center pb-4 border-b border-[#C7A965]/20">
+                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+                  <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
+                    <img
+                      src="/magic-touch-catering-logo.svg"
+                      alt="Magic Touch Catering"
+                      className="w-14 h-auto filter brightness-0"
+                    />
+                  </div>
+                </div>
               </div>
 
               {['Home', 'Menu', 'About', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-4 text-lg font-medium tracking-[0.025em] border-b border-[#C7A965]/8"
+                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-3 text-base tracking-wider border-b border-[#C7A965]/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}
@@ -181,7 +189,7 @@ export default function Header() {
               ))}
               
               {/* Mobile Plan Catering Button */}
-              <div className={`transition-all duration-500 mt-6 ${
+              <div className={`transition-all duration-300 mt-4 ${
                 showPlanButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
               }`}>
                 <button 
@@ -189,10 +197,10 @@ export default function Header() {
                     setPlannerOpen(true);
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-xl hover:shadow-xl transition-all duration-300 font-semibold text-[16px] tracking-[0.025em] border border-[#C7A965]/20"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-lg hover:shadow-lg transition-all duration-300"
                 >
                   <ClipboardDocumentListIcon className="h-5 w-5" />
-                  <span>Plan Catering</span>
+                  <span className="font-medium tracking-wide">Plan Catering</span>
                 </button>
               </div>
             </div>
