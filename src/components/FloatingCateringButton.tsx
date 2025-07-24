@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -198,7 +197,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -208,7 +207,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -218,7 +217,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -227,7 +226,7 @@ export default function FloatingCateringButton() {
                       placeholder="Company/Organization"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -236,7 +235,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.eventDate}
                       onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -244,7 +243,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.eventType}
                       onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     >
                       <option value="">Select Event Type *</option>
                       <option value="corporate">Corporate Event</option>
@@ -261,7 +260,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.guestCount}
                       onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -270,7 +269,7 @@ export default function FloatingCateringButton() {
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm resize-none"
+                      className="w-full px-4 py-3 bg-[var(--color-brand-background)] border border-[var(--color-brand-primary)]/30 rounded-lg text-[var(--color-brand-contrast)] placeholder-[var(--color-brand-contrast)]/50 focus:border-[var(--color-brand-primary)] focus:outline-none transition-colors text-sm resize-none"
                     />
                   </div>
                   <button
