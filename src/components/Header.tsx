@@ -89,23 +89,23 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+            <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
               <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
                 <img
                   src="/magic-touch-catering-logo.svg"
                   alt="Magic Touch Catering"
-                  className="max-h-10 w-auto filter brightness-0"
+                  className="max-h-14 w-auto filter brightness-0"
                 />
               </div>
             </div>
             <div className="ml-4 hidden md:block">
-              <h1 className="text-xl font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
-              <p className="text-xs text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
+              <h1 className="text-2xl font-light text-[#F1E6D1] tracking-wider">Magic Touch</h1>
+              <p className="text-sm text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-12 text-white text-sm tracking-wider font-light">
+          <nav className="hidden md:flex items-center gap-8 text-white text-sm tracking-wider font-light">
             <a href="#home" className="relative group py-2">
               <span className="hover:text-[#C7A965] transition-all duration-300">Home</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
@@ -122,6 +122,15 @@ export default function Header() {
               <span className="hover:text-[#C7A965] transition-all duration-300">Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#C7A965] to-[#B8A157] transition-all duration-300 group-hover:w-full"></span>
             </a>
+            
+            {/* Plan Catering Button */}
+            <button 
+              onClick={() => setPlannerOpen(true)}
+              className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-lg hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105 ml-4"
+            >
+              <ClipboardDocumentListIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+              <span className="font-medium tracking-wide text-sm">Plan Catering</span>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -155,12 +164,24 @@ export default function Header() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-3 text-base tracking-wider border-b border-[#C7A965]/10 last:border-b-0"
+                  className="block text-center text-white hover:text-[#C7A965] transition-all duration-300 py-3 text-base tracking-wider border-b border-[#C7A965]/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}
                 </a>
               ))}
+              
+              {/* Mobile Plan Catering Button */}
+              <button 
+                onClick={() => {
+                  setPlannerOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-lg hover:shadow-lg transition-all duration-300 mt-4"
+              >
+                <ClipboardDocumentListIcon className="h-5 w-5" />
+                <span className="font-medium tracking-wide">Plan Catering</span>
+              </button>
             </div>
           </div>
         )}
