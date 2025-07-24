@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -22,6 +22,7 @@ export default function Header() {
   const [plannerOpen, setPlannerOpen] = useState(false);
   const [cateringItems, setCateringItems] = useState<CateringItem[]>([]);
   const [dragOver, setDragOver] = useState(false);
+  const [showPlanButton, setShowPlanButton] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,6 +42,17 @@ export default function Header() {
     { id: '5', name: 'Executive Lunch Box', category: 'Corporate' },
     { id: '6', name: 'Wedding Banquet Package', category: 'Wedding' },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      // Hide header button as soon as user starts scrolling
+      setShowPlanButton(scrollY < 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleDragStart = (e: React.DragEvent, item: any) => {
     e.dataTransfer.setData('text/plain', JSON.stringify(item));
@@ -124,13 +136,17 @@ export default function Header() {
             </a>
             
             {/* Plan Catering Button */}
-            <button 
-              onClick={() => setPlannerOpen(true)}
-              className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-lg hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105 ml-4"
-            >
-              <ClipboardDocumentListIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="font-medium tracking-wide text-sm">Plan Catering</span>
-            </button>
+            <div className={`transition-all duration-300 ml-4 ${
+              showPlanButton ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
+            }`}>
+              <button 
+                onClick={() => setPlannerOpen(true)}
+                className="group flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-lg hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
+              >
+                <ClipboardDocumentListIcon className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="font-medium tracking-wide text-sm">Plan Catering</span>
+              </button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -172,16 +188,20 @@ export default function Header() {
               ))}
               
               {/* Mobile Plan Catering Button */}
-              <button 
-                onClick={() => {
-                  setPlannerOpen(true);
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-lg hover:shadow-lg transition-all duration-300 mt-4"
-              >
-                <ClipboardDocumentListIcon className="h-5 w-5" />
-                <span className="font-medium tracking-wide">Plan Catering</span>
-              </button>
+              <div className={`transition-all duration-300 mt-4 ${
+                showPlanButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+              }`}>
+                <button 
+                  onClick={() => {
+                    setPlannerOpen(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  <ClipboardDocumentListIcon className="h-5 w-5" />
+                  <span className="font-medium tracking-wide">Plan Catering</span>
+                </button>
+              </div>
             </div>
           </div>
         )}

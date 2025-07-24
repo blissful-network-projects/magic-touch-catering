@@ -44,8 +44,8 @@ export default function FloatingCateringButton() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Show floating button after scrolling past the hero section (approximately 100vh)
-      setIsVisible(scrollY > window.innerHeight * 0.8);
+      // Show floating button as soon as user starts scrolling
+      setIsVisible(scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
