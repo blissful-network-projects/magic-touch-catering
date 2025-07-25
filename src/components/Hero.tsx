@@ -269,9 +269,9 @@ export default function Hero() {
         <button
           onClick={prevImage}
           className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-lg md:text-3xl lg:text-4xl bg-black/25 shadow-2xl
+          text-white text-lg md:text-3xl lg:text-4xl bg-transparent
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
+          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0]"
         >
           &#8592;
         </button>
@@ -281,9 +281,9 @@ export default function Hero() {
         <button
           onClick={nextImage}
           className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-lg md:text-3xl lg:text-4xl bg-black/25 shadow-2xl
+          text-white text-lg md:text-3xl lg:text-4xl bg-transparent
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
+          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0]"
         >
           &#8594;
         </button>
