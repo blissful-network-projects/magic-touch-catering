@@ -198,7 +198,7 @@ export default function Hero() {
             <span className="block text-6xl md:text-8xl lg:text-9xl font-dancing-script font-medium leading-none mb-4 text-white tracking-tight drop-shadow-2xl" style={{ fontFamily: 'var(--font-dancing-script)' }}>
               Magic Touch
             </span>
-            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg">
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg" style={{ fontFamily: 'var(--font-geist-sans)' }}>
               CATERING
             </span>
             {/* Enhanced luxury underline */}
