@@ -49,59 +49,91 @@ export default function Hero() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1B1B1B] to-[#000000] z-[60] flex items-center justify-center">
-        <div className="text-center relative">
-          {/* Premium loading animation with enhanced luxury backdrop */}
-          <div className="relative">
-            {/* Enhanced luxury backdrop glow */}
-            <div className="absolute inset-0 w-40 h-40 mx-auto -mt-6 rounded-full bg-gradient-to-r from-[#9B8FC7]/30 via-[#A8C4A0]/25 to-[#9B8FC7]/30 blur-3xl animate-pulse"></div>
+      <div className="fixed inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1B1B1B] to-[#000000] z-[60] flex items-center justify-center overflow-hidden">
+        {/* Ambient background particles */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#9B8FC7]/20 rounded-full animate-pulse" style={{ animationDelay: "0s", animationDuration: "4s" }}></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse" style={{ animationDelay: "2s", animationDuration: "6s" }}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/15 rounded-full animate-pulse" style={{ animationDelay: "1s", animationDuration: "5s" }}></div>
+        </div>
 
-            <div className="relative w-28 h-28 mx-auto mb-8 rounded-full border border-[#9B8FC7]/30 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/5 to-[#A8C4A0]/5 backdrop-blur-sm">
+        <div className="text-center relative">
+          {/* Premium loading animation with sophisticated backdrop */}
+          <div className="relative">
+            {/* Multi-layered luxury backdrop with breathing effect */}
+            <div className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse" style={{ animationDuration: "3s" }}></div>
+            <div className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4s" }}></div>
+
+            {/* Logo container with enhanced glassmorphism */}
+            <div className="relative w-32 h-32 mx-auto mb-10 rounded-full border border-[#9B8FC7]/20 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/8 via-transparent to-[#A8C4A0]/8 backdrop-blur-xl shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent"></div>
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                className="w-full h-full object-contain opacity-0 animate-[fadeIn_0.8s_ease-in-out_0.3s_forwards] p-4"
+                className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-5 relative z-10"
               />
+              
+              {/* Subtle inner glow */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#9B8FC7]/10 to-[#A8C4A0]/10 blur-sm"></div>
             </div>
 
-            {/* Two loading rings */}
-            <div className="absolute inset-0 w-28 h-28 mx-auto -mt-2">
+            {/* Sophisticated orbital rings with different speeds and opacities */}
+            <div className="absolute inset-0 w-32 h-32 mx-auto mt-2">
+              {/* Outer ring - slow, elegant */}
               <div
-                className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#9B8FC7] animate-spin"
-                style={{ animationDuration: "2s" }}
+                className="absolute inset-0 rounded-full border border-transparent border-t-[#9B8FC7]/60 border-r-[#9B8FC7]/20 animate-spin"
+                style={{ animationDuration: "4s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
               ></div>
+              
+              {/* Inner ring - medium speed, counter-clockwise */}
               <div
-                className="absolute inset-3 rounded-full border-2 border-transparent border-t-[#A8C4A0] animate-spin animate-reverse"
-                style={{ animationDuration: "3s" }}
+                className="absolute inset-4 rounded-full border border-transparent border-t-[#A8C4A0]/70 border-l-[#A8C4A0]/30 animate-spin animate-reverse"
+                style={{ animationDuration: "3s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
+              ></div>
+              
+              {/* Center pulse ring */}
+              <div
+                className="absolute inset-8 rounded-full border border-[#9B8FC7]/40 animate-ping"
+                style={{ animationDuration: "2s" }}
               ></div>
             </div>
           </div>
 
-          <div className="space-y-3 opacity-0 animate-[fadeIn_0.8s_ease-in-out_0.8s_forwards]">
-            <div className="text-[#A8C4A0] text-xs tracking-[0.4em] uppercase font-medium drop-shadow-lg">
+          {/* Refined text content with better timing */}
+          <div className="space-y-4 opacity-0 animate-[fadeIn_1s_ease-in-out_1s_forwards]">
+            <div className="text-[#A8C4A0] text-xs tracking-[0.5em] uppercase font-light drop-shadow-lg">
               Curating Excellence
             </div>
-            <div className="text-white text-xl tracking-wide font-light drop-shadow-lg">
+            <div className="text-white/90 text-lg tracking-wide font-extralight drop-shadow-lg max-w-xs mx-auto leading-relaxed">
               Your Extraordinary Experience Awaits
             </div>
           </div>
 
-          {/* Elegant loading indicator */}
-          <div className="flex justify-center items-center space-x-2 mt-8 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.2s_forwards]">
-            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent animate-pulse"></div>
-            <div
-              className="w-1.5 h-1.5 bg-[#A8C4A0] rounded-full animate-bounce"
-              style={{ animationDelay: "0s" }}
-            ></div>
-            <div
-              className="w-1.5 h-1.5 bg-[#9B8FC7] rounded-full animate-bounce"
-              style={{ animationDelay: "0.2s" }}
-            ></div>
-            <div
-              className="w-1.5 h-1.5 bg-[#A8C4A0] rounded-full animate-bounce"
-              style={{ animationDelay: "0.4s" }}
-            ></div>
-            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent animate-pulse"></div>
+          {/* Minimalist progress indicator */}
+          <div className="mt-12 opacity-0 animate-[fadeIn_1s_ease-in-out_1.5s_forwards]">
+            <div className="flex justify-center items-center space-x-3">
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B8FC7]/50 to-transparent"></div>
+              <div className="flex space-x-1">
+                <div
+                  className="w-1 h-1 bg-[#A8C4A0]/80 rounded-full animate-pulse"
+                  style={{ animationDelay: "0s", animationDuration: "1.5s" }}
+                ></div>
+                <div
+                  className="w-1 h-1 bg-[#9B8FC7]/80 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.5s", animationDuration: "1.5s" }}
+                ></div>
+                <div
+                  className="w-1 h-1 bg-[#A8C4A0]/80 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s", animationDuration: "1.5s" }}
+                ></div>
+              </div>
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B8FC7]/50 to-transparent"></div>
+            </div>
+            
+            {/* Subtle loading text */}
+            <div className="text-[#F9F7F4]/40 text-xs tracking-[0.2em] uppercase mt-6 font-light">
+              Loading
+            </div>
           </div>
         </div>
       </div>
