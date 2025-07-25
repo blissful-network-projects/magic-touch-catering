@@ -7,6 +7,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingCateringButton from "@/components/FloatingCateringButton";
+import StructuredData from "@/components/StructuredData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <main className="relative">
         <Hero />
         <About />

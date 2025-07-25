@@ -1,8 +1,6 @@
 
 import FAQ from "@/components/FAQ";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StructuredData from "@/components/StructuredData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,8 +17,6 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
-      <StructuredData />
-      <Header />
       <main className="pt-20">
         <FAQ />
       </main>
