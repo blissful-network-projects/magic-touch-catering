@@ -3,10 +3,16 @@
 
 @theme {
   --color-brand-gold: #C7A965;
+  --color-brand-gold-light: #D4B574;
+  --color-brand-gold-dark: #B8A157;
   --color-brand-champagne: #F1E6D1;
+  --color-brand-champagne-dark: #E8D7B8;
   --color-brand-green: #3C4A39;
+  --color-brand-green-light: #4A5947;
   --color-brand-black: #1B1B1B;
+  --color-brand-black-light: #2A2A2A;
   --color-brand-white: #FFFFFF;
+  --color-brand-cream: #FEFDF8;
 }
 
 body {
@@ -132,12 +138,79 @@ textarea:focus-visible {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.luxury-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px rgba(199, 169, 101, 0.15),
+    0 4px 16px rgba(199, 169, 101, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(199, 169, 101, 0.12),
+    0 8px 25px rgba(199, 169, 101, 0.08);
+}
+
+.button-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.button-luxury:hover::before {
+  left: 100%;
+}
+
 /* Luxury gradient text */
 .gradient-text {
   background: linear-gradient(135deg, var(--color-brand-gold) 0%, var(--color-brand-champagne) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #D4B574 0%, #C7A965 50%, #B8A157 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-luxury-spacing {
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.text-premium {
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+.heading-luxury {
+  font-weight: 200;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
 
 /* Premium shadow effects */
@@ -151,4 +224,19 @@ textarea:focus-visible {
   box-shadow: 
     0 10px 40px rgba(199, 169, 101, 0.15),
     0 4px 16px rgba(199, 169, 101, 0.1);
+}
+
+.luxury-shadow-xl {
+  box-shadow: 
+    0 25px 60px rgba(199, 169, 101, 0.12),
+    0 8px 25px rgba(199, 169, 101, 0.08),
+    0 2px 8px rgba(199, 169, 101, 0.06);
+}
+
+.luxury-inset-shadow {
+  box-shadow: inset 0 2px 8px rgba(199, 169, 101, 0.06);
+}
+
+.text-shadow-luxury {
+  text-shadow: 0 2px 4px rgba(27, 27, 27, 0.3);
 }
