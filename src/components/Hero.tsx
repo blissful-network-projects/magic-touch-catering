@@ -268,8 +268,8 @@ export default function Hero() {
       <div className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={prevImage}
-          className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-lg md:text-3xl lg:text-4xl bg-transparent
+          className="h-12 w-12 md:h-18 md:w-18 lg:h-24 lg:w-24 flex items-center justify-center border border-white/30 rounded-full 
+          text-white text-base md:text-2xl lg:text-3xl bg-transparent
           transition-all duration-300 ease-out 
           hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0]"
         >
@@ -280,8 +280,8 @@ export default function Hero() {
       <div className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={nextImage}
-          className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-lg md:text-3xl lg:text-4xl bg-transparent
+          className="h-12 w-12 md:h-18 md:w-18 lg:h-24 lg:w-24 flex items-center justify-center border border-white/30 rounded-full 
+          text-white text-base md:text-2xl lg:text-3xl bg-transparent
           transition-all duration-300 ease-out 
           hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0]"
         >
