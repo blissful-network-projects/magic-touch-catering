@@ -60,18 +60,18 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-32 bg-[var(--color-brand-background)]">
+    <section id="contact" className="relative py-32 bg-[#1B1B1B]">
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[var(--color-brand-primary)] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[var(--color-brand-contrast)] mb-6">
+          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
             Let's Create
-            <span className="block text-[var(--color-brand-primary)]">Something Amazing</span>
+            <span className="block text-[#C7A965]">Something Amazing</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--color-brand-primary)] to-transparent mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-[var(--color-brand-contrast)]/70 leading-relaxed">
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto mb-8"></div>
+          <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 leading-relaxed">
             Ready to elevate your next event? Contact us today to discuss how we can bring your culinary vision to life with our signature touch of excellence.
           </p>
         </div>
