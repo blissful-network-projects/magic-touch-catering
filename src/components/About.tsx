@@ -36,7 +36,7 @@ export default function About() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Story</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
+          <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6">
             Crafting Culinary
             <span className="block text-[#9B8FC7]">Excellence</span>
           </h2>
@@ -66,11 +66,11 @@ export default function About() {
             visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
           }`}>
             <div>
-              <h3 className="text-2xl font-light text-[#F5F3F0] mb-4">Where Passion Meets Perfection</h3>
-              <p className="text-[#F5F3F0]/80 leading-relaxed mb-6">
+              <h3 className="text-2xl heading-secondary text-[#F5F3F0] mb-4">Where Passion Meets Perfection</h3>
+              <p className="text-[#F5F3F0]/80 body-luxury mb-6">
                 For over two decades, Magic Touch Catering has been the premier choice for discerning clients who demand nothing less than extraordinary. Our journey began with a simple philosophy: every event deserves to be a masterpiece.
               </p>
-              <p className="text-[#F1E6D1]/80 leading-relaxed">
+              <p className="text-[#F1E6D1]/80 body-luxury">
                 From intimate gatherings to grand celebrations, we transform your vision into an unforgettable culinary experience that speaks to the heart and delights the senses.
               </p>
             </div>

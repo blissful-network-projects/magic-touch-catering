@@ -65,12 +65,12 @@ export default function Contact() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
+          <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6">
             Let's Create
             <span className="block text-[#9B8FC7]">Something Amazing</span>
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 body-luxury">
             Ready to elevate your next event? Contact us today to discuss how we can bring your culinary vision to life with our signature touch of excellence.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function Contact() {
           <div className={`transition-all duration-1000 delay-300 ${
             visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}>
-            <h3 className="text-2xl font-light text-[#F1E6D1] mb-8">Connect With Us</h3>
+            <h3 className="text-2xl heading-secondary text-[#F1E6D1] mb-8">Connect With Us</h3>
 
             <div className="space-y-8">
               {contactInfo.map((info, index) => (

@@ -50,7 +50,7 @@ export default function Services() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Expertise</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
+          <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6">
             Signature
             <span className="block text-[#9B8FC7]">Services</span>
           </h2>
@@ -76,10 +76,10 @@ export default function Services() {
               </div>
               
               <div className="p-8">
-                <h3 className="text-2xl font-light text-[#F5F3F0] mb-4 group-hover:text-[#9B8FC7] transition-colors">
+                <h3 className="text-2xl heading-secondary text-[#F5F3F0] mb-4 group-hover:text-[#9B8FC7] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-[#F5F3F0]/70 leading-relaxed mb-6">
+                <p className="text-[#F5F3F0]/70 body-luxury mb-6">
                   {service.description}
                 </p>
                 
