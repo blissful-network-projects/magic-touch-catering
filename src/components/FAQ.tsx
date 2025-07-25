@@ -1,3 +1,7 @@
+Fixing unescaped apostrophes in FAQ component to prevent build errors.
+```
+
+```typescript
 "use client";
 
 import { useState, useEffect } from "react";
@@ -48,8 +52,8 @@ export default function FAQ() {
           answer: "$24 per person. Station service combines the elegance of plated dining with the interactive experience of buffet-style service."
         },
         {
-          question: "What is the average catering price per person for hors d'oeuvres?",
-          answer: "$26 per person. Our hors d'oeuvres packages include a variety of gourmet appetizers perfect for cocktail receptions and networking events."
+          question: "What is the average catering price per person for hors d&apos;oeuvres?",
+          answer: "$26 per person. Our hors d&apos;oeuvres packages include a variety of gourmet appetizers perfect for cocktail receptions and networking events."
         }
       ]
     },
@@ -75,7 +79,7 @@ export default function FAQ() {
         },
         {
           question: "What catering services do you provide?",
-          answer: "We offer buffet service, cocktail receptions, hors d'oeuvres, plated dining, and station service. Each service style can be customized to match your event's unique requirements."
+          answer: "We offer buffet service, cocktail receptions, hors d&apos;oeuvres, plated dining, and station service. Each service style can be customized to match your event's unique requirements."
         }
       ]
     },
@@ -110,7 +114,7 @@ export default function FAQ() {
         questions: [
           {
             question: "How far in advance should I book catering services?",
-            answer: "We recommend booking 4-6 weeks in advance for most events. For weddings, we suggest 2-3 months in advance, especially during Arizona's peak season (October-May)."
+            answer: "We recommend booking 4-6 weeks in advance for most events. For weddings, we suggest 2-3 months in advance, especially during Arizona&apos;s peak season (October-May)."
           }
         ]
       }
@@ -190,7 +194,7 @@ export default function FAQ() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#F5F3F0]/60 text-sm mb-6 body-luxury">
-            Still have questions? We're here to help create your perfect event.
+            Still have questions? We&apos;re here to help create your perfect event.
           </p>
           <button className="px-8 py-4 bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-[#1A1A1A] rounded-full hover:shadow-2xl hover:shadow-[#9B8FC7]/30 transition-all duration-300 font-medium tracking-wide transform hover:scale-105">
             Contact Our Team
@@ -200,3 +204,4 @@ export default function FAQ() {
     </section>
   );
 }
+`
