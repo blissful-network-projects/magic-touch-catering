@@ -64,11 +64,15 @@ export default function Hero() {
               />
             </div>
 
-            {/* Simplified loading ring */}
+            {/* Two loading rings */}
             <div className="absolute inset-0 w-28 h-28 mx-auto -mt-2">
               <div
                 className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#9B8FC7] animate-spin"
                 style={{ animationDuration: "2s" }}
+              ></div>
+              <div
+                className="absolute inset-3 rounded-full border-2 border-transparent border-t-[#A8C4A0] animate-spin animate-reverse"
+                style={{ animationDuration: "3s" }}
               ></div>
             </div>
           </div>
