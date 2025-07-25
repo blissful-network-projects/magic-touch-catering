@@ -51,14 +51,22 @@ export default function Footer() {
             </p>
             
             <div className="flex space-x-4">
-              {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((social) => (
-                <button
-                  key={social}
-                  className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center text-sm"
-                >
-                  {social[0]}
-                </button>
-              ))}
+              <a
+                href="https://www.facebook.com/AZMagicTouchCatering"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center text-sm"
+              >
+                F
+              </a>
+              <a
+                href="https://www.instagram.com/magic.touch.catering/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center text-sm"
+              >
+                I
+              </a>
             </div>
           </div>
 
