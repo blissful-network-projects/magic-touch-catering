@@ -2,22 +2,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-gold: #C7A965;
-  --color-brand-gold-light: #D4B574;
-  --color-brand-gold-dark: #B8A157;
-  --color-brand-champagne: #F1E6D1;
-  --color-brand-champagne-dark: #E8D7B8;
-  --color-brand-green: #3C4A39;
-  --color-brand-green-light: #4A5947;
-  --color-brand-black: #1B1B1B;
-  --color-brand-black-light: #2A2A2A;
+  --color-brand-lavender: #9B8FC7;
+  --color-brand-lavender-light: #B5A8D6;
+  --color-brand-lavender-dark: #8177B8;
+  --color-brand-sage: #A8C4A0;
+  --color-brand-sage-light: #BDD4B6;
+  --color-brand-sage-dark: #93B08B;
+  --color-brand-cream: #F9F7F4;
+  --color-brand-cream-dark: #F2EFE8;
+  --color-brand-charcoal: #2A2A2A;
+  --color-brand-charcoal-light: #3A3A3A;
   --color-brand-white: #FFFFFF;
-  --color-brand-cream: #FEFDF8;
+  --color-brand-whisper: #FEFEFE;
 }
 
 body {
-  background-color: var(--color-brand-black);
-  color: var(--color-brand-champagne);
+  background-color: var(--color-brand-charcoal);
+  color: var(--color-brand-cream);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   overflow-x: hidden;
 }
@@ -85,16 +86,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-black);
+  background: var(--color-brand-charcoal);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-gold);
+  background: var(--color-brand-lavender);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8A157;
+  background: var(--color-brand-lavender-dark);
 }
 
 /* Backdrop blur support */
@@ -108,8 +109,8 @@ html {
 
 /* Text selection */
 ::selection {
-  background-color: var(--color-brand-gold);
-  color: var(--color-brand-black);
+  background-color: var(--color-brand-lavender);
+  color: var(--color-brand-white);
 }
 
 /* Focus states */
@@ -117,7 +118,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-brand-gold);
+  outline: 2px solid var(--color-brand-lavender);
   outline-offset: 2px;
 }
 
@@ -145,8 +146,8 @@ textarea:focus-visible {
 .luxury-hover:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 12px 40px rgba(199, 169, 101, 0.15),
-    0 4px 16px rgba(199, 169, 101, 0.1);
+    0 12px 40px rgba(155, 143, 199, 0.15),
+    0 4px 16px rgba(155, 143, 199, 0.1);
 }
 
 .card-hover {
@@ -156,8 +157,8 @@ textarea:focus-visible {
 .card-hover:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 
-    0 20px 60px rgba(199, 169, 101, 0.12),
-    0 8px 25px rgba(199, 169, 101, 0.08);
+    0 20px 60px rgba(155, 143, 199, 0.12),
+    0 8px 25px rgba(155, 143, 199, 0.08);
 }
 
 .button-luxury {
@@ -183,14 +184,21 @@ textarea:focus-visible {
 
 /* Luxury gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-brand-gold) 0%, var(--color-brand-champagne) 100%);
+  background: linear-gradient(135deg, var(--color-brand-lavender) 0%, var(--color-brand-cream) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-gold {
-  background: linear-gradient(135deg, #D4B574 0%, #C7A965 50%, #B8A157 100%);
+.gradient-text-lavender {
+  background: linear-gradient(135deg, #B5A8D6 0%, #9B8FC7 50%, #8177B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-sage {
+  background: linear-gradient(135deg, #BDD4B6 0%, #A8C4A0 50%, #93B08B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -216,27 +224,27 @@ textarea:focus-visible {
 /* Premium shadow effects */
 .luxury-shadow {
   box-shadow: 
-    0 4px 20px rgba(199, 169, 101, 0.1),
-    0 1px 3px rgba(199, 169, 101, 0.08);
+    0 4px 20px rgba(155, 143, 199, 0.1),
+    0 1px 3px rgba(155, 143, 199, 0.08);
 }
 
 .luxury-shadow-lg {
   box-shadow: 
-    0 10px 40px rgba(199, 169, 101, 0.15),
-    0 4px 16px rgba(199, 169, 101, 0.1);
+    0 10px 40px rgba(155, 143, 199, 0.15),
+    0 4px 16px rgba(155, 143, 199, 0.1);
 }
 
 .luxury-shadow-xl {
   box-shadow: 
-    0 25px 60px rgba(199, 169, 101, 0.12),
-    0 8px 25px rgba(199, 169, 101, 0.08),
-    0 2px 8px rgba(199, 169, 101, 0.06);
+    0 25px 60px rgba(155, 143, 199, 0.12),
+    0 8px 25px rgba(155, 143, 199, 0.08),
+    0 2px 8px rgba(155, 143, 199, 0.06);
 }
 
 .luxury-inset-shadow {
-  box-shadow: inset 0 2px 8px rgba(199, 169, 101, 0.06);
+  box-shadow: inset 0 2px 8px rgba(155, 143, 199, 0.06);
 }
 
 .text-shadow-luxury {
-  text-shadow: 0 2px 4px rgba(27, 27, 27, 0.3);
+  text-shadow: 0 2px 4px rgba(42, 42, 42, 0.3);
 }

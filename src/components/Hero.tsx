@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -59,19 +58,19 @@ export default function Hero() {
                 className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards]"
               />
             </div>
-            
+
             {/* Elegant loading rings */}
             <div className="absolute inset-0 w-24 h-24 mx-auto">
               <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#C7A965] animate-spin"></div>
               <div className="absolute inset-2 rounded-full border-2 border-transparent border-t-[#C7A965]/60 animate-spin animate-reverse" style={{ animationDuration: '2s' }}></div>
             </div>
           </div>
-          
+
           <div className="space-y-2 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.2s_forwards]">
             <div className="text-[#C7A965] text-sm tracking-[0.3em] uppercase font-light">Preparing</div>
             <div className="text-[#F1E6D1] text-lg tracking-wider font-light">Your Culinary Experience</div>
           </div>
-          
+
           {/* Loading dots */}
           <div className="flex justify-center space-x-1 mt-6 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.5s_forwards]">
             <div className="w-2 h-2 bg-[#C7A965] rounded-full animate-pulse"></div>
@@ -106,20 +105,20 @@ export default function Hero() {
           <p className="tracking-[0.4em] text-[#C7A965] text-xs md:text-sm uppercase mb-6 font-light opacity-0 animate-[slideUp_0.8s_ease-out_0.5s_forwards]">
             Exquisite Culinary Artistry
           </p>
-          
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-tight mb-8 text-[#F1E6D1] opacity-0 animate-[slideUp_0.8s_ease-out_0.8s_forwards]">
             Magic Touch
             <span className="block text-4xl md:text-5xl lg:text-6xl text-[#C7A965] font-light tracking-wider mt-2">
               Catering
             </span>
           </h1>
-          
+
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_1.1s_forwards]"></div>
-          
+
           <p className="max-w-2xl mx-auto text-base md:text-lg text-[#F1E6D1]/90 mb-12 font-light leading-relaxed opacity-0 animate-[slideUp_0.8s_ease-out_1.4s_forwards]">
             Where culinary excellence meets impeccable service. We transform your most important occasions into extraordinary gastronomic experiences that linger in memory long after the last bite.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.7s_forwards]">
             <button className="px-8 py-4 rounded-full border border-[#C7A965] text-[#1B1B1B] bg-[#C7A965] hover:bg-transparent hover:text-[#F1E6D1] transition-all duration-500 font-medium tracking-wider text-sm uppercase">
               Explore Our Artistry
@@ -143,10 +142,10 @@ export default function Hero() {
       <div className="absolute left-6 top-1/2 -translate-y-1/2 z-20">
         <button
           onClick={prevImage}
-          className="h-16 w-16 flex items-center justify-center border border-[#F1E6D1]/30 rounded-full 
-          text-[#F1E6D1] text-2xl backdrop-blur-sm bg-black/10
+          className="h-16 w-16 flex items-center justify-center border border-[#F9F7F4]/30 rounded-full 
+          text-[#F9F7F4] text-2xl backdrop-blur-sm bg-black/10
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#C7A965] hover:text-[#C7A965] hover:bg-[#C7A965]/10"
+          hover:scale-110 hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10"
         >
           &#8592;
         </button>
@@ -155,10 +154,10 @@ export default function Hero() {
       <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
         <button
           onClick={nextImage}
-          className="h-16 w-16 flex items-center justify-center border border-[#F1E6D1]/30 rounded-full 
-          text-[#F1E6D1] text-2xl backdrop-blur-sm bg-black/10
+          className="h-16 w-16 flex items-center justify-center border border-[#F9F7F4]/30 rounded-full 
+          text-[#F9F7F4] text-2xl backdrop-blur-sm bg-black/10
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#C7A965] hover:text-[#C7A965] hover:bg-[#C7A965]/10"
+          hover:scale-110 hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10"
         >
           &#8594;
         </button>
