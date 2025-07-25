@@ -173,7 +173,7 @@ export default function Hero() {
         </div>
 
         {/* Premium Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
           <div className="flex flex-col items-center group cursor-pointer">
             <div className="text-[#F9F7F4]/50 text-xs tracking-[0.3em] uppercase mb-3 group-hover:text-[#9B8FC7] transition-colors duration-300">Explore</div>
             <div className="relative">
