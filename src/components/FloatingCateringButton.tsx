@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -110,13 +109,13 @@ export default function FloatingCateringButton() {
       {/* Catering Planner Popup */}
       {plannerOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-          <div className="bg-[#1B1B1B] border border-[#C7A965]/20 rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
+          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-[#C7A965]/20">
-              <h2 className="text-2xl font-light text-[#F1E6D1] tracking-wide">Create Your Catering Experience</h2>
+            <div className="flex items-center justify-between p-6 border-b border-[#9B8FC7]/20">
+              <h2 className="text-2xl font-light text-[#F5F3F0] tracking-wide">Create Your Catering Experience</h2>
               <button
                 onClick={() => setPlannerOpen(false)}
-                className="text-[#F1E6D1] hover:text-[#C7A965] transition-colors"
+                className="text-[#F5F3F0] hover:text-[#9B8FC7] transition-colors"
               >
                 <XCircleIcon className="h-6 w-6" />
               </button>
@@ -198,7 +197,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -208,7 +207,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -218,7 +217,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -227,7 +226,7 @@ export default function FloatingCateringButton() {
                       placeholder="Company/Organization"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -236,7 +235,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.eventDate}
                       onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -244,7 +243,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.eventType}
                       onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     >
                       <option value="">Select Event Type *</option>
                       <option value="corporate">Corporate Event</option>
@@ -261,7 +260,7 @@ export default function FloatingCateringButton() {
                       required
                       value={formData.guestCount}
                       onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
                     />
                   </div>
                   <div>
@@ -270,7 +269,7 @@ export default function FloatingCateringButton() {
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-black/30 border border-[#C7A965]/30 rounded-lg text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors text-sm resize-none"
+                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm resize-none"
                     />
                   </div>
                   <button

@@ -113,7 +113,7 @@ export default function Header() {
         }`}
       >
         {/* Elegant top accent line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C7A965] via-[#F1E6D1] to-[#C7A965]"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Scaled Logo */}
@@ -135,7 +135,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-[#1B1B1B] hover:text-[#C7A965] transition-colors duration-300 font-medium"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium"
               >
                 {item.name}
               </a>
@@ -153,7 +153,7 @@ export default function Header() {
             >
               <button
                 onClick={() => setPlannerOpen(true)}
-                className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-2xl hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
+                className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#9B8FC7] to-[#7D6DB8] text-white rounded-full hover:shadow-2xl hover:shadow-[#9B8FC7]/30 transition-all duration-300 transform hover:scale-105"
               >
                 <ClipboardDocumentListIcon className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                 <span className="font-medium tracking-wide text-sm">
@@ -166,7 +166,7 @@ export default function Header() {
             <div className="lg:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-[#1B1B1B] hover:text-[#C7A965] transition-colors duration-300"
+                className="p-2 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300"
               >
                 {mobileMenuOpen ? (
                   <XMarkIcon className="h-6 w-6" />
@@ -180,7 +180,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#C7A965]/20">
+          <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#9B8FC7]/20">
             <div className="px-6 py-6 space-y-4">
               {[
                 { name: "Home", href: "#home" },
@@ -191,7 +191,7 @@ export default function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block py-3 text-[#1B1B1B] hover:text-[#C7A965] font-medium transition-colors duration-300"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] font-medium transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -204,7 +204,7 @@ export default function Header() {
                     setPlannerOpen(true);
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-xl transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-[#9B8FC7] to-[#7D6DB8] text-white rounded-full hover:shadow-xl transition-all duration-300"
                 >
                   <ClipboardDocumentListIcon className="h-5 w-5" />
                   <span className="font-medium tracking-wide">
@@ -220,15 +220,15 @@ export default function Header() {
       {/* Catering Planner Popup */}
       {plannerOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-          <div className="bg-[#1B1B1B] border border-[#C7A965]/20 rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
+          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-[#C7A965]/20">
+            <div className="flex items-center justify-between p-6 border-b border-[#9B8FC7]/20">
               <h2 className="text-2xl font-light text-[#F1E6D1] tracking-wide">
                 Create Your Catering Experience
               </h2>
               <button
                 onClick={() => setPlannerOpen(false)}
-                className="text-[#F1E6D1] hover:text-[#C7A965] transition-colors"
+                className="text-[#F1E6D1] hover:text-[#9B8FC7] transition-colors"
               >
                 <XCircleIcon className="h-6 w-6" />
               </button>
@@ -236,7 +236,7 @@ export default function Header() {
 
             <div className="flex h-full">
               {/* Left Panel - Available Items */}
-              <div className="w-1/3 p-6 border-r border-[#C7A965]/20 overflow-y-auto">
+              <div className="w-1/3 p-6 border-r border-[#9B8FC7]/20 overflow-y-auto">
                 <h3 className="text-lg font-light text-[#F9F7F4] mb-4 tracking-wide">
                   Available Items
                 </h3>
@@ -246,12 +246,12 @@ export default function Header() {
                       key={item.id}
                       draggable
                       onDragStart={(e) => handleDragStart(e, item)}
-                      className="p-4 bg-[#C7A965]/10 border border-[#C7A965]/20 rounded-lg cursor-move hover:bg-[#C7A965]/20 transition-colors"
+                      className="p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-move hover:bg-[#9B8FC7]/20 transition-colors"
                     >
                       <div className="text-[#F1E6D1] font-medium text-sm">
                         {item.name}
                       </div>
-                      <div className="text-[#C7A965] text-xs mt-1">
+                      <div className="text-[#9B8FC7] text-xs mt-1">
                         {item.category}
                       </div>
                     </div>
@@ -273,8 +273,8 @@ export default function Header() {
                   onDrop={handleDrop}
                   className={`min-h-64 border-2 border-dashed rounded-lg p-4 transition-colors ${
                     dragOver
-                      ? "border-[#C7A965] bg-[#C7A965]/10"
-                      : "border-[#C7A965]/30"
+                      ? "border-[#9B8FC7] bg-[#9B8FC7]/10"
+                      : "border-[#9B8FC7]/30"
                   }`}
                 >
                   {cateringItems.length === 0 ? (
@@ -287,13 +287,13 @@ export default function Header() {
                       {cateringItems.map((item) => (
                         <div
                           key={item.id}
-                          className="flex items-center justify-between p-3 bg-[#C7A965]/20 rounded-lg"
+                          className="flex items-center justify-between p-3 bg-[#9B8FC7]/20 rounded-lg"
                         >
                           <div className="flex-1">
                             <div className="text-[#F1E6D1] text-sm font-medium">
                               {item.name}
                             </div>
-                            <div className="text-[#C7A965] text-xs">
+                            <div className="text-[#9B8FC7] text-xs">
                               {item.category}
                             </div>
                           </div>
@@ -308,7 +308,7 @@ export default function Header() {
                                   parseInt(e.target.value),
                                 )
                               }
-                              className="w-16 px-2 py-1 bg-black/30 border border-[#C7A965]/30 rounded text-[#F1E6D1] text-sm"
+                              className="w-16 px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F1E6D1] text-sm"
                             />
                             <button
                               onClick={() => removeItem(item.id)}
@@ -431,7 +431,7 @@ export default function Header() {
                   <button
                     type="submit"
                     disabled={cateringItems.length === 0}
-                    className="w-full px-6 py-3 bg-[#C7A965] text-black rounded-lg hover:bg-[#C7A965]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                    className="w-full px-6 py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                   >
                     Request Custom Quote
                   </button>

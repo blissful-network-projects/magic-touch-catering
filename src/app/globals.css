@@ -4,14 +4,14 @@
 @theme {
   --color-brand-lavender: #9B8FC7;
   --color-brand-lavender-light: #B5A8D6;
-  --color-brand-lavender-dark: #8177B8;
+  --color-brand-lavender-dark: #7D6DB8;
   --color-brand-sage: #A8C4A0;
   --color-brand-sage-light: #BDD4B6;
-  --color-brand-sage-dark: #93B08B;
-  --color-brand-cream: #F9F7F4;
-  --color-brand-cream-dark: #F2EFE8;
-  --color-brand-charcoal: #2A2A2A;
-  --color-brand-charcoal-light: #3A3A3A;
+  --color-brand-sage-dark: #8FAD87;
+  --color-brand-cream: #F5F3F0;
+  --color-brand-cream-dark: #EDE9E4;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-charcoal-light: #2A2A2A;
   --color-brand-white: #FFFFFF;
   --color-brand-whisper: #FEFEFE;
 }
@@ -184,21 +184,21 @@ textarea:focus-visible {
 
 /* Luxury gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-brand-lavender) 0%, var(--color-brand-cream) 100%);
+  background: linear-gradient(135deg, var(--color-brand-lavender) 0%, var(--color-brand-sage) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-lavender {
-  background: linear-gradient(135deg, #B5A8D6 0%, #9B8FC7 50%, #8177B8 100%);
+  background: linear-gradient(135deg, var(--color-brand-lavender-light) 0%, var(--color-brand-lavender) 50%, var(--color-brand-lavender-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-sage {
-  background: linear-gradient(135deg, #BDD4B6 0%, #A8C4A0 50%, #93B08B 100%);
+  background: linear-gradient(135deg, var(--color-brand-sage-light) 0%, var(--color-brand-sage) 50%, var(--color-brand-sage-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

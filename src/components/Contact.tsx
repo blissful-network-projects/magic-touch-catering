@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -82,7 +81,7 @@ export default function Contact() {
             visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}>
             <h3 className="text-2xl font-light text-[#F1E6D1] mb-8">Connect With Us</h3>
-            
+
             <div className="space-y-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start gap-4">
@@ -121,7 +120,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -131,7 +130,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -143,7 +142,7 @@ export default function Contact() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -152,7 +151,7 @@ export default function Contact() {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -163,7 +162,7 @@ export default function Contact() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors resize-none"
+                  className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors resize-none"
                 />
               </div>
 

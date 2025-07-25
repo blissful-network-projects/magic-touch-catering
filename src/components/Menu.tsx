@@ -63,13 +63,13 @@ export default function Menu() {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Culinary Artistry</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
+          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Culinary Artistry</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
             Signature
-            <span className="block text-[#C7A965]">Menu</span>
+            <span className="block text-[#9B8FC7]">Menu</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 leading-relaxed">
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8"></div>
+          <p className="max-w-2xl mx-auto text-[#F5F3F0]/70 leading-relaxed">
             Each dish is a masterpiece, crafted with the finest ingredients and presented with artistic flair. Our menus are fully customizable to suit your event's unique requirements.
           </p>
         </div>
@@ -84,8 +84,8 @@ export default function Menu() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-8 py-4 rounded-full border transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-[#C7A965] text-black border-[#C7A965]'
-                  : 'bg-transparent text-[#F1E6D1] border-[#C7A965]/30 hover:border-[#C7A965]'
+                  ? 'bg-[#9B8FC7] text-white border-[#9B8FC7]'
+                  : 'bg-transparent text-[#F5F3F0] border-[#9B8FC7]/30 hover:border-[#9B8FC7]'
               }`}
             >
               <div className="text-center">
@@ -103,7 +103,7 @@ export default function Menu() {
           {menuItems[activeCategory as keyof typeof menuItems]?.map((item, index) => (
             <div
               key={index}
-              className="group p-8 bg-gradient-to-br from-[#2A2A2A] to-[#1B1B1B] rounded-2xl border border-[#C7A965]/20 hover:border-[#C7A965]/40 transition-all duration-300 hover:transform hover:-translate-y-1"
+              className="group p-8 bg-gradient-to-br from-[#2A2A2A] to-[#1B1B1B] rounded-2xl border border-[#9B8FC7]/20 hover:border-[#9B8FC7]/40 transition-all duration-300 hover:transform hover:-translate-y-1"
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-light text-[#F1E6D1] group-hover:text-[#C7A965] transition-colors">
@@ -120,7 +120,7 @@ export default function Menu() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#F1E6D1]/60 text-sm mb-6">All menus are customizable and pricing varies based on guest count and selections</p>
-          <button className="px-8 py-4 border border-[#C7A965] text-[#C7A965] rounded-full hover:bg-[#C7A965] hover:text-black transition-all duration-300 font-medium tracking-wide">
+          <button className="px-8 py-4 border border-[#A8C4A0] text-[#A8C4A0] rounded-full hover:bg-[#A8C4A0] hover:text-black transition-all duration-300 font-medium tracking-wide">
             Request Full Menu & Pricing
           </button>
         </div>

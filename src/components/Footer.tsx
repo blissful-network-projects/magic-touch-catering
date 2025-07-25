@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#C7A965] to-[#B8A157] p-0.5">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#9B8FC7] to-[#7D6DB8] p-0.5">
                 <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
                   <img
                     src="/magic-touch-catering-logo.svg"
@@ -41,12 +41,12 @@ export default function Footer() {
                 </div>
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-light text-[#F1E6D1] tracking-wider">Magic Touch</h3>
-                <p className="text-xs text-[#C7A965] tracking-[0.2em] uppercase">Catering</p>
+                <h3 className="text-xl font-light text-[#F5F3F0] tracking-wider">Magic Touch</h3>
+                <p className="text-xs text-[#A8C4A0] tracking-[0.2em] uppercase">Catering</p>
               </div>
             </div>
             
-            <p className="text-[#F1E6D1]/70 leading-relaxed mb-6 max-w-md">
+            <p className="text-[#F5F3F0]/70 leading-relaxed mb-6 max-w-md">
               Creating extraordinary culinary experiences that transform your most important occasions into unforgettable memories. Excellence is not just our standard—it's our signature.
             </p>
             
@@ -107,7 +107,7 @@ export default function Footer() {
       </div>
 
       {/* Elegant Bottom Accent */}
-      <div className="h-1 bg-gradient-to-r from-transparent via-[#C7A965] to-transparent"></div>
+      <div className="h-1 bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent"></div>
     </footer>
   );
 }

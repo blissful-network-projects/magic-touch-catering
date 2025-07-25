@@ -35,12 +35,12 @@ export default function About() {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Story</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
+          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Our Story</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
             Crafting Culinary
-            <span className="block text-[#C7A965]">Excellence</span>
+            <span className="block text-[#9B8FC7]">Excellence</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -53,7 +53,7 @@ export default function About() {
                 alt="Chef preparing gourmet meal"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#C7A965] to-[#B8A157] rounded-2xl flex items-center justify-center">
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#9B8FC7] to-[#7D6DB8] rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-black">25+</div>
                   <div className="text-xs text-black/80 tracking-wider">YEARS</div>
@@ -66,8 +66,8 @@ export default function About() {
             visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
           }`}>
             <div>
-              <h3 className="text-2xl font-light text-[#F1E6D1] mb-4">Where Passion Meets Perfection</h3>
-              <p className="text-[#F1E6D1]/80 leading-relaxed mb-6">
+              <h3 className="text-2xl font-light text-[#F5F3F0] mb-4">Where Passion Meets Perfection</h3>
+              <p className="text-[#F5F3F0]/80 leading-relaxed mb-6">
                 For over two decades, Magic Touch Catering has been the premier choice for discerning clients who demand nothing less than extraordinary. Our journey began with a simple philosophy: every event deserves to be a masterpiece.
               </p>
               <p className="text-[#F1E6D1]/80 leading-relaxed">
@@ -76,13 +76,13 @@ export default function About() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-[#C7A965]/10 rounded-xl border border-[#C7A965]/20">
-                <div className="text-3xl font-light text-[#C7A965] mb-2">500+</div>
-                <div className="text-sm text-[#F1E6D1]/70 tracking-wide">Events Catered</div>
+              <div className="text-center p-6 bg-[#9B8FC7]/10 rounded-xl border border-[#9B8FC7]/20">
+                <div className="text-3xl font-light text-[#9B8FC7] mb-2">500+</div>
+                <div className="text-sm text-[#F5F3F0]/70 tracking-wide">Events Catered</div>
               </div>
-              <div className="text-center p-6 bg-[#C7A965]/10 rounded-xl border border-[#C7A965]/20">
-                <div className="text-3xl font-light text-[#C7A965] mb-2">50+</div>
-                <div className="text-sm text-[#F1E6D1]/70 tracking-wide">Menu Options</div>
+              <div className="text-center p-6 bg-[#A8C4A0]/10 rounded-xl border border-[#A8C4A0]/20">
+                <div className="text-3xl font-light text-[#A8C4A0] mb-2">50+</div>
+                <div className="text-sm text-[#F5F3F0]/70 tracking-wide">Menu Options</div>
               </div>
             </div>
           </div>
