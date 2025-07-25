@@ -144,9 +144,9 @@ export default function Header() {
               <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                className="h-8 md:h-6 w-auto object-contain"
-                width={120}
-                height={120}
+                className="h-10 md:h-8 w-auto object-contain"
+                width={150}
+                height={150}
                 priority
               />
             </Link>
