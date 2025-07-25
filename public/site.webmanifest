@@ -1,0 +1,23 @@
+
+{
+  "name": "Magic Touch Catering - Premium Catering Services",
+  "short_name": "Magic Touch Catering",
+  "description": "Premium catering services in Phoenix, AZ for weddings, corporate events, and private parties",
+  "icons": [
+    {
+      "src": "/magic-touch-catering-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#9B8FC7",
+  "background_color": "#1A1A1A",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["food", "business", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

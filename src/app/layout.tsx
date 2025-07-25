@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import AdvancedSEO from "@/components/AdvancedSEO";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,22 +29,35 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL('https://magictouchcatering.com'),
   title: {
-    default: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
-    template: "%s | Magic Touch Catering"
+    default: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ | Wedding & Corporate Events",
+    template: "%s | Magic Touch Catering - Phoenix's Premier Catering Service"
   },
-  description: "Magic Touch Catering offers premium catering services in Phoenix, AZ for weddings, corporate events, and private parties. 25+ years of culinary excellence with customizable menus and professional service.",
-  keywords: "catering Phoenix, wedding catering, corporate catering, private party catering, Scottsdale catering, Arizona catering, gourmet catering, professional catering services",
-  authors: [{ name: "Magic Touch Catering" }],
+  description: "★★★★★ Magic Touch Catering - Phoenix's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Phoenix, Scottsdale, Tempe. FREE quotes!",
+  keywords: "catering Phoenix, wedding catering Phoenix, corporate catering Scottsdale, private party catering Arizona, gourmet catering services, professional catering Phoenix AZ, event catering near me, catering pricing Phoenix, best catering company Arizona, luxury catering services",
+  authors: [{ name: "Magic Touch Catering Team", url: "https://magictouchcatering.com/about" }],
   creator: "Magic Touch Catering",
   publisher: "Magic Touch Catering",
+  category: "Food & Beverage",
+  classification: "Catering Services",
   formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+  },
+  alternates: {
+    canonical: "https://magictouchcatering.com",
+    languages: {
+      'en-US': 'https://magictouchcatering.com',
+    },
   },
   openGraph: {
-    title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
-    description: "25+ years of culinary excellence. Professional catering for weddings, corporate events, and private parties in Phoenix and Scottsdale.",
+    title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ | Wedding & Corporate Events",
+    description: "★★★★★ Phoenix's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Phoenix, Scottsdale, Tempe. FREE quotes!",
     url: "https://magictouchcatering.com",
     siteName: "Magic Touch Catering",
     images: [
@@ -51,15 +65,28 @@ export const metadata: Metadata = {
         url: "/magic-touch-catering-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Magic Touch Catering - Premium Catering Services",
+        alt: "Magic Touch Catering - Premium Catering Services in Phoenix Arizona",
+        type: "image/svg+xml",
+      },
+      {
+        url: "/elegant-wedding-catering-setup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Elegant wedding catering setup by Magic Touch Catering",
+        type: "image/jpeg",
       },
     ],
     locale: "en_US",
     type: "website",
+    countryName: "United States",
+    emails: ["info@magictouchcatering.com"],
+    phoneNumbers: ["+1-602-555-0123"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Magic Touch Catering - Premium Catering Services",
+    site: "@magictouchcatering",
+    creator: "@magictouchcatering",
+    title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
     description: "25+ years of culinary excellence in Phoenix, AZ",
     images: ["/magic-touch-catering-logo.svg"],
   },
@@ -85,12 +112,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-US">
+      <head>
+        <AdvancedSEO />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <meta name="theme-color" content="#9B8FC7" />
+        <meta name="msapplication-TileColor" content="#9B8FC7" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/magic-touch-catering-logo.svg" />
+        <link rel="icon" type="image/svg+xml" href="/magic-touch-catering-logo.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${lora.variable} antialiased`}
       >
         <Header />
         {children}
+        <noscript>
+          <div style={{padding: '20px', textAlign: 'center', backgroundColor: '#f3f4f6'}}>
+            <p>This website works best with JavaScript enabled. Please enable JavaScript for the best experience.</p>
+          </div>
+        </noscript>
       </body>
     </html>
   );

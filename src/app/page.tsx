@@ -11,9 +11,26 @@ import StructuredData from "@/components/StructuredData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
-  description: "Magic Touch Catering offers premium catering services in Phoenix, AZ for weddings, corporate events, and private parties. 25+ years of culinary excellence with pricing from $24-$38 per person.",
-  keywords: "catering Phoenix, wedding catering, corporate catering, private party catering, Scottsdale catering, Arizona catering, gourmet catering, professional catering services, catering pricing",
+  title: "Magic Touch Catering - Phoenix's #1 Premium Catering Service | Wedding & Corporate Events",
+  description: "★★★★★ Award-winning catering in Phoenix since 1998! Wedding, corporate & private event catering $24-$38/person. Serving 500+ events yearly. FREE consultation & quotes. Call (602) 555-0123",
+  keywords: "catering Phoenix AZ, wedding catering Phoenix, corporate catering Scottsdale Arizona, private party catering near me, gourmet catering services Phoenix, professional event catering Arizona, luxury catering Phoenix Scottsdale, best catering company Arizona, catering pricing Phoenix, award winning catering services",
+  alternates: {
+    canonical: "https://magictouchcatering.com",
+  },
+  openGraph: {
+    title: "Magic Touch Catering - Phoenix's #1 Premium Catering Service",
+    description: "★★★★★ Award-winning catering in Phoenix since 1998! 500+ events yearly, $24-$38/person. FREE consultation!",
+    url: "https://magictouchcatering.com",
+    type: "website",
+    images: [
+      {
+        url: "/elegant-wedding-catering-setup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Magic Touch Catering - Elegant wedding catering setup in Phoenix Arizona",
+      },
+    ],
+  },
 };
 
 export default function Home() {

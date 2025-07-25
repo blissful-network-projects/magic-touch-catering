@@ -169,6 +169,9 @@ export default function Hero() {
     <section
       className="relative h-screen w-full overflow-hidden"
       style={{ paddingTop: "80px" }}
+      itemScope
+      itemType="https://schema.org/LocalBusiness"
+      aria-label="Magic Touch Catering Hero Section"
     >
       {/* Background Images with Smooth Transitions */}
       {heroImages.map((image, index) => (
@@ -215,7 +218,7 @@ export default function Hero() {
           </div>
 
           {/* Dramatic Typography with Enhanced Visibility */}
-          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
+          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]" itemProp="name">
             <span className="block text-4xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
@@ -228,7 +231,7 @@ export default function Hero() {
 
           {/* Elevated Description with Better Contrast */}
           <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
-            <p className="text-lg md:text-xl text-white/95 body-luxury leading-relaxed tracking-wide drop-shadow-lg">
+            <p className="text-lg md:text-xl text-white/95 body-luxury leading-relaxed tracking-wide drop-shadow-lg" itemProp="description">
               Where culinary mastery transcends expectation. We orchestrate
               <span className="text-[#A8C4A0] subheading-elegant drop-shadow-md">
                 {" "}
@@ -236,6 +239,14 @@ export default function Hero() {
               </span>
               that transform your most treasured moments into timeless memories.
             </p>
+            <div className="hidden" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+              <span itemProp="streetAddress">9343 E Shea Blvd B-135</span>
+              <span itemProp="addressLocality">Scottsdale</span>
+              <span itemProp="addressRegion">AZ</span>
+              <span itemProp="postalCode">85260</span>
+            </div>
+            <div className="hidden" itemProp="telephone">+1-602-555-0123</div>
+            <div className="hidden" itemProp="email">info@magictouchcatering.com</div>
           </div>
 
           {/* Premium Call-to-Actions */}
