@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[#F5F3F0]/70 leading-relaxed mb-6 max-w-md">
-              Creating extraordinary culinary experiences that transform your most important occasions into unforgettable memories. Excellence is not just our standard—it's our signature.
+              Creating extraordinary culinary experiences that transform your most important occasions into unforgettable memories. Excellence is not just our standard—it&apos;s our signature.
             </p>
 
             <div className="flex space-x-4">

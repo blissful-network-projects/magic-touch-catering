@@ -35,7 +35,7 @@ export default function Hero() {
       clearTimeout(timer2);
       clearInterval(imageInterval);
     };
-  }, []);
+  }, [heroImages.length]);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
