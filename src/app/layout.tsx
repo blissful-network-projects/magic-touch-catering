@@ -1,24 +1,16 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"; // ✅ Add this import
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header /> {/* ✅ Just add it here */}
         {children}

@@ -186,30 +186,30 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto">
           {/* Premium Brand Line with Enhanced Visibility */}
           <div className="flex items-center justify-center mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_0.3s_forwards]">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#A8C4A0]/80"></div>
-            <p className="mx-8 tracking-[0.3em] text-[#A8C4A0] text-sm uppercase font-medium drop-shadow-lg text-luxury-accent">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#A8C4A0]/80"></div>
+            <p className="mx-6 tracking-[0.5em] text-[#A8C4A0] text-xs uppercase font-medium drop-shadow-lg">
               Exquisite Culinary Artistry
             </p>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#A8C4A0]/80"></div>
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#A8C4A0]/80"></div>
           </div>
 
           {/* Dramatic Typography with Enhanced Visibility */}
           <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-5xl md:text-7xl lg:text-8xl leading-none mb-4 text-white tracking-tight drop-shadow-2xl heading-luxury">
+            <span className="block text-6xl md:text-8xl lg:text-9xl font-extralight leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
-            <span className="block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text tracking-[0.2em] drop-shadow-lg heading-luxury-serif">
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg">
               CATERING
             </span>
             {/* Enhanced luxury underline */}
-            <div className="w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-8 drop-shadow-md"></div>
+            <div className="w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-6 drop-shadow-md"></div>
           </h1>
 
           {/* Elevated Description with Better Contrast */}
-          <div className="max-w-3xl mx-auto mt-16 mb-20 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
-            <p className="text-lg md:text-xl text-white/95 leading-relaxed tracking-wide drop-shadow-lg text-premium">
+          <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
+            <p className="text-lg md:text-xl text-white/95 font-light leading-relaxed tracking-wide drop-shadow-lg">
               Where culinary mastery transcends expectation. We orchestrate
-              <span className="text-[#A8C4A0] font-medium drop-shadow-md text-luxury-accent">
+              <span className="text-[#A8C4A0] font-medium drop-shadow-md">
                 {" "}
                 extraordinary gastronomic symphonies{" "}
               </span>
@@ -218,32 +218,32 @@ export default function Hero() {
           </div>
 
           {/* Premium Call-to-Actions */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
-            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105 text-premium-medium">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
+            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105">
               <span className="relative z-10">Begin Your Journey</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
-            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 tracking-[0.1em] text-sm uppercase backdrop-blur-sm text-premium">
+            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm">
               <span className="group-hover:tracking-[0.15em] transition-all duration-300">
                 Discover Excellence
               </span>
             </button>
           </div>
 
-          {/* Elegant Trust Indicators - moved higher to prevent overlap */}
-          <div className="flex justify-center items-center space-x-12 opacity-0 animate-[slideUp_0.8s_ease-out_1.5s_forwards]">
+          {/* Elegant Trust Indicators */}
+          <div className="flex justify-center items-center space-x-8 mt-16 opacity-0 animate-[slideUp_0.8s_ease-out_1.5s_forwards]">
             <div className="text-center">
-              <div className="text-2xl text-[#9B8FC7] mb-2 heading-luxury-serif">
+              <div className="text-2xl font-light text-[#9B8FC7] mb-1">
                 500+
               </div>
-              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase text-premium">
+              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase">
                 Premium Events
               </div>
             </div>
-            <div className="w-px h-8 bg-[#F9F7F4]/30"></div>
+            <div className="w-px"></div>
             <div className="text-center">
-              <div className="text-2xl text-[#A8C4A0] mb-2 heading-luxury-serif">20+</div>
-              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase text-premium">
+              <div className="text-2xl font-light text-[#A8C4A0] mb-1">20+</div>
+              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase">
                 Years Excellence
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function Hero() {
         </div>
 
         {/* Premium Scroll Indicator */}
-        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
           <div className="flex flex-col items-center group cursor-pointer">
             <div className="text-[#F9F7F4]/50 text-xs tracking-[0.3em] uppercase mb-3 group-hover:text-[#9B8FC7] transition-colors duration-300">
               Explore
