@@ -195,7 +195,7 @@ export default function Hero() {
 
           {/* Dramatic Typography with Enhanced Visibility */}
           <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-4xl md:text-6xl lg:text-7xl heading-primary leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
+            <span className="block text-4xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
             <span className="block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text subheading-luxury tracking-[0.2em] drop-shadow-lg">
