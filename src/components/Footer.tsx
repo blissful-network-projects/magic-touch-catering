@@ -55,17 +55,23 @@ export default function Footer() {
                 href="https://www.facebook.com/AZMagicTouchCatering"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center text-sm"
+                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center"
               >
-                F
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </a>
               <a
                 href="https://www.instagram.com/magic.touch.catering/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center text-sm"
+                className="w-10 h-10 rounded-full border border-[#C7A965]/30 text-[#C7A965] hover:bg-[#C7A965] hover:text-black transition-all duration-300 flex items-center justify-center"
               >
-                I
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348 0-1.297 1.051-2.348 2.348-2.348 1.297 0 2.348 1.051 2.348 2.348 0 1.297-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348 0-1.297 1.051-2.348 2.348-2.348 1.297 0 2.348 1.051 2.348 2.348 0 1.297-1.051 2.348-2.348 2.348zm3.718-8.348H4.114c-.61 0-1.102-.492-1.102-1.102V5.434c0-.61.492-1.102 1.102-1.102h15.771c.61 0 1.102.492 1.102 1.102v2.104c0 .61-.492 1.102-1.102 1.102z"/>
+                  <path d="M12 8.531c-1.934 0-3.5 1.566-3.5 3.5s1.566 3.5 3.5 3.5 3.5-1.566 3.5-3.5-1.566-3.5-3.5-3.5zm0 5.65c-1.187 0-2.15-.963-2.15-2.15s.963-2.15 2.15-2.15 2.15.963 2.15 2.15-.963 2.15-2.15 2.15z"/>
+                  <circle cx="15.65" cy="8.35" r=".85"/>
+                </svg>
               </a>
             </div>
           </div>
