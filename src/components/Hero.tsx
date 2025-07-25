@@ -285,7 +285,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation Arrows with Custom SVG Design */}
+      {/* Navigation Arrows with Custom Arrow SVG Design */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={prevImage}
@@ -296,18 +296,19 @@ export default function Hero() {
           group"
         >
           <svg 
-            width="20" 
-            height="20" 
+            width="24" 
+            height="24" 
             viewBox="0 0 24 24" 
             fill="none" 
-            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0]"
-            stroke="white" 
-            strokeWidth="1.5"
+            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0] group-hover:fill-[#A8C4A0]"
           >
             <path 
-              d="M15 18L9 12L15 6" 
-              strokeLinecap="round" 
+              d="M15 12L10 7V10H4V14H10V17L15 12Z" 
+              fill="white"
+              stroke="white" 
+              strokeWidth="1"
               strokeLinejoin="round"
+              className="transition-colors duration-300 group-hover:fill-[#A8C4A0] group-hover:stroke-[#A8C4A0]"
             />
           </svg>
         </button>
@@ -323,18 +324,19 @@ export default function Hero() {
           group"
         >
           <svg 
-            width="20" 
-            height="20" 
+            width="24" 
+            height="24" 
             viewBox="0 0 24 24" 
             fill="none" 
-            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0]"
-            stroke="white" 
-            strokeWidth="1.5"
+            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0] group-hover:fill-[#A8C4A0]"
           >
             <path 
-              d="M9 18L15 12L9 6" 
-              strokeLinecap="round" 
+              d="M9 12L14 17V14H20V10H14V7L9 12Z" 
+              fill="white"
+              stroke="white" 
+              strokeWidth="1"
               strokeLinejoin="round"
+              className="transition-colors duration-300 group-hover:fill-[#A8C4A0] group-hover:stroke-[#A8C4A0]"
             />
           </svg>
         </button>
