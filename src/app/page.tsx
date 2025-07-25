@@ -11,15 +11,15 @@ import StructuredData from "@/components/StructuredData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Magic Touch Catering - Phoenix's #1 Premium Catering Service | Wedding & Corporate Events",
-  description: "★★★★★ Award-winning catering in Phoenix since 1998! Wedding, corporate & private event catering $24-$38/person. Serving 500+ events yearly. FREE consultation & quotes. Call (602) 555-0123",
-  keywords: "catering Phoenix AZ, wedding catering Phoenix, corporate catering Scottsdale Arizona, private party catering near me, gourmet catering services Phoenix, professional event catering Arizona, luxury catering Phoenix Scottsdale, best catering company Arizona, catering pricing Phoenix, award winning catering services",
+  title: "Magic Touch Catering - Scottsdale's #1 Premium Catering Service | Wedding & Corporate Events",
+  description: "★★★★★ Award-winning catering in Scottsdale since 1998! Wedding, corporate & private event catering $24-$38/person. Serving 500+ events yearly. FREE consultation & quotes. Call (602) 555-0123",
+  keywords: "catering Scottsdale AZ, wedding catering Scottsdale, corporate catering Scottsdale Arizona, private party catering Scottsdale, gourmet catering services Scottsdale, professional event catering Scottsdale, luxury catering Scottsdale Paradise Valley, best catering company Scottsdale, catering pricing Scottsdale, award winning catering services Arizona",
   alternates: {
     canonical: "https://magictouchcatering.com",
   },
   openGraph: {
-    title: "Magic Touch Catering - Phoenix's #1 Premium Catering Service",
-    description: "★★★★★ Award-winning catering in Phoenix since 1998! 500+ events yearly, $24-$38/person. FREE consultation!",
+    title: "Magic Touch Catering - Scottsdale's #1 Premium Catering Service",
+    description: "★★★★★ Award-winning catering in Scottsdale since 1998! 500+ events yearly, $24-$38/person. FREE consultation!",
     url: "https://magictouchcatering.com",
     type: "website",
     images: [

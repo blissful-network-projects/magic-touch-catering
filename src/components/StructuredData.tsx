@@ -7,7 +7,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "CateringBusiness",
     "name": "Magic Touch Catering",
-    "description": "Premium catering services in Phoenix, AZ specializing in weddings, corporate events, and private parties with over 25 years of culinary excellence.",
+    "description": "Premium catering services in Scottsdale, AZ specializing in weddings, corporate events, and private parties with over 25 years of culinary excellence.",
     "url": "https://magictouchcatering.com",
     "telephone": "+1-602-555-0123",
     "email": "info@magictouchcatering.com",
@@ -42,14 +42,6 @@ export default function StructuredData() {
     "areaServed": [
       {
         "@type": "City",
-        "name": "Phoenix",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Arizona"
-        }
-      },
-      {
-        "@type": "City",
         "name": "Scottsdale",
         "containedInPlace": {
           "@type": "State",
@@ -58,7 +50,15 @@ export default function StructuredData() {
       },
       {
         "@type": "City",
-        "name": "Tempe",
+        "name": "Paradise Valley",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Arizona"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Phoenix",
         "containedInPlace": {
           "@type": "State",
           "name": "Arizona"
@@ -79,7 +79,7 @@ export default function StructuredData() {
           "description": "Complete wedding catering services with customizable menus"
         },
         "priceRange": "$28-$38 per person",
-        "areaServed": "Phoenix Metropolitan Area"
+        "areaServed": "Scottsdale Metropolitan Area"
       },
       {
         "@type": "Offer",
@@ -89,7 +89,7 @@ export default function StructuredData() {
           "description": "Professional corporate event catering and business lunch services"
         },
         "priceRange": "$24-$32 per person",
-        "areaServed": "Phoenix Metropolitan Area"
+        "areaServed": "Scottsdale Metropolitan Area"
       }
     ],
     "hasOfferCatalog": {
@@ -245,7 +245,7 @@ export default function StructuredData() {
     "name": "Magic Touch Catering",
     "url": "https://magictouchcatering.com",
     "logo": "https://magictouchcatering.com/magic-touch-catering-logo.svg",
-    "description": "Premium catering services in Phoenix, Arizona with over 25 years of culinary excellence",
+    "description": "Premium catering services in Scottsdale, Arizona with over 25 years of culinary excellence",
     "foundingDate": "1998",
     "founder": {
       "@type": "Person",

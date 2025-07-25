@@ -15,9 +15,9 @@ interface AdvancedSEOProps {
 }
 
 export default function AdvancedSEO({
-  title = "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
-  description = "Magic Touch Catering offers premium catering services in Phoenix, AZ for weddings, corporate events, and private parties. 25+ years of culinary excellence with pricing from $24-$38 per person.",
-  keywords = "catering Phoenix, wedding catering, corporate catering, private party catering, Scottsdale catering, Arizona catering, gourmet catering, professional catering services, catering pricing",
+  title = "Magic Touch Catering - Premium Catering Services in Scottsdale, AZ",
+  description = "Magic Touch Catering offers premium catering services in Scottsdale, AZ for weddings, corporate events, and private parties. 25+ years of culinary excellence with pricing from $24-$38 per person.",
+  keywords = "catering Scottsdale, wedding catering Scottsdale, corporate catering, private party catering, Scottsdale catering AZ, Arizona catering, gourmet catering Scottsdale, professional catering services Scottsdale, catering pricing Scottsdale",
   canonicalUrl,
   ogImage = "/magic-touch-catering-logo.svg",
   ogType = "website",
@@ -63,7 +63,7 @@ export default function AdvancedSEO({
       
       {/* Geographic SEO */}
       <meta name="geo.region" content="US-AZ" />
-      <meta name="geo.placename" content="Phoenix, Arizona" />
+      <meta name="geo.placename" content="Scottsdale, Arizona" />
       <meta name="geo.position" content="33.5731;-111.8910" />
       <meta name="ICBM" content="33.5731, -111.8910" />
       

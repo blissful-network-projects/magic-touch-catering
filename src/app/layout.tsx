@@ -29,11 +29,11 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL('https://magictouchcatering.com'),
   title: {
-    default: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ | Wedding & Corporate Events",
-    template: "%s | Magic Touch Catering - Phoenix's Premier Catering Service"
+    default: "Magic Touch Catering - Premium Catering Services in Scottsdale, AZ | Wedding & Corporate Events",
+    template: "%s | Magic Touch Catering - Scottsdale's Premier Catering Service"
   },
-  description: "★★★★★ Magic Touch Catering - Phoenix's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Phoenix, Scottsdale, Tempe. FREE quotes!",
-  keywords: "catering Phoenix, wedding catering Phoenix, corporate catering Scottsdale, private party catering Arizona, gourmet catering services, professional catering Phoenix AZ, event catering near me, catering pricing Phoenix, best catering company Arizona, luxury catering services",
+  description: "★★★★★ Magic Touch Catering - Scottsdale's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Scottsdale, Phoenix, Paradise Valley. FREE quotes!",
+  keywords: "catering Scottsdale, wedding catering Scottsdale, corporate catering Scottsdale AZ, private party catering Scottsdale, gourmet catering services Scottsdale, professional catering Scottsdale Arizona, event catering Scottsdale, catering pricing Scottsdale, best catering company Scottsdale, luxury catering services Arizona",
   authors: [{ name: "Magic Touch Catering Team", url: "https://magictouchcatering.com/about" }],
   creator: "Magic Touch Catering",
   publisher: "Magic Touch Catering",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ | Wedding & Corporate Events",
-    description: "★★★★★ Phoenix's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Phoenix, Scottsdale, Tempe. FREE quotes!",
+    title: "Magic Touch Catering - Premium Catering Services in Scottsdale, AZ | Wedding & Corporate Events",
+    description: "★★★★★ Scottsdale's #1 premium catering service since 1998. Wedding, corporate & private event catering from $24-$38/person. Serving Scottsdale, Phoenix, Paradise Valley. FREE quotes!",
     url: "https://magictouchcatering.com",
     siteName: "Magic Touch Catering",
     images: [
@@ -86,8 +86,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@magictouchcatering",
     creator: "@magictouchcatering",
-    title: "Magic Touch Catering - Premium Catering Services in Phoenix, AZ",
-    description: "25+ years of culinary excellence in Phoenix, AZ",
+    title: "Magic Touch Catering - Premium Catering Services in Scottsdale, AZ",
+    description: "25+ years of culinary excellence in Scottsdale, AZ",
     images: ["/magic-touch-catering-logo.svg"],
   },
   robots: {
