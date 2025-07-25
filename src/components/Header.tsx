@@ -127,13 +127,10 @@ export default function Header() {
           {/* Minimalist Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {[
-              { name: "Home", href: "/" },
-              { name: "Services", href: "/services" },
-              { name: "Menu", href: "/#menu" },
-              { name: "Gallery", href: "/gallery" },
-              { name: "About", href: "/#about" },
-              { name: "FAQ", href: "/faq" },
-              { name: "Contact", href: "/#contact" },
+              { name: "Home", href: "#home" },
+              { name: "Menu", href: "#menu" },
+              { name: "About", href: "#about" },
+              { name: "Contact", href: "#contact" },
             ].map((item) => (
               <a
                 key={item.name}
@@ -186,13 +183,10 @@ export default function Header() {
           <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#9B8FC7]/20">
             <div className="px-6 py-6 space-y-4">
               {[
-                { name: "Home", href: "/" },
-                { name: "Services", href: "/services" },
-                { name: "Menu", href: "/#menu" },
-                { name: "Gallery", href: "/gallery" },
-                { name: "About", href: "/#about" },
-                { name: "FAQ", href: "/faq" },
-                { name: "Contact", href: "/#contact" },
+                { name: "Home", href: "#home" },
+                { name: "Menu", href: "#menu" },
+                { name: "About", href: "#about" },
+                { name: "Contact", href: "#contact" },
               ].map((item) => (
                 <a
                   key={item.name}

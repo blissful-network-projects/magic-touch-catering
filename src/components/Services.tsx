@@ -32,13 +32,13 @@ export default function Services() {
     {
       title: "Wedding Celebrations",
       description: "Transform your special day into a culinary fairy tale with bespoke menus crafted for your love story.",
-      image: "/luxury-wedding-reception-decor.jpg",
+      image: "/elegant-wedding-catering-setup.jpg",
       features: ["Custom Wedding Menus", "Bridal Tastings", "Reception Dining"]
     },
     {
       title: "Private Parties",
       description: "Intimate gatherings deserve exceptional attention. We create memorable moments for your closest connections.",
-      image: "/romantic-wedding-table-setting.jpg",
+      image: "/luxury-catering-experience.jpg",
       features: ["Personal Chef Service", "Cocktail Parties", "Anniversary Dinners"]
     }
   ];

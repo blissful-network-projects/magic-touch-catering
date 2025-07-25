@@ -7,39 +7,19 @@ export default function Footer() {
   const footerSections = [
     {
       title: "Services",
-      links: [
-        { name: "Corporate Events", href: "/services#corporate" },
-        { name: "Wedding Catering", href: "/services#wedding" },
-        { name: "Private Parties", href: "/services#private" },
-        { name: "Special Occasions", href: "/services" }
-      ]
+      links: ["Corporate Events", "Wedding Catering", "Private Parties", "Special Occasions"]
     },
     {
       title: "Menu",
-      links: [
-        { name: "Appetizers", href: "/#menu" },
-        { name: "Main Courses", href: "/#menu" },
-        { name: "Desserts", href: "/#menu" },
-        { name: "Beverages", href: "/#menu" }
-      ]
+      links: ["Appetizers", "Main Courses", "Desserts", "Beverages"]
     },
     {
       title: "Company",
-      links: [
-        { name: "About Us", href: "/#about" },
-        { name: "Our Team", href: "/#about" },
-        { name: "Testimonials", href: "/#about" },
-        { name: "Gallery", href: "/gallery" }
-      ]
+      links: ["About Us", "Our Team", "Testimonials", "Gallery"]
     },
     {
       title: "Contact",
-      links: [
-        { name: "Get Quote", href: "/#contact" },
-        { name: "Book Consultation", href: "/#contact" },
-        { name: "Emergency Catering", href: "/#contact" },
-        { name: "FAQ", href: "/faq" }
-      ]
+      links: ["Get Quote", "Book Consultation", "Emergency Catering", "FAQ"]
     }
   ];
 
@@ -100,12 +80,12 @@ export default function Footer() {
               <h4 className="text-[#F1E6D1] font-medium mb-6 tracking-wide">{section.title}</h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
-                  <li key={link.name}>
+                  <li key={link}>
                     <a
-                      href={link.href}
+                      href="#"
                       className="text-[#F1E6D1]/60 hover:text-[#C7A965] transition-colors text-sm"
                     >
-                      {link.name}
+                      {link}
                     </a>
                   </li>
                 ))}

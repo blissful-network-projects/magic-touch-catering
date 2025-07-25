@@ -9,12 +9,10 @@ export default function Hero() {
 
   const heroImages = [
     "/magic-touch-banquet-food.jpg",
-    "/elegant-wedding-ceremony-setup.jpg",
-    "/luxury-wedding-reception-decor.jpg",
-    "/romantic-wedding-table-setting.jpg",
-    "/premium-wedding-catering-display.jpg",
-    "/elegant-bridal-party-dining.jpg",
-    "/sophisticated-wedding-venue-setup.jpg",
+    "/elegant-wedding-catering-setup.jpg",
+    "/luxury-catering-experience.jpg",
+    "/professional-catering-presentation.jpg",
+    "/gourmet-catering-display.jpg",
   ];
 
   useEffect(() => {

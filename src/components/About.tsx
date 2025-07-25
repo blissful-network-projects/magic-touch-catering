@@ -49,8 +49,8 @@ export default function About() {
           }`}>
             <div className="relative">
               <img 
-                src="/elegant-wedding-ceremony-setup.jpg" 
-                alt="Elegant wedding ceremony with premium catering setup"
+                src="/chef-preparing-gourmet-meal.jpg" 
+                alt="Chef preparing gourmet meal"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#9B8FC7] to-[#7D6DB8] rounded-2xl flex items-center justify-center">
