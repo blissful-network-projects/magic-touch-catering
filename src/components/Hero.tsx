@@ -195,10 +195,10 @@ export default function Hero() {
 
           {/* Dramatic Typography with Enhanced Visibility */}
           <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-6xl md:text-8xl lg:text-9xl font-extralight leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
+            <span className="block text-6xl md:text-8xl lg:text-9xl heading-primary leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
-            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg">
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text subheading-luxury tracking-[0.2em] drop-shadow-lg">
               CATERING
             </span>
             {/* Enhanced luxury underline */}
@@ -207,9 +207,9 @@ export default function Hero() {
 
           {/* Elevated Description with Better Contrast */}
           <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
-            <p className="text-lg md:text-xl text-white/95 font-light leading-relaxed tracking-wide drop-shadow-lg">
+            <p className="text-lg md:text-xl text-white/95 body-luxury leading-relaxed tracking-wide drop-shadow-lg">
               Where culinary mastery transcends expectation. We orchestrate
-              <span className="text-[#A8C4A0] font-medium drop-shadow-md">
+              <span className="text-[#A8C4A0] subheading-elegant drop-shadow-md">
                 {" "}
                 extraordinary gastronomic symphonies{" "}
               </span>
@@ -219,11 +219,11 @@ export default function Hero() {
 
           {/* Premium Call-to-Actions */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
-            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105">
+            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white body-luxury font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105">
               <span className="relative z-10">Begin Your Journey</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
-            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm">
+            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 body-luxury font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm">
               <span className="group-hover:tracking-[0.15em] transition-all duration-300">
                 Discover Excellence
               </span>
