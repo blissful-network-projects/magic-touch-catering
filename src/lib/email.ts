@@ -1,5 +1,4 @@
-
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 interface ContactFormData {
   name: string;
@@ -22,9 +21,9 @@ interface CateringFormData {
 }
 
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.BREVO_SMTP_HOST,
-    port: parseInt(process.env.BREVO_SMTP_PORT || '587'),
+    port: parseInt(process.env.BREVO_SMTP_PORT || "587"),
     secure: false,
     auth: {
       user: process.env.BREVO_SMTP_USER,
@@ -136,13 +135,13 @@ const createContactEmailTemplate = (data: ContactFormData) => {
           </div>
           
           <div class="timestamp">
-            Received on ${new Date().toLocaleDateString('en-US', { 
-              weekday: 'long', 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
+            Received on ${new Date().toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
             })}
           </div>
 
@@ -158,12 +157,12 @@ const createContactEmailTemplate = (data: ContactFormData) => {
 
           <div class="field-group">
             <div class="field-label">Phone Number</div>
-            <div class="field-value">${data.phone || 'Not provided'}</div>
+            <div class="field-value">${data.phone || "Not provided"}</div>
           </div>
 
           <div class="field-group">
             <div class="field-label">Subject</div>
-            <div class="field-value">${data.subject || 'General Inquiry'}</div>
+            <div class="field-value">${data.subject || "General Inquiry"}</div>
           </div>
 
           <div class="field-group">
@@ -383,13 +382,13 @@ const createCateringEmailTemplate = (data: CateringFormData) => {
           </div>
           
           <div class="timestamp">
-            Received on ${new Date().toLocaleDateString('en-US', { 
-              weekday: 'long', 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
+            Received on ${new Date().toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
             })}
           </div>
 
@@ -398,11 +397,13 @@ const createCateringEmailTemplate = (data: CateringFormData) => {
             <div class="event-details">
               <div class="event-detail">
                 <div class="event-detail-label">Event Date</div>
-                <div class="event-detail-value">${new Date(data.eventDate).toLocaleDateString('en-US', { 
-                  weekday: 'short',
-                  month: 'short', 
-                  day: 'numeric', 
-                  year: 'numeric' 
+                <div class="event-detail-value">${new Date(
+                  data.eventDate,
+                ).toLocaleDateString("en-US", {
+                  weekday: "short",
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
                 })}</div>
               </div>
               <div class="event-detail">
@@ -435,24 +436,36 @@ const createCateringEmailTemplate = (data: CateringFormData) => {
             <div class="field-value">${data.phone}</div>
           </div>
 
-          ${data.company ? `
+          ${
+            data.company
+              ? `
           <div class="field-group">
             <div class="field-label">Company/Organization</div>
             <div class="field-value">${data.company}</div>
           </div>
-          ` : ''}
+          `
+              : ""
+          }
 
-          ${data.message ? `
+          ${
+            data.message
+              ? `
           <div class="field-group">
             <div class="field-label">Special Requests & Notes</div>
             <div class="field-value message-field">${data.message}</div>
           </div>
-          ` : ''}
+          `
+              : ""
+          }
 
-          ${data.cateringItems && data.cateringItems.length > 0 ? `
+          ${
+            data.cateringItems && data.cateringItems.length > 0
+              ? `
           <div class="catering-items">
             <h4>🍽️ Selected Catering Items</h4>
-            ${data.cateringItems.map(item => `
+            ${data.cateringItems
+              .map(
+                (item) => `
               <div class="item">
                 <div class="item-info">
                   <div class="item-name">${item.name}</div>
@@ -460,9 +473,13 @@ const createCateringEmailTemplate = (data: CateringFormData) => {
                 </div>
                 <div class="item-quantity">×${item.quantity}</div>
               </div>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </div>
-          ` : ''}
+          `
+              : ""
+          }
         </div>
         <div class="footer">
           <p><strong>🚀 Action Required:</strong> This catering request needs immediate follow-up within 24 hours.</p>
@@ -481,7 +498,7 @@ export const sendContactEmail = async (data: ContactFormData) => {
   const mailOptions = {
     from: process.env.BREVO_FROM_EMAIL,
     to: process.env.BREVO_TO_EMAIL,
-    subject: `New Contact Inquiry - ${data.subject || 'General'} | Magic Touch Catering`,
+    subject: `New Contact Inquiry - ${data.subject || "General"} | Magic Touch Catering`,
     html: htmlContent,
     replyTo: data.email,
   };
