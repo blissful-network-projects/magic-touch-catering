@@ -52,31 +52,46 @@ export default function Hero() {
       <div className="fixed inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1B1B1B] to-[#000000] z-[60] flex items-center justify-center overflow-hidden">
         {/* Ambient background particles */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#9B8FC7]/20 rounded-full animate-pulse" style={{ animationDelay: "0s", animationDuration: "4s" }}></div>
-          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse" style={{ animationDelay: "2s", animationDuration: "6s" }}></div>
-          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/15 rounded-full animate-pulse" style={{ animationDelay: "1s", animationDuration: "5s" }}></div>
+          <div
+            className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#9B8FC7]/20 rounded-full animate-pulse"
+            style={{ animationDelay: "0s", animationDuration: "4s" }}
+          ></div>
+          <div
+            className="absolute top-3/4 right-1/4 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse"
+            style={{ animationDelay: "2s", animationDuration: "6s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/15 rounded-full animate-pulse"
+            style={{ animationDelay: "1s", animationDuration: "5s" }}
+          ></div>
         </div>
 
         <div className="text-center relative">
           {/* Premium loading animation with sophisticated backdrop */}
           <div className="relative">
             {/* Multi-layered luxury backdrop with breathing effect */}
-            <div className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse" style={{ animationDuration: "3s" }}></div>
-            <div className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4s" }}></div>
+            <div
+              className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse"
+              style={{ animationDuration: "3s" }}
+            ></div>
+            <div
+              className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse"
+              style={{ animationDelay: "1.5s", animationDuration: "4s" }}
+            ></div>
 
             {/* Logo container with enhanced visibility */}
             <div className="relative w-32 h-32 mx-auto mb-10 rounded-full border-2 border-[#9B8FC7]/40 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/15 via-[#F9F7F4]/5 to-[#A8C4A0]/15 backdrop-blur-xl shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5"></div>
-              
+
               {/* Bright background for logo contrast */}
               <div className="absolute inset-3 rounded-full bg-gradient-to-br from-[#F9F7F4]/90 via-[#F9F7F4]/95 to-[#F9F7F4]/90 shadow-inner"></div>
-              
+
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
                 className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-6 relative z-10 filter brightness-110 contrast-110"
               />
-              
+
               {/* Enhanced inner glow for visibility */}
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 blur-sm"></div>
             </div>
@@ -86,15 +101,21 @@ export default function Hero() {
               {/* Outer ring - slow, elegant */}
               <div
                 className="absolute inset-0 rounded-full border border-transparent border-t-[#9B8FC7]/60 border-r-[#9B8FC7]/20 animate-spin"
-                style={{ animationDuration: "4s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
+                style={{
+                  animationDuration: "4s",
+                  animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
+                }}
               ></div>
-              
+
               {/* Inner ring - medium speed, counter-clockwise */}
               <div
                 className="absolute inset-4 rounded-full border border-transparent border-t-[#A8C4A0]/70 border-l-[#A8C4A0]/30 animate-spin animate-reverse"
-                style={{ animationDuration: "3s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
+                style={{
+                  animationDuration: "3s",
+                  animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
+                }}
               ></div>
-              
+
               {/* Center pulse ring */}
               <div
                 className="absolute inset-8 rounded-full border border-[#9B8FC7]/40 animate-ping"
@@ -133,7 +154,7 @@ export default function Hero() {
               </div>
               <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B8FC7]/50 to-transparent"></div>
             </div>
-            
+
             {/* Subtle loading text */}
             <div className="text-[#F9F7F4]/40 text-xs tracking-[0.2em] uppercase mt-6 font-light">
               Loading
@@ -219,27 +240,27 @@ export default function Hero() {
 
           {/* Premium Call-to-Actions */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
-            <button 
+            <button
               onClick={() => {
-                const contactSection = document.getElementById('contact');
+                const contactSection = document.getElementById("contact");
                 if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                  contactSection.scrollIntoView({ behavior: "smooth" });
                 } else {
-                  window.location.href = '/contact';
+                  window.location.href = "/contact";
                 }
               }}
               className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white body-luxury font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105"
             >
-              <span className="relative z-10">Begin Your Journey</span>
+              <span className="relative z-10">Elevate Your Next Event</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
-            <button 
+            <button
               onClick={() => {
-                const aboutSection = document.getElementById('about');
+                const aboutSection = document.getElementById("about");
                 if (aboutSection) {
-                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                  aboutSection.scrollIntoView({ behavior: "smooth" });
                 } else {
-                  window.location.href = '/about';
+                  window.location.href = "/about";
                 }
               }}
               className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 body-luxury font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm"
