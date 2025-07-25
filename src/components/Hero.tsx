@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [loading, setLoading] = useState(true);
@@ -86,9 +87,11 @@ export default function Hero() {
               {/* Bright background for logo contrast */}
               <div className="absolute inset-3 rounded-full bg-gradient-to-br from-[#F9F7F4]/90 via-[#F9F7F4]/95 to-[#F9F7F4]/90 shadow-inner"></div>
 
-              <img
+              <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
+                width={128}
+                height={128}
                 className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-6 relative z-10 filter brightness-110 contrast-110"
               />
 

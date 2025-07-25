@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -52,9 +55,11 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#9B8FC7] to-[#7D6DB8] p-0.5">
                 <div className="flex items-center justify-center w-full h-full rounded-full bg-white">
-                  <img
+                  <Image
                     src="/magic-touch-catering-logo.svg"
                     alt="Magic Touch Catering"
+                    width={40}
+                    height={40}
                     className="max-h-10 w-auto filter brightness-0"
                   />
                 </div>

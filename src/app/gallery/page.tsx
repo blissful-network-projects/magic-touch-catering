@@ -1,8 +1,8 @@
-
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import StructuredData from "@/components/StructuredData";
 import Header from "@/components/Header";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Gallery - Magic Touch Catering | Event Photos & Food Presentations",
@@ -56,14 +56,16 @@ export default function GalleryPage() {
                   className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2A2A2A] to-[#1B1B1B] border border-[#9B8FC7]/20 hover:border-[#9B8FC7]/40 transition-all duration-500"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={image.src} 
+                    <Image
+                      src={image.src}
                       alt={image.alt}
+                      width={400}
+                      height={300}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <span className="inline-block px-3 py-1 bg-[#9B8FC7] text-xs rounded-full mb-2 tracking-wide">
                       {image.category}

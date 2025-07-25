@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -140,10 +141,12 @@ export default function Header() {
           {/* Clickable Logo */}
           <div className="flex items-center">
             <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
-              <img
+              <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
                 className="h-6 w-auto scale-700 origin-left object-contain"
+                width={100}
+                height={100}
               />
             </Link>
           </div>

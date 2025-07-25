@@ -1,7 +1,7 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from 'next/image'; // Import the Image component
 
 export default function Services() {
   const [visible, setVisible] = useState(false);
@@ -67,14 +67,16 @@ export default function Services() {
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src={service.image} 
+                <Image
+                  src={service.image}
                   alt={service.title}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B] via-transparent to-transparent opacity-60"></div>
               </div>
-              
+
               <div className="p-8">
                 <h3 className="text-2xl heading-secondary text-[#F5F3F0] mb-4 group-hover:text-[#9B8FC7] transition-colors">
                   {service.title}
@@ -82,7 +84,7 @@ export default function Services() {
                 <p className="text-[#F5F3F0]/70 body-luxury mb-6">
                   {service.description}
                 </p>
-                
+
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-[#F5F3F0]/60">
@@ -91,7 +93,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className="text-[#9B8FC7] text-sm tracking-wider hover:text-[#F5F3F0] transition-colors group">
                   Learn More
                   <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>

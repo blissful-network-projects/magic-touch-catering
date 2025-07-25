@@ -1,3 +1,7 @@
+Fixed an unescaped apostrophe in the FAQ component.
+```
+
+```typescript
 "use client";
 
 import { useState, useEffect } from "react";
@@ -200,3 +204,4 @@ export default function FAQ() {
     </section>
   );
 }
+`

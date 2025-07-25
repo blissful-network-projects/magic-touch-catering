@@ -69,7 +69,7 @@ export default function Menu() {
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-[#F5F3F0]/70 leading-relaxed">
-            Each dish is a masterpiece, crafted with the finest ingredients and presented with artistic flair. Our menus are fully customizable to suit your event's unique requirements.
+            Each dish is a masterpiece, crafted with the finest ingredients and presented with artistic flair. Our menus are fully customizable to suit your event&apos;s unique requirements.
           </p>
         </div>
 
