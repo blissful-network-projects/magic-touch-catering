@@ -38,22 +38,22 @@ export default function Contact() {
   const contactInfo = [
     {
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["Contact for booking", "Call for consultation"],
       icon: "📞"
     },
     {
       title: "Email",
-      details: ["hello@magictouchcatering.com", "events@magictouchcatering.com"],
+      details: ["info@magictouchcatering.com", "bookings@magictouchcatering.com"],
       icon: "✉️"
     },
     {
       title: "Location",
-      details: ["123 Culinary Street", "Gourmet City, GC 12345"],
+      details: ["9343 E Shea Blvd B-135", "Scottsdale, AZ 85260"],
       icon: "📍"
     },
     {
       title: "Hours",
-      details: ["Mon-Fri: 9AM - 6PM", "Sat-Sun: By Appointment"],
+      details: ["Currently Closed", "Opens 9 AM Fri"],
       icon: "🕐"
     }
   ];
