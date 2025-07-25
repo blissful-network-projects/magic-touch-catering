@@ -87,23 +87,13 @@ export default function Contact() {
                 <div key={index} className="flex items-start gap-4">
                   <div className="text-2xl">{info.icon}</div>
                   <div>
-                    <h4 className="text-[#C7A965] font-medium mb-2">{info.title}</h4>
+                    <h4 className="text-[#A8C4A0] font-medium mb-2">{info.title}</h4>
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-[#F1E6D1]/70">{detail}</p>
+                      <p key={idx} className="text-[#F5F3F0]/70">{detail}</p>
                     ))}
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-12 p-8 bg-gradient-to-br from-[#C7A965]/10 to-[#C7A965]/5 rounded-2xl border border-[#C7A965]/20">
-              <h4 className="text-[#C7A965] font-medium mb-4">Emergency Catering</h4>
-              <p className="text-[#F1E6D1]/70 text-sm leading-relaxed">
-                Need last-minute catering? We offer emergency catering services for urgent events. Contact us 24/7 for immediate assistance.
-              </p>
-              <button className="mt-4 text-[#C7A965] text-sm font-medium hover:text-[#F1E6D1] transition-colors">
-                Call Emergency Line: +1 (555) 911-FOOD
-              </button>
             </div>
           </div>
 
@@ -120,7 +110,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -130,7 +120,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -142,7 +132,7 @@ export default function Contact() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -151,7 +141,7 @@ export default function Contact() {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -162,13 +152,13 @@ export default function Contact() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#C7A965]/30 rounded-xl text-[#F1E6D1] placeholder-[#F1E6D1]/50 focus:border-[#C7A965] focus:outline-none transition-colors resize-none"
+                  className="w-full px-6 py-4 bg-[#2A2A2A] border border-[#9B8FC7]/30 rounded-xl text-[#F5F3F0] placeholder-[#F5F3F0]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-xl hover:shadow-2xl hover:shadow-[#C7A965]/30 transition-all duration-300 font-medium tracking-wide transform hover:scale-[1.02]"
+                className="w-full px-8 py-4 bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-[#1A1A1A] rounded-xl hover:shadow-2xl hover:shadow-[#9B8FC7]/30 transition-all duration-300 font-medium tracking-wide transform hover:scale-[1.02]"
               >
                 Send Message
               </button>
