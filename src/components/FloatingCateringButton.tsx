@@ -99,7 +99,7 @@ export default function FloatingCateringButton() {
       }`}>
         <button 
           onClick={() => setPlannerOpen(true)}
-          className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#C7A965] to-[#B8A157] text-black rounded-full hover:shadow-2xl hover:shadow-[#C7A965]/30 transition-all duration-300 transform hover:scale-105"
+          className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#9B8FC7] to-[#7D6DB8] text-white rounded-full hover:shadow-2xl hover:shadow-[#9B8FC7]/30 transition-all duration-300 transform hover:scale-105"
         >
           <ClipboardDocumentListIcon className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
           <span className="font-medium tracking-wide text-sm">Plan Catering</span>
@@ -123,18 +123,18 @@ export default function FloatingCateringButton() {
 
             <div className="flex h-full">
               {/* Left Panel - Available Items */}
-              <div className="w-1/3 p-6 border-r border-[#C7A965]/20 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Available Items</h3>
+              <div className="w-1/3 p-6 border-r border-[#9B8FC7]/20 overflow-y-auto">
+                <h3 className="text-lg font-light text-[#F5F3F0] mb-4 tracking-wide">Available Items</h3>
                 <div className="space-y-3">
                   {availableItems.map((item) => (
                     <div
                       key={item.id}
                       draggable
                       onDragStart={(e) => handleDragStart(e, item)}
-                      className="p-4 bg-[#C7A965]/10 border border-[#C7A965]/20 rounded-lg cursor-move hover:bg-[#C7A965]/20 transition-colors"
+                      className="p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-move hover:bg-[#9B8FC7]/20 transition-colors"
                     >
-                      <div className="text-[#F1E6D1] font-medium text-sm">{item.name}</div>
-                      <div className="text-[#C7A965] text-xs mt-1">{item.category}</div>
+                      <div className="text-[#F5F3F0] font-medium text-sm">{item.name}</div>
+                      <div className="text-[#A8C4A0] text-xs mt-1">{item.category}</div>
                     </div>
                   ))}
                 </div>
@@ -142,27 +142,27 @@ export default function FloatingCateringButton() {
 
               {/* Center Panel - Drop Zone */}
               <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Your Selection</h3>
+                <h3 className="text-lg font-light text-[#F5F3F0] mb-4 tracking-wide">Your Selection</h3>
                 <div
                   onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
                   onDragLeave={() => setDragOver(false)}
                   onDrop={handleDrop}
                   className={`min-h-64 border-2 border-dashed rounded-lg p-4 transition-colors ${
-                    dragOver ? 'border-[#C7A965] bg-[#C7A965]/10' : 'border-[#C7A965]/30'
+                    dragOver ? 'border-[#9B8FC7] bg-[#9B8FC7]/10' : 'border-[#9B8FC7]/30'
                   }`}
                 >
                   {cateringItems.length === 0 ? (
-                    <div className="text-center text-[#F1E6D1]/60 py-12">
+                    <div className="text-center text-[#F5F3F0]/60 py-12">
                       <PlusIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
                       Drag items here to build your catering package
                     </div>
                   ) : (
                     <div className="space-y-3">
                       {cateringItems.map((item) => (
-                        <div key={item.id} className="flex items-center justify-between p-3 bg-[#C7A965]/20 rounded-lg">
+                        <div key={item.id} className="flex items-center justify-between p-3 bg-[#9B8FC7]/20 rounded-lg">
                           <div className="flex-1">
-                            <div className="text-[#F1E6D1] text-sm font-medium">{item.name}</div>
-                            <div className="text-[#C7A965] text-xs">{item.category}</div>
+                            <div className="text-[#F5F3F0] text-sm font-medium">{item.name}</div>
+                            <div className="text-[#A8C4A0] text-xs">{item.category}</div>
                           </div>
                           <div className="flex items-center gap-2">
                             <input
@@ -170,7 +170,7 @@ export default function FloatingCateringButton() {
                               min="1"
                               value={item.quantity}
                               onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                              className="w-16 px-2 py-1 bg-black/30 border border-[#C7A965]/30 rounded text-[#F1E6D1] text-sm"
+                              className="w-16 px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F5F3F0] text-sm"
                             />
                             <button
                               onClick={() => removeItem(item.id)}
@@ -188,7 +188,7 @@ export default function FloatingCateringButton() {
 
               {/* Right Panel - Contact Form */}
               <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">Event Details</h3>
+                <h3 className="text-lg font-light text-[#F5F3F0] mb-4 tracking-wide">Event Details</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <input
@@ -275,7 +275,7 @@ export default function FloatingCateringButton() {
                   <button
                     type="submit"
                     disabled={cateringItems.length === 0}
-                    className="w-full px-6 py-3 bg-[#C7A965] text-black rounded-lg hover:bg-[#C7A965]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                    className="w-full px-6 py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                   >
                     Request Custom Quote
                   </button>
