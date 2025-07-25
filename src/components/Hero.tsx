@@ -127,11 +127,11 @@ export default function Hero() {
           </div>
 
           {/* Dramatic Typography with Enhanced Visibility */}
-          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-6xl md:text-8xl lg:text-9xl font-extralight leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
+          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards] font-[var(--font-playfair)]">
+            <span className="block text-6xl md:text-8xl lg:text-9xl font-light leading-none mb-4 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
-            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg">
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-normal tracking-[0.2em] drop-shadow-lg">
               CATERING
             </span>
             {/* Enhanced luxury underline */}
@@ -140,7 +140,7 @@ export default function Hero() {
 
           {/* Elevated Description with Better Contrast */}
           <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
-            <p className="text-lg md:text-xl text-white/95 font-light leading-relaxed tracking-wide drop-shadow-lg">
+            <p className="text-lg md:text-xl text-white/95 font-light leading-relaxed tracking-wide drop-shadow-lg font-[var(--font-inter)]">
               Where culinary mastery transcends expectation. We orchestrate 
               <span className="text-[#A8C4A0] font-medium drop-shadow-md"> extraordinary gastronomic symphonies </span>
               that transform your most treasured moments into timeless memories.
