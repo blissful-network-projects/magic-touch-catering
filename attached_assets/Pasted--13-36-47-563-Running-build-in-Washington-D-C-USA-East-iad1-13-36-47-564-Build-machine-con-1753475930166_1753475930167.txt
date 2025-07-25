@@ -1,0 +1,68 @@
+[13:36:47.563] Running build in Washington, D.C., USA (East) – iad1
+[13:36:47.564] Build machine configuration: 4 cores, 8 GB
+[13:36:47.581] Cloning github.com/blissful-network-projects/magic-touch-catering (Branch: main, Commit: f731f42)
+[13:36:47.681] Previous build caches not available
+[13:36:54.240] Cloning completed: 6.659s
+[13:36:55.321] Running "vercel build"
+[13:36:56.038] Vercel CLI 44.5.0
+[13:36:56.416] Installing dependencies...
+[13:37:08.876] 
+[13:37:08.876] added 354 packages in 12s
+[13:37:08.876] 
+[13:37:08.876] 144 packages are looking for funding
+[13:37:08.877]   run `npm fund` for details
+[13:37:09.099] Detected Next.js version: 15.4.3
+[13:37:09.103] Running "npm run build"
+[13:37:09.324] 
+[13:37:09.325] > magic-touch-catering@0.1.0 build
+[13:37:09.325] > next build
+[13:37:09.325] 
+[13:37:10.366] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[13:37:10.366] This information is used to shape Next.js' roadmap and prioritize features.
+[13:37:10.367] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[13:37:10.367] https://nextjs.org/telemetry
+[13:37:10.367] 
+[13:37:10.483]    ▲ Next.js 15.4.3
+[13:37:10.483] 
+[13:37:10.513]    Creating an optimized production build ...
+[13:37:22.808]  ✓ Compiled successfully in 8.0s
+[13:37:22.812]    Linting and checking validity of types ...
+[13:37:26.049] 
+[13:37:26.049] Failed to compile.
+[13:37:26.050] 
+[13:37:26.050] ./src/app/gallery/page.tsx
+[13:37:26.050] 59:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.050] 
+[13:37:26.050] ./src/app/services/page.tsx
+[13:37:26.050] 62:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.050] 
+[13:37:26.050] ./src/components/About.tsx
+[13:37:26.050] 51:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.050] 
+[13:37:26.050] ./src/components/FAQ.tsx
+[13:37:26.051] 193:37  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[13:37:26.051] 
+[13:37:26.051] ./src/components/FloatingCateringButton.tsx
+[13:37:26.051] 44:27  Warning: 'event' is defined but never used.  @typescript-eslint/no-unused-vars
+[13:37:26.051] 54:54  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[13:37:26.051] 
+[13:37:26.051] ./src/components/Footer.tsx
+[13:37:26.051] 55:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.051] 
+[13:37:26.051] ./src/components/Header.tsx
+[13:37:26.051] 59:54  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[13:37:26.051] 143:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.051] 
+[13:37:26.051] ./src/components/Hero.tsx
+[13:37:26.051] 89:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.052] 
+[13:37:26.052] ./src/components/Menu.tsx
+[13:37:26.052] 72:163  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[13:37:26.052] 
+[13:37:26.052] ./src/components/Services.tsx
+[13:37:26.052] 70:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+[13:37:26.052] 
+[13:37:26.052] info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+[13:37:26.081] Error: Command "npm run build" exited with 1
+[13:37:26.484] 
+[13:37:30.078] Exiting build container
