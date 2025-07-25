@@ -64,17 +64,21 @@ export default function Hero() {
             <div className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse" style={{ animationDuration: "3s" }}></div>
             <div className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4s" }}></div>
 
-            {/* Logo container with enhanced glassmorphism */}
-            <div className="relative w-32 h-32 mx-auto mb-10 rounded-full border border-[#9B8FC7]/20 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/8 via-transparent to-[#A8C4A0]/8 backdrop-blur-xl shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent"></div>
+            {/* Logo container with enhanced visibility */}
+            <div className="relative w-32 h-32 mx-auto mb-10 rounded-full border-2 border-[#9B8FC7]/40 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/15 via-[#F9F7F4]/5 to-[#A8C4A0]/15 backdrop-blur-xl shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5"></div>
+              
+              {/* Bright background for logo contrast */}
+              <div className="absolute inset-3 rounded-full bg-gradient-to-br from-[#F9F7F4]/90 via-[#F9F7F4]/95 to-[#F9F7F4]/90 shadow-inner"></div>
+              
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-5 relative z-10"
+                className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-6 relative z-10 filter brightness-110 contrast-110"
               />
               
-              {/* Subtle inner glow */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#9B8FC7]/10 to-[#A8C4A0]/10 blur-sm"></div>
+              {/* Enhanced inner glow for visibility */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 blur-sm"></div>
             </div>
 
             {/* Sophisticated orbital rings with different speeds and opacities */}
