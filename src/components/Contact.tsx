@@ -64,12 +64,12 @@ export default function Contact() {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <p className="text-[#C7A965] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
-          <h2 className="text-4xl md:text-6xl font-thin text-[#F1E6D1] mb-6">
+          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
+          <h2 className="text-4xl md:text-6xl font-thin text-[#F5F3F0] mb-6">
             Let's Create
-            <span className="block text-[#C7A965]">Something Amazing</span>
+            <span className="block text-[#9B8FC7]">Something Amazing</span>
           </h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C7A965] to-transparent mx-auto mb-8"></div>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-[#F1E6D1]/70 leading-relaxed">
             Ready to elevate your next event? Contact us today to discuss how we can bring your culinary vision to life with our signature touch of excellence.
           </p>
