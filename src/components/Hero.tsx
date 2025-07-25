@@ -16,19 +16,19 @@ export default function Hero() {
   ];
 
   useEffect(() => {
-    // Epic loading sequence
+    // Refined luxury loading sequence - faster for premium feel
     const timer1 = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1500);
 
     const timer2 = setTimeout(() => {
       setTextVisible(true);
-    }, 2500);
+    }, 1800);
 
-    // Image carousel
+    // Image carousel with elegant timing
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 6000);
 
     return () => {
       clearTimeout(timer1);
@@ -47,35 +47,41 @@ export default function Hero() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-[#1B1B1B] z-[60] flex items-center justify-center">
-        <div className="text-center">
-          {/* Epic loading animation */}
+      <div className="fixed inset-0 bg-gradient-to-br from-[#1B1B1B] via-[#1A1A1A] to-[#0F0F0F] z-[60] flex items-center justify-center">
+        <div className="text-center relative">
+          {/* Premium loading animation with luxury backdrop */}
           <div className="relative">
-            <div className="w-24 h-24 mx-auto mb-8 rounded-full border-2 border-[#C7A965]/20 overflow-hidden">
+            {/* Luxury backdrop glow */}
+            <div className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/20 to-[#9B8FC7]/20 blur-3xl animate-pulse"></div>
+            
+            <div className="relative w-28 h-28 mx-auto mb-8 rounded-full border border-[#9B8FC7]/30 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/5 to-[#A8C4A0]/5 backdrop-blur-sm">
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards]"
+                className="w-full h-full object-contain opacity-0 animate-[fadeIn_0.8s_ease-in-out_0.3s_forwards] p-4"
               />
             </div>
 
-            {/* Elegant loading rings */}
-            <div className="absolute inset-0 w-24 h-24 mx-auto">
-              <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#C7A965] animate-spin"></div>
-              <div className="absolute inset-2 rounded-full border-2 border-transparent border-t-[#C7A965]/60 animate-spin animate-reverse" style={{ animationDuration: '2s' }}></div>
+            {/* Sophisticated loading rings */}
+            <div className="absolute inset-0 w-28 h-28 mx-auto -mt-2">
+              <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#9B8FC7] border-r-[#9B8FC7]/40 animate-spin" style={{ animationDuration: '2s' }}></div>
+              <div className="absolute inset-3 rounded-full border-2 border-transparent border-t-[#A8C4A0] border-l-[#A8C4A0]/40 animate-spin animate-reverse" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute inset-6 rounded-full border border-transparent border-b-[#9B8FC7]/60 animate-spin" style={{ animationDuration: '4s' }}></div>
             </div>
           </div>
 
-          <div className="space-y-2 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.2s_forwards]">
-            <div className="text-[#9B8FC7] text-sm tracking-[0.3em] uppercase font-light">Preparing</div>
-            <div className="text-[#F9F7F4] text-lg tracking-wider font-light">Your Culinary Experience</div>
+          <div className="space-y-3 opacity-0 animate-[fadeIn_0.8s_ease-in-out_0.8s_forwards]">
+            <div className="text-[#9B8FC7] text-xs tracking-[0.4em] uppercase font-light">Curating Excellence</div>
+            <div className="text-[#F9F7F4] text-xl tracking-wide font-thin">Your Extraordinary Experience Awaits</div>
           </div>
 
-          {/* Loading dots */}
-          <div className="flex justify-center space-x-1 mt-6 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.5s_forwards]">
-            <div className="w-2 h-2 bg-[#9B8FC7] rounded-full animate-pulse"></div>
-            <div className="w-2 h-2 bg-[#9B8FC7] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-2 h-2 bg-[#9B8FC7] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+          {/* Elegant loading indicator */}
+          <div className="flex justify-center items-center space-x-2 mt-8 opacity-0 animate-[fadeIn_0.8s_ease-in-out_1.2s_forwards]">
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-[#A8C4A0] rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+            <div className="w-1.5 h-1.5 bg-[#9B8FC7] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-1.5 h-1.5 bg-[#A8C4A0] rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent animate-pulse"></div>
           </div>
         </div>
       </div>
@@ -95,45 +101,82 @@ export default function Hero() {
         />
       ))}
 
-      {/* Sophisticated Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1B1B1B]/30 via-[#1B1B1B]/50 to-[#1B1B1B]/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1B1B1B]/20 via-transparent to-[#1B1B1B]/20" />
+      {/* Premium Multi-layer Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1B1B1B]/20 via-[#1B1B1B]/40 to-[#1B1B1B]/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1B1B1B]/30 via-transparent to-[#1B1B1B]/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#9B8FC7]/5 via-transparent to-transparent" />
+
+      {/* Floating luxury elements */}
+      <div className="absolute top-20 left-10 w-2 h-2 bg-[#9B8FC7]/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-40 right-16 w-1 h-1 bg-[#A8C4A0]/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-32 left-20 w-1.5 h-1.5 bg-[#9B8FC7]/20 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       {/* Content */}
       <div className={`relative z-10 flex flex-col justify-center items-center h-full px-4 text-center transition-all duration-1000 ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="max-w-4xl mx-auto">
-          <p className="tracking-[0.4em] text-[#9B8FC7] text-xs md:text-sm uppercase mb-6 font-light opacity-0 animate-[slideUp_0.8s_ease-out_0.5s_forwards]">
-            Exquisite Culinary Artistry
-          </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Premium Brand Line */}
+          <div className="flex items-center justify-center mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_0.3s_forwards]">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#9B8FC7]/60"></div>
+            <p className="mx-6 tracking-[0.5em] text-[#9B8FC7] text-xs uppercase font-light">
+              Exquisite Culinary Artistry
+            </p>
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#9B8FC7]/60"></div>
+          </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-tight mb-8 text-[#F9F7F4] opacity-0 animate-[slideUp_0.8s_ease-out_0.8s_forwards]">
-            Magic Touch
-            <span className="block text-4xl md:text-5xl lg:text-6xl text-[#A8C4A0] font-light tracking-wider mt-2">
-              Catering
+          {/* Dramatic Typography */}
+          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
+            <span className="block text-6xl md:text-8xl lg:text-9xl font-extralight leading-none mb-4 text-[#F9F7F4] tracking-tight">
+              Magic Touch
             </span>
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em]">
+              CATERING
+            </span>
+            {/* Luxury underline */}
+            <div className="w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-6"></div>
           </h1>
 
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_1.1s_forwards]"></div>
+          {/* Elevated Description */}
+          <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
+            <p className="text-lg md:text-xl text-[#F9F7F4]/95 font-light leading-relaxed tracking-wide">
+              Where culinary mastery transcends expectation. We orchestrate 
+              <span className="text-[#A8C4A0] font-normal"> extraordinary gastronomic symphonies </span>
+              that transform your most treasured moments into timeless memories.
+            </p>
+          </div>
 
-          <p className="max-w-2xl mx-auto text-base md:text-lg text-[#F9F7F4]/90 mb-12 font-light leading-relaxed opacity-0 animate-[slideUp_0.8s_ease-out_1.4s_forwards]">
-            Where culinary excellence meets impeccable service. We transform your most important occasions into extraordinary gastronomic experiences that linger in memory long after the last bite.
-          </p>
+          {/* Premium Call-to-Actions */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
+            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105">
+              <span className="relative z-10">Begin Your Journey</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </button>
+            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm">
+              <span className="group-hover:tracking-[0.15em] transition-all duration-300">Discover Excellence</span>
+            </button>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.7s_forwards]">
-            <button className="px-8 py-4 rounded-full border border-[#9B8FC7] text-white bg-[#9B8FC7] hover:bg-transparent hover:text-[#F9F7F4] transition-all duration-500 font-medium tracking-wider text-sm uppercase">
-              Explore Our Artistry
-            </button>
-            <button className="px-8 py-4 rounded-full border border-[#F9F7F4]/30 text-[#F9F7F4] hover:border-[#A8C4A0] hover:text-[#A8C4A0] transition-all duration-500 font-light tracking-wider text-sm uppercase">
-              View Portfolio
-            </button>
+          {/* Elegant Trust Indicators */}
+          <div className="flex justify-center items-center space-x-8 mt-16 opacity-0 animate-[slideUp_0.8s_ease-out_1.5s_forwards]">
+            <div className="text-center">
+              <div className="text-2xl font-light text-[#9B8FC7] mb-1">500+</div>
+              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase">Premium Events</div>
+            </div>
+            <div className="w-px h-8 bg-gradient-to-b from-transparent via-[#9B8FC7]/40 to-transparent"></div>
+            <div className="text-center">
+              <div className="text-2xl font-light text-[#A8C4A0] mb-1">20+</div>
+              <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase">Years Excellence</div>
+            </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2.5s_forwards]">
-          <div className="flex flex-col items-center">
-            <div className="text-[#F9F7F4]/60 text-xs tracking-wider uppercase mb-2">Scroll</div>
-            <div className="w-px h-8 bg-gradient-to-b from-[#9B8FC7] to-transparent animate-pulse"></div>
+        {/* Premium Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+          <div className="flex flex-col items-center group cursor-pointer">
+            <div className="text-[#F9F7F4]/50 text-xs tracking-[0.3em] uppercase mb-3 group-hover:text-[#9B8FC7] transition-colors duration-300">Explore</div>
+            <div className="relative">
+              <div className="w-px h-10 bg-gradient-to-b from-[#9B8FC7] via-[#A8C4A0] to-transparent group-hover:from-[#A8C4A0] group-hover:via-[#9B8FC7] transition-all duration-500"></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#9B8FC7] rounded-full animate-bounce"></div>
+            </div>
           </div>
         </div>
       </div>
