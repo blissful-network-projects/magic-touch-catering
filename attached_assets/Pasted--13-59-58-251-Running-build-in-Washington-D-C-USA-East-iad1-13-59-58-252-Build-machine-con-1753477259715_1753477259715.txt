@@ -1,0 +1,44 @@
+[13:59:58.251] Running build in Washington, D.C., USA (East) – iad1
+[13:59:58.252] Build machine configuration: 4 cores, 8 GB
+[13:59:58.270] Cloning github.com/blissful-network-projects/magic-touch-catering (Branch: main, Commit: f4de193)
+[13:59:58.417] Previous build caches not available
+[14:00:04.672] Cloning completed: 6.401s
+[14:00:06.679] Running "vercel build"
+[14:00:07.237] Vercel CLI 44.5.0
+[14:00:07.580] Installing dependencies...
+[14:00:21.326] 
+[14:00:21.326] added 354 packages in 13s
+[14:00:21.326] 
+[14:00:21.326] 144 packages are looking for funding
+[14:00:21.326]   run `npm fund` for details
+[14:00:21.391] Detected Next.js version: 15.4.3
+[14:00:21.396] Running "npm run build"
+[14:00:21.536] 
+[14:00:21.538] > magic-touch-catering@0.1.0 build
+[14:00:21.538] > next build
+[14:00:21.538] 
+[14:00:22.437] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[14:00:22.437] This information is used to shape Next.js' roadmap and prioritize features.
+[14:00:22.437] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[14:00:22.437] https://nextjs.org/telemetry
+[14:00:22.437] 
+[14:00:22.561]    ▲ Next.js 15.4.3
+[14:00:22.562] 
+[14:00:22.598]    Creating an optimized production build ...
+[14:00:35.173]  ✓ Compiled successfully in 8.0s
+[14:00:35.178]    Linting and checking validity of types ...
+[14:00:40.132] Failed to compile.
+[14:00:40.132] 
+[14:00:40.132] ./src/app/layout.tsx:104:3
+[14:00:40.133] Type error: An object literal cannot have multiple properties with the same name.
+[14:00:40.133] 
+[14:00:40.133] [0m [90m 102 |[39m     }[33m,[39m
+[14:00:40.133]  [90m 103 |[39m   }[33m,[39m
+[14:00:40.133] [31m[1m>[22m[39m[90m 104 |[39m   verification[33m:[39m {
+[14:00:40.133]  [90m     |[39m   [31m[1m^[22m[39m
+[14:00:40.133]  [90m 105 |[39m     google[33m:[39m [32m"your-google-verification-code"[39m[33m,[39m
+[14:00:40.133]  [90m 106 |[39m   }[33m,[39m
+[14:00:40.133]  [90m 107 |[39m }[33m;[39m[0m
+[14:00:40.155] Next.js build worker exited with code: 1 and signal: null
+[14:00:40.182] Error: Command "npm run build" exited with 1
+[14:00:40.414] 
