@@ -121,8 +121,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <meta name="theme-color" content="#9B8FC7" />
         <meta name="msapplication-TileColor" content="#9B8FC7" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/magic-touch-catering-logo.svg" />
-        <link rel="icon" type="image/svg+xml" href="/magic-touch-catering-logo.svg" />
+        
+        {/* Favicon hierarchy for maximum compatibility */}
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+        
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
