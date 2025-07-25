@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -105,7 +104,16 @@ export default function FAQ() {
           answer: "We provide chairs, tables, barware, china, chocolate fountain, flatware, glassware, and linens. Our rental inventory ensures your event has everything needed for a sophisticated presentation."
         }
       ]
-    }
+    },
+    {
+        category: "Booking",
+        questions: [
+          {
+            question: "How far in advance should I book catering services?",
+            answer: "We recommend booking 4-6 weeks in advance for most events. For weddings, we suggest 2-3 months in advance, especially during Arizona&apos;s peak season (October-May)."
+          }
+        ]
+      }
   ];
 
   return (
@@ -137,12 +145,12 @@ export default function FAQ() {
               <h3 className="text-2xl heading-secondary text-[#A8C4A0] mb-6 text-center">
                 {category.category}
               </h3>
-              
+
               <div className="space-y-4">
                 {category.questions.map((item, questionIndex) => {
                   const globalIndex = categoryIndex * 100 + questionIndex;
                   const isOpen = openItems.includes(globalIndex);
-                  
+
                   return (
                     <div
                       key={questionIndex}
@@ -161,7 +169,7 @@ export default function FAQ() {
                           <ChevronDownIcon className="h-5 w-5 text-[#F5F3F0]/60 group-hover:text-[#9B8FC7] transition-colors flex-shrink-0" />
                         )}
                       </button>
-                      
+
                       {isOpen && (
                         <div className="px-6 pb-6">
                           <div className="w-full h-px bg-gradient-to-r from-[#9B8FC7]/20 via-[#9B8FC7]/40 to-[#9B8FC7]/20 mb-4"></div>

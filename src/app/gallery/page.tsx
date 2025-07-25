@@ -1,6 +1,8 @@
 
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Gallery - Magic Touch Catering | Event Photos & Food Presentations",

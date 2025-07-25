@@ -41,7 +41,7 @@ export default function FloatingCateringButton() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (event: Event) => {
       const scrollY = window.scrollY;
       // Show floating button as soon as user starts scrolling
       setIsVisible(scrollY > 50);

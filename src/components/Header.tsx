@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -138,59 +139,59 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           {/* Clickable Logo */}
           <div className="flex items-center">
-            <a href="/" className="hover:opacity-80 transition-opacity duration-300">
+            <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
                 className="h-6 w-auto scale-700 origin-left object-contain"
               />
-            </a>
+            </Link>
           </div>
           {/* Minimalist Desktop Navigation */}
           {/* Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <a
+              <Link
                 href="/"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/services"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/menu"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 Menu
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/gallery"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 Gallery
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/faq"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 FAQ
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
                 Contact
-              </a>
+              </Link>
             </nav>
 
           {/* Plan Catering Button */}
@@ -234,55 +235,55 @@ export default function Header() {
           <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#9B8FC7]/20">
 
 <div className="px-6 pt-6 pb-6 space-y-4">
-                <a
+                <Link
                   href="/"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/services"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/menu"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Menu
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/gallery"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Gallery
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/faq"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   FAQ
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
               </div>
           </div>
         )}

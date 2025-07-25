@@ -83,7 +83,7 @@ export default function Contact() {
         }`}>
           <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">Get In Touch</p>
           <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6">
-            Let's Create
+            Let&apos;s Create
             <span className="block text-[#9B8FC7]">Something Amazing</span>
           </h2>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#9B8FC7] to-transparent mx-auto mb-8"></div>
