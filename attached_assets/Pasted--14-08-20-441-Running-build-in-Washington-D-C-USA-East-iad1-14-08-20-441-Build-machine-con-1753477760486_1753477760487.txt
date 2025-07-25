@@ -1,0 +1,45 @@
+[14:08:20.441] Running build in Washington, D.C., USA (East) – iad1
+[14:08:20.441] Build machine configuration: 4 cores, 8 GB
+[14:08:20.462] Cloning github.com/blissful-network-projects/magic-touch-catering (Branch: main, Commit: e057f0a)
+[14:08:20.580] Previous build caches not available
+[14:08:27.200] Cloning completed: 6.738s
+[14:08:29.492] Running "vercel build"
+[14:08:30.070] Vercel CLI 44.5.0
+[14:08:30.406] Installing dependencies...
+[14:08:42.757] 
+[14:08:42.757] added 354 packages in 12s
+[14:08:42.757] 
+[14:08:42.757] 144 packages are looking for funding
+[14:08:42.757]   run `npm fund` for details
+[14:08:42.813] Detected Next.js version: 15.4.3
+[14:08:42.817] Running "npm run build"
+[14:08:42.943] 
+[14:08:42.943] > magic-touch-catering@0.1.0 build
+[14:08:42.943] > next build
+[14:08:42.944] 
+[14:08:43.808] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[14:08:43.809] This information is used to shape Next.js' roadmap and prioritize features.
+[14:08:43.809] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[14:08:43.809] https://nextjs.org/telemetry
+[14:08:43.809] 
+[14:08:43.930]    ▲ Next.js 15.4.3
+[14:08:43.930] 
+[14:08:43.964]    Creating an optimized production build ...
+[14:08:56.091]  ✓ Compiled successfully in 8.0s
+[14:08:56.096]    Linting and checking validity of types ...
+[14:09:00.915] Failed to compile.
+[14:09:00.916] 
+[14:09:00.916] ./src/lib/email.ts:25:21
+[14:09:00.916] Type error: Property 'createTransporter' does not exist on type 'typeof import("/vercel/path0/node_modules/@types/nodemailer/index")'. Did you mean 'createTransport'?
+[14:09:00.916] 
+[14:09:00.916] [0m [90m 23 |[39m
+[14:09:00.916]  [90m 24 |[39m [36mconst[39m createTransporter [33m=[39m () [33m=>[39m {
+[14:09:00.916] [31m[1m>[22m[39m[90m 25 |[39m   [36mreturn[39m nodemailer[33m.[39mcreateTransporter({
+[14:09:00.917]  [90m    |[39m                     [31m[1m^[22m[39m
+[14:09:00.917]  [90m 26 |[39m     host[33m:[39m process[33m.[39menv[33m.[39m[33mBREVO_SMTP_HOST[39m[33m,[39m
+[14:09:00.917]  [90m 27 |[39m     port[33m:[39m parseInt(process[33m.[39menv[33m.[39m[33mBREVO_SMTP_PORT[39m [33m||[39m [32m'587'[39m)[33m,[39m
+[14:09:00.917]  [90m 28 |[39m     secure[33m:[39m [36mfalse[39m[33m,[39m[0m
+[14:09:00.937] Next.js build worker exited with code: 1 and signal: null
+[14:09:00.961] Error: Command "npm run build" exited with 1
+[14:09:01.195] 
+[14:09:04.354] Exiting build container
