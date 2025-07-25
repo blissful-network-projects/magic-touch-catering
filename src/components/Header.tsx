@@ -108,7 +108,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-[#C7A965]/20"
+            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/10 border-b border-[#9B8FC7]/20"
             : "bg-gradient-to-b from-white/90 via-white/80 to-white/70 backdrop-blur-md"
         }`}
       >
@@ -237,7 +237,7 @@ export default function Header() {
             <div className="flex h-full">
               {/* Left Panel - Available Items */}
               <div className="w-1/3 p-6 border-r border-[#C7A965]/20 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">
+                <h3 className="text-lg font-light text-[#F9F7F4] mb-4 tracking-wide">
                   Available Items
                 </h3>
                 <div className="space-y-3">
@@ -261,7 +261,7 @@ export default function Header() {
 
               {/* Center Panel - Drop Zone */}
               <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">
+                <h3 className="text-lg font-light text-[#F9F7F4] mb-4 tracking-wide">
                   Your Selection
                 </h3>
                 <div
@@ -326,7 +326,7 @@ export default function Header() {
 
               {/* Right Panel - Contact Form */}
               <div className="w-1/3 p-6 overflow-y-auto">
-                <h3 className="text-lg font-light text-[#F1E6D1] mb-4 tracking-wide">
+                <h3 className="text-lg font-light text-[#F9F7F4] mb-4 tracking-wide">
                   Event Details
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
