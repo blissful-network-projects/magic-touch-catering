@@ -41,7 +41,7 @@ export default function FloatingCateringButton() {
   ];
 
   useEffect(() => {
-    const handleScroll = (event: Event) => {
+    const handleScroll = () => {
       const scrollY = window.scrollY;
       // Show floating button as soon as user starts scrolling
       setIsVisible(scrollY > 50);
@@ -51,7 +51,7 @@ export default function FloatingCateringButton() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDragStart = (e: React.DragEvent, item: any) => {
+  const handleDragStart = (e: React.DragEvent, item: { id: string; name: string; category: string }) => {
     e.dataTransfer.setData('text/plain', JSON.stringify(item));
   };
 
@@ -117,14 +117,6 @@ export default function FloatingCateringButton() {
       console.error('Catering form error:', error);
       alert('There was an error submitting your catering request. Please try again or call us directly.');
     }
-  };
-
-  const handleClick = () => {
-    setPlannerOpen(!plannerOpen);
-  };
-
-  const handleOptionClick = (option: string, action: () => void) => {
-    action();
   };
 
   return (
