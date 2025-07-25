@@ -79,16 +79,44 @@ export default function FloatingCateringButton() {
     setCateringItems(items => items.filter(item => item.id !== id));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', { formData, cateringItems });
-    alert('Thank you! We will contact you within 24 hours with a custom quote.');
-    setPlannerOpen(false);
-    setCateringItems([]);
-    setFormData({
-      name: '', email: '', phone: '', company: '', eventDate: '', 
-      eventType: '', guestCount: '', message: ''
-    });
+
+    try {
+      const requestData = {
+        ...formData,
+        cateringItems: cateringItems,
+      };
+
+      const response = await fetch('/api/catering', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your catering request has been submitted. We'll contact you within 24 hours to discuss your event details.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          eventDate: "",
+          eventType: "",
+          guestCount: "",
+          message: "",
+        });
+        setCateringItems([]);
+        setPlannerOpen(false);
+      } else {
+        throw new Error('Failed to submit catering request');
+      }
+    } catch (error) {
+      console.error('Catering form error:', error);
+      alert('There was an error submitting your catering request. Please try again or call us directly.');
+    }
   };
 
   return (
