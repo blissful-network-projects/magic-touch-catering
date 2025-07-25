@@ -138,18 +138,30 @@ export default function Header() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+          
           {/* Clickable Logo */}
           <div className="flex items-center">
-            <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
+            <Link
+              href="/"
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
               <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                className="h-4 sm:h-5 md:h-6 w-auto scale-500 sm:scale-600 md:scale-700 origin-left object-contain"
                 width={100}
                 height={100}
+                className="
+                  h-6 w-auto object-contain origin-left
+                  scale-100          /* mobile default */
+                  sm:scale-110       /* slightly larger on small screens */
+                  md:scale-125       /* tablets */
+                  lg:scale-150       /* desktop, close to scale-600 */
+                  xl:scale-175       /* large desktop */
+                "
               />
             </Link>
           </div>
+
           {/* Minimalist Desktop Navigation */}
           {/* Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-8">
