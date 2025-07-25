@@ -320,7 +320,7 @@ export default function Header() {
                     <div
                       key={item.id}
                       draggable
-                      onDragStart={(e) => handleDragStart(e, item)}
+                      onDragStart={(e: React.DragEvent, item: any) => handleDragStart(e, item)}
                       className="p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-move hover:bg-[#9B8FC7]/20 transition-colors"
                     >
                       <div className="text-[#F1E6D1] font-medium text-sm">

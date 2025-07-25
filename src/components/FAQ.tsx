@@ -111,7 +111,7 @@ export default function FAQ() {
         questions: [
           {
             question: "How far in advance should I book catering services?",
-            answer: "We recommend booking 4-6 weeks in advance for most events. For weddings, we suggest 2-3 months in advance, especially during Arizona's peak season (October-May)."
+            answer: "We recommend booking 4-6 weeks in advance for most events. For weddings, we suggest 2-3 months in advance, especially during Arizona&apos;s peak season (October-May)."
           }
         ]
       }

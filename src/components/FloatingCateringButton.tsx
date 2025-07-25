@@ -119,6 +119,14 @@ export default function FloatingCateringButton() {
     }
   };
 
+  const handleClick = () => {
+    setPlannerOpen(!plannerOpen);
+  };
+
+  const handleOptionClick = (option: string, action: () => void) => {
+    action();
+  };
+
   return (
     <>
       {/* Floating Button */}

@@ -1,9 +1,9 @@
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import Image from "next/image";
 import StructuredData from "@/components/StructuredData";
 import Header from "@/components/Header";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Catering Services - Magic Touch Catering | Wedding, Corporate & Private Events",
@@ -59,9 +59,11 @@ export default function ServicesPage() {
               </div>
 
               <div className="relative">
-                <img 
+                <Image 
                   src="/professional-catering-presentation.jpg"
                   alt="Professional catering presentation"
+                  width={400}
+                  height={256}
                   className="rounded-2xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#9B8FC7] to-[#A8C4A0] p-8 rounded-2xl">
