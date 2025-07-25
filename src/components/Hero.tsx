@@ -52,46 +52,31 @@ export default function Hero() {
       <div className="fixed inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1B1B1B] to-[#000000] z-[60] flex items-center justify-center overflow-hidden">
         {/* Ambient background particles */}
         <div className="absolute inset-0">
-          <div
-            className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#9B8FC7]/20 rounded-full animate-pulse"
-            style={{ animationDelay: "0s", animationDuration: "4s" }}
-          ></div>
-          <div
-            className="absolute top-3/4 right-1/4 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse"
-            style={{ animationDelay: "2s", animationDuration: "6s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/15 rounded-full animate-pulse"
-            style={{ animationDelay: "1s", animationDuration: "5s" }}
-          ></div>
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#9B8FC7]/20 rounded-full animate-pulse" style={{ animationDelay: "0s", animationDuration: "4s" }}></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse" style={{ animationDelay: "2s", animationDuration: "6s" }}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/15 rounded-full animate-pulse" style={{ animationDelay: "1s", animationDuration: "5s" }}></div>
         </div>
 
         <div className="text-center relative">
           {/* Premium loading animation with sophisticated backdrop */}
           <div className="relative">
             {/* Multi-layered luxury backdrop with breathing effect */}
-            <div
-              className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse"
-              style={{ animationDuration: "3s" }}
-            ></div>
-            <div
-              className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse"
-              style={{ animationDelay: "1.5s", animationDuration: "4s" }}
-            ></div>
+            <div className="absolute inset-0 w-48 h-48 mx-auto -mt-10 rounded-full bg-gradient-to-r from-[#9B8FC7]/20 via-[#A8C4A0]/15 to-[#9B8FC7]/20 blur-3xl animate-pulse" style={{ animationDuration: "3s" }}></div>
+            <div className="absolute inset-0 w-32 h-32 mx-auto -mt-4 rounded-full bg-gradient-to-r from-[#A8C4A0]/25 via-[#9B8FC7]/20 to-[#A8C4A0]/25 blur-2xl animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4s" }}></div>
 
             {/* Logo container with enhanced visibility */}
             <div className="relative w-32 h-32 mx-auto mb-10 rounded-full border-2 border-[#9B8FC7]/40 overflow-hidden bg-gradient-to-br from-[#9B8FC7]/15 via-[#F9F7F4]/5 to-[#A8C4A0]/15 backdrop-blur-xl shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5"></div>
-
+              
               {/* Bright background for logo contrast */}
               <div className="absolute inset-3 rounded-full bg-gradient-to-br from-[#F9F7F4]/90 via-[#F9F7F4]/95 to-[#F9F7F4]/90 shadow-inner"></div>
-
+              
               <img
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
                 className="w-full h-full object-contain opacity-0 animate-[fadeIn_1s_ease-in-out_0.5s_forwards] p-6 relative z-10 filter brightness-110 contrast-110"
               />
-
+              
               {/* Enhanced inner glow for visibility */}
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 blur-sm"></div>
             </div>
@@ -101,21 +86,15 @@ export default function Hero() {
               {/* Outer ring - slow, elegant */}
               <div
                 className="absolute inset-0 rounded-full border border-transparent border-t-[#9B8FC7]/60 border-r-[#9B8FC7]/20 animate-spin"
-                style={{
-                  animationDuration: "4s",
-                  animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
-                }}
+                style={{ animationDuration: "4s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
               ></div>
-
+              
               {/* Inner ring - medium speed, counter-clockwise */}
               <div
                 className="absolute inset-4 rounded-full border border-transparent border-t-[#A8C4A0]/70 border-l-[#A8C4A0]/30 animate-spin animate-reverse"
-                style={{
-                  animationDuration: "3s",
-                  animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)",
-                }}
+                style={{ animationDuration: "3s", animationTimingFunction: "cubic-bezier(0.4, 0, 0.6, 1)" }}
               ></div>
-
+              
               {/* Center pulse ring */}
               <div
                 className="absolute inset-8 rounded-full border border-[#9B8FC7]/40 animate-ping"
@@ -154,7 +133,7 @@ export default function Hero() {
               </div>
               <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9B8FC7]/50 to-transparent"></div>
             </div>
-
+            
             {/* Subtle loading text */}
             <div className="text-[#F9F7F4]/40 text-xs tracking-[0.2em] uppercase mt-6 font-light">
               Loading
@@ -216,7 +195,7 @@ export default function Hero() {
 
           {/* Dramatic Typography with Enhanced Visibility */}
           <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-6xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl">
+            <span className="block text-4xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
             <span className="block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text subheading-luxury tracking-[0.2em] drop-shadow-lg">
@@ -285,60 +264,28 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation Arrows with Custom Arrow SVG Design */}
+      {/* Navigation Arrows with Enhanced Visibility */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={prevImage}
-          className="h-24 w-24 flex items-center justify-center border border-white/30 rounded-full 
-          backdrop-blur-md bg-black/20 shadow-2xl
+          className="h-16 w-16 flex items-center justify-center border-2 border-white/40 rounded-full 
+          text-white text-2xl backdrop-blur-md bg-black/25 shadow-2xl
           transition-all duration-300 ease-out 
-          hover:scale-105 hover:border-[#A8C4A0]/60 hover:bg-[#A8C4A0]/10
-          group"
+          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
         >
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0] group-hover:fill-[#A8C4A0]"
-          >
-            <path 
-              d="M15 12L10 7V10H4V14H10V17L15 12Z" 
-              fill="white"
-              stroke="white" 
-              strokeWidth="1"
-              strokeLinejoin="round"
-              className="transition-colors duration-300 group-hover:fill-[#A8C4A0] group-hover:stroke-[#A8C4A0]"
-            />
-          </svg>
+          &#8592;
         </button>
       </div>
 
       <div className="absolute right-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={nextImage}
-          className="h-24 w-24 flex items-center justify-center border border-white/30 rounded-full 
-          backdrop-blur-md bg-black/20 shadow-2xl
+          className="h-16 w-16 flex items-center justify-center border-2 border-white/40 rounded-full 
+          text-white text-2xl backdrop-blur-md bg-black/25 shadow-2xl
           transition-all duration-300 ease-out 
-          hover:scale-105 hover:border-[#A8C4A0]/60 hover:bg-[#A8C4A0]/10
-          group"
+          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
         >
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0] group-hover:fill-[#A8C4A0]"
-          >
-            <path 
-              d="M9 12L14 17V14H20V10H14V7L9 12Z" 
-              fill="white"
-              stroke="white" 
-              strokeWidth="1"
-              strokeLinejoin="round"
-              className="transition-colors duration-300 group-hover:fill-[#A8C4A0] group-hover:stroke-[#A8C4A0]"
-            />
-          </svg>
+          &#8594;
         </button>
       </div>
 
