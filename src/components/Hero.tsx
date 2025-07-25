@@ -16,14 +16,14 @@ export default function Hero() {
   ];
 
   useEffect(() => {
-    // Refined luxury loading sequence - faster for premium feel
+    // Ultra-premium loading sequence - swift and confident
     const timer1 = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1200);
 
     const timer2 = setTimeout(() => {
       setTextVisible(true);
-    }, 1800);
+    }, 1400);
 
     // Image carousel with elegant timing
     const imageInterval = setInterval(() => {
@@ -193,16 +193,16 @@ export default function Hero() {
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#A8C4A0]/80"></div>
           </div>
 
-          {/* Dramatic Typography with Enhanced Visibility */}
+          {/* Dramatic Typography with Enhanced Hierarchy */}
           <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
-            <span className="block text-6xl md:text-8xl lg:text-9xl font-dancing-script font-medium leading-none mb-4 text-white tracking-tight drop-shadow-2xl" style={{ fontFamily: 'var(--font-dancing-script)' }}>
+            <span className="block text-7xl md:text-9xl lg:text-[12rem] font-dancing-script font-medium leading-[0.85] mb-2 text-white tracking-tight drop-shadow-2xl transform hover:scale-105 transition-transform duration-700 ease-out" style={{ fontFamily: 'var(--font-dancing-script)' }}>
               Magic Touch
             </span>
-            <span className="block text-3xl md:text-5xl lg:text-6xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-light tracking-[0.2em] drop-shadow-lg" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+            <span className="block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text font-extralight tracking-[0.35em] drop-shadow-lg hover:tracking-[0.4em] transition-all duration-500" style={{ fontFamily: 'var(--font-geist-sans)' }}>
               CATERING
             </span>
-            {/* Enhanced luxury underline */}
-            <div className="w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-6 drop-shadow-md"></div>
+            {/* Refined luxury underline with subtle animation */}
+            <div className="w-24 h-[1px] bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-8 drop-shadow-md hover:w-40 transition-all duration-1000 ease-out"></div>
           </h1>
 
           {/* Elevated Description with Better Contrast */}
@@ -217,14 +217,15 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Premium Call-to-Actions */}
+          {/* Premium Call-to-Actions with Refined Interactions */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
-            <button className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105">
-              <span className="relative z-10">Begin Your Journey</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <button className="group relative px-12 py-5 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-700 hover:shadow-2xl hover:shadow-[#9B8FC7]/30 hover:scale-[1.02] hover:-translate-y-1">
+              <span className="relative z-10 group-hover:tracking-[0.15em] transition-all duration-300">Begin Your Journey</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
-            <button className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm">
-              <span className="group-hover:tracking-[0.15em] transition-all duration-300">
+            <button className="group px-12 py-5 rounded-full border border-[#F9F7F4]/30 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/5 transition-all duration-700 font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm hover:backdrop-blur-md hover:scale-[1.02] hover:-translate-y-1">
+              <span className="group-hover:tracking-[0.2em] transition-all duration-500">
                 Discover Excellence
               </span>
             </button>
