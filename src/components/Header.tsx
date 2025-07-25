@@ -116,17 +116,25 @@ export default function Header() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          {/* Scaled Logo */}
+          {/* Clickable Logo */}
           <div className="flex items-center">
-            <img
-              src="/magic-touch-catering-logo.svg"
-              alt="Magic Touch Catering"
-              className="h-6 w-auto scale-700 origin-left object-contain"
-            />
+            <a href="/" className="hover:opacity-80 transition-opacity duration-300">
+              <img
+                src="/magic-touch-catering-logo.svg"
+                alt="Magic Touch Catering"
+                className="h-6 w-auto scale-700 origin-left object-contain"
+              />
+            </a>
           </div>
           {/* Minimalist Desktop Navigation */}
           {/* Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-8">
+              <a
+                href="/"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                Home
+              </a>
               <a
                 href="/about"
                 className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
@@ -206,6 +214,13 @@ export default function Header() {
           <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#9B8FC7]/20">
             
 <div className="px-6 pt-6 pb-6 space-y-4">
+                <a
+                  href="/"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </a>
                 <a
                   href="/about"
                   className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
