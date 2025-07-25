@@ -1,4 +1,3 @@
-
 "use client";
 
 export default function Footer() {
@@ -7,19 +6,39 @@ export default function Footer() {
   const footerSections = [
     {
       title: "Services",
-      links: ["Corporate Events", "Wedding Catering", "Private Parties", "Special Occasions"]
+      links: [
+        { name: "Corporate Events", href: "/corporate-events" },
+        { name: "Wedding Catering", href: "/wedding-catering" },
+        { name: "Private Parties", href: "/private-parties" },
+        { name: "Special Occasions", href: "/special-occasions" }
+      ]
     },
     {
       title: "Menu",
-      links: ["Appetizers", "Main Courses", "Desserts", "Beverages"]
+      links: [
+        { name: "Appetizers", href: "/appetizers" },
+        { name: "Main Courses", href: "/main-courses" },
+        { name: "Desserts", href: "/desserts" },
+        { name: "Beverages", href: "/beverages" }
+      ]
     },
     {
       title: "Company",
-      links: ["About Us", "Our Team", "Testimonials", "Gallery"]
+      links: [
+        { name: "About Us", href: "/about-us" },
+        { name: "Our Team", href: "/our-team" },
+        { name: "Testimonials", href: "/testimonials" },
+        { name: "Gallery", href: "/gallery" }
+      ]
     },
     {
       title: "Contact",
-      links: ["Get Quote", "Book Consultation", "Emergency Catering", "FAQ"]
+      links: [
+        { name: "Get Quote", href: "/get-quote" },
+        { name: "Book Consultation", href: "/book-consultation" },
+        { name: "Emergency Catering", href: "/emergency-catering" },
+        { name: "FAQ", href: "/faq" }
+      ]
     }
   ];
 
@@ -45,11 +64,11 @@ export default function Footer() {
                 <p className="text-xs text-[#A8C4A0] tracking-[0.2em] uppercase">Catering</p>
               </div>
             </div>
-            
+
             <p className="text-[#F5F3F0]/70 leading-relaxed mb-6 max-w-md">
               Creating extraordinary culinary experiences that transform your most important occasions into unforgettable memories. Excellence is not just our standard—it's our signature.
             </p>
-            
+
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/AZMagicTouchCatering"
@@ -80,12 +99,12 @@ export default function Footer() {
               <h4 className="text-[#F1E6D1] font-medium mb-6 tracking-wide">{section.title}</h4>
               <ul className="space-y-3">
                 {section.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.name}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-[#F1E6D1]/60 hover:text-[#C7A965] transition-colors text-sm"
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -102,7 +121,7 @@ export default function Footer() {
             <div className="text-[#F1E6D1]/50 text-sm">
               © {currentYear} Magic Touch Catering. All rights reserved.
             </div>
-            
+
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-[#F1E6D1]/50 hover:text-[#C7A965] transition-colors">
                 Privacy Policy

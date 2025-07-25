@@ -125,22 +125,45 @@ export default function Header() {
             />
           </div>
           {/* Minimalist Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {[
-              { name: "Home", href: "#home" },
-              { name: "Menu", href: "#menu" },
-              { name: "About", href: "#about" },
-              { name: "Contact", href: "#contact" },
-            ].map((item) => (
+          {/* Navigation Links */}
+            <nav className="hidden lg:flex items-center space-x-8">
               <a
-                key={item.name}
-                href={item.href}
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium"
+                href="/about"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
               >
-                {item.name}
+                About
               </a>
-            ))}
-          </nav>
+              <a
+                href="/services"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                Services
+              </a>
+              <a
+                href="/menu"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                Menu
+              </a>
+              <a
+                href="/gallery"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                Gallery
+              </a>
+              <a
+                href="/faq"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                FAQ
+              </a>
+              <a
+                href="/contact"
+                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+              >
+                Contact
+              </a>
+            </nav>
 
           {/* Plan Catering Button */}
           <div className="flex items-center gap-4">
@@ -181,38 +204,51 @@ export default function Header() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-[#9B8FC7]/20">
-            <div className="px-6 py-6 space-y-4">
-              {[
-                { name: "Home", href: "#home" },
-                { name: "Menu", href: "#menu" },
-                { name: "About", href: "#about" },
-                { name: "Contact", href: "#contact" },
-              ].map((item) => (
+            
+<div className="px-6 pt-6 pb-6 space-y-4">
                 <a
-                  key={item.name}
-                  href={item.href}
-                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] font-medium transition-colors duration-300"
+                  href="/about"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item.name}
+                  About
                 </a>
-              ))}
-
-              <div className="pt-4">
-                <button
-                  onClick={() => {
-                    setPlannerOpen(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-[#9B8FC7] to-[#7D6DB8] text-white rounded-full hover:shadow-xl transition-all duration-300"
+                <a
+                  href="/services"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  <ClipboardDocumentListIcon className="h-5 w-5" />
-                  <span className="font-medium tracking-wide">
-                    Plan Catering
-                  </span>
-                </button>
+                  Services
+                </a>
+                <a
+                  href="/menu"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Menu
+                </a>
+                <a
+                  href="/gallery"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Gallery
+                </a>
+                <a
+                  href="/faq"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
+                <a
+                  href="/contact"
+                  className="block py-3 text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </a>
               </div>
-            </div>
           </div>
         )}
       </header>
