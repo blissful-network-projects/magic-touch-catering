@@ -285,28 +285,58 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation Arrows with Enhanced Visibility */}
+      {/* Navigation Arrows with Custom SVG Design */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={prevImage}
-          className="h-16 w-16 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-2xl backdrop-blur-md bg-black/25 shadow-2xl
+          className="h-24 w-24 flex items-center justify-center border border-white/30 rounded-full 
+          backdrop-blur-md bg-black/20 shadow-2xl
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
+          hover:scale-105 hover:border-[#A8C4A0]/60 hover:bg-[#A8C4A0]/10
+          group"
         >
-          &#8592;
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0]"
+            stroke="white" 
+            strokeWidth="1.5"
+          >
+            <path 
+              d="M15 18L9 12L15 6" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
 
       <div className="absolute right-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={nextImage}
-          className="h-16 w-16 flex items-center justify-center border-2 border-white/40 rounded-full 
-          text-white text-2xl backdrop-blur-md bg-black/25 shadow-2xl
+          className="h-24 w-24 flex items-center justify-center border border-white/30 rounded-full 
+          backdrop-blur-md bg-black/20 shadow-2xl
           transition-all duration-300 ease-out 
-          hover:scale-110 hover:border-[#A8C4A0] hover:text-[#A8C4A0] hover:bg-[#A8C4A0]/15"
+          hover:scale-105 hover:border-[#A8C4A0]/60 hover:bg-[#A8C4A0]/10
+          group"
         >
-          &#8594;
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            className="transition-colors duration-300 group-hover:stroke-[#A8C4A0]"
+            stroke="white" 
+            strokeWidth="1.5"
+          >
+            <path 
+              d="M9 18L15 12L9 6" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
 
