@@ -323,7 +323,7 @@ export default function Header() {
       {/* Catering Planner Popup */}
       {plannerOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-2 sm:p-4">
-          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-7xl h-[95vh] sm:h-[90vh] overflow-hidden relative">
+          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-7xl h-[98vh] sm:h-[95vh] overflow-hidden relative">
             {/* Header */}
             <div className="flex items-center justify-between p-3 sm:p-4 md:p-6 border-b border-[#9B8FC7]/20">
               <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#F1E6D1] tracking-wide">
@@ -340,9 +340,9 @@ export default function Header() {
             {/* Mobile & Tablet Layout - Stacked */}
             <div className="block lg:hidden h-full">
               <form onSubmit={handleSubmit} className="h-full flex flex-col">
-                {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto">
-                  <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6">
+                {/* Scrollable Content - Reduced height to make room for button */}
+                <div className="flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+                  <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6 pb-6">
                     {/* Available Items - Mobile & Tablet */}
                     <div>
                       <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
@@ -529,15 +529,20 @@ export default function Header() {
                   </div>
                 </div>
                 
-                {/* Fixed Submit Button */}
-                <div className="flex-shrink-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6">
+                {/* Fixed Submit Button - Always visible */}
+                <div className="flex-shrink-0 sticky bottom-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6 shadow-lg">
                   <button
                     type="submit"
                     disabled={cateringItems.length === 0}
-                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
+                    className="w-full px-4 sm:px-6 py-4 sm:py-5 bg-gradient-to-r from-[#9B8FC7] to-[#7D6DB8] text-white rounded-xl hover:shadow-2xl hover:shadow-[#9B8FC7]/30 transition-all duration-300 font-semibold tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base transform hover:scale-105"
                   >
-                    Request Custom Quote
+                    🍽️ Request Custom Quote ({cateringItems.length} items)
                   </button>
+                  {cateringItems.length === 0 && (
+                    <p className="text-center text-[#F1E6D1]/60 text-xs mt-2">
+                      Add items above to continue
+                    </p>
+                  )}
                 </div>
               </form>
             </div>
