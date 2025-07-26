@@ -276,6 +276,10 @@ export default function About() {
             <div className="absolute top-8 left-1/6 w-1 h-1 bg-[#A8C4A0]/25 rounded-full animate-pulse" style={{ animationDelay: "2.5s", animationDuration: "3.5s" }}></div>
             <div className="absolute top-4 right-1/4 w-0.5 h-0.5 bg-[#9B8FC7]/35 rounded-full animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4.5s" }}></div>
             <div className="absolute top-10 right-1/6 w-1.5 h-1.5 bg-[#A8C4A0]/20 rounded-full animate-pulse" style={{ animationDelay: "0.5s", animationDuration: "6s" }}></div>
+            <div className="absolute top-1/2 left-1/3 w-1 h-1 bg-[#9B8FC7]/30 rounded-full animate-pulse" style={{ animationDelay: "3s", animationDuration: "4s" }}></div>
+            <div className="absolute top-1/2 right-2/5 w-0.5 h-0.5 bg-[#A8C4A0]/40 rounded-full animate-pulse" style={{ animationDelay: "1.2s", animationDuration: "3.8s" }}></div>
+            <div className="absolute bottom-20 left-1/5 w-1.5 h-1.5 bg-[#9B8FC7]/25 rounded-full animate-pulse" style={{ animationDelay: "2.8s", animationDuration: "5.2s" }}></div>
+            <div className="absolute bottom-32 right-1/3 w-0.5 h-0.5 bg-[#A8C4A0]/35 rounded-full animate-pulse" style={{ animationDelay: "0.8s", animationDuration: "4.3s" }}></div>
           </div>
           
           <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] text-center mb-12 relative">
