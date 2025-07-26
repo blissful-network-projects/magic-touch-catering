@@ -116,9 +116,8 @@ export default function About() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light relative">
+          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">
             Our Story
-            <span className="absolute -top-2 -right-4 text-[#9B8FC7]/30 text-2xl">✨</span>
           </p>
           <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6 relative">
             Crafting Culinary
@@ -169,9 +168,8 @@ export default function About() {
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
             }`}
           >
-            <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] mb-6 relative">
+            <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] mb-6">
               Where Passion Meets Perfection
-              <span className="absolute -top-3 -right-8 text-[#9B8FC7]/30 text-xl">🍽️</span>
             </h3>
             <div className="space-y-6">
               <p className="text-[#F5F3F0]/80 body-luxury leading-relaxed group hover:text-[#F5F3F0] transition-colors duration-300">
@@ -192,10 +190,10 @@ export default function About() {
             {/* Enhanced Feature List */}
             <div className="mt-8 space-y-4">
               {[
-                { icon: "👨‍🍳", text: "Award-winning culinary team" },
-                { icon: "🌱", text: "Locally sourced, premium ingredients" },
-                { icon: "📋", text: "Personalized menu design" },
-                { icon: "✨", text: "Full-service event coordination" }
+                { text: "Award-winning culinary team" },
+                { text: "Locally sourced, premium ingredients" },
+                { text: "Personalized menu design" },
+                { text: "Full-service event coordination" }
               ].map((item, index) => (
                 <div 
                   key={index}
@@ -204,9 +202,7 @@ export default function About() {
                   }`}
                   style={{ transitionDelay: `${800 + index * 100}ms` }}
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-sm">{item.icon}</span>
-                  </div>
+                  <div className="w-2 h-2 bg-gradient-to-br from-[#9B8FC7] to-[#A8C4A0] rounded-full group-hover:scale-110 transition-transform duration-300 mt-2 flex-shrink-0"></div>
                   <span className="text-[#F5F3F0]/90 body-luxury group-hover:text-[#A8C4A0] transition-colors duration-300">
                     {item.text}
                   </span>
