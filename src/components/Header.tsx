@@ -151,11 +151,11 @@ export default function Header() {
                 width={100}
                 height={100}
                 className="
-                  h-10 w-auto object-contain origin-left
-                  sm:h-12
-                  md:h-14
-                  lg:h-16
-                  xl:h-18
+                  h-16 w-auto object-contain origin-left
+                  sm:h-20
+                  md:h-24
+                  lg:h-28
+                  xl:h-32
                 "
               />
             </Link>
