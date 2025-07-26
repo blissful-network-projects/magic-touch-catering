@@ -526,18 +526,18 @@ export default function Header() {
                         />
                       </div>
                     </div>
+
+                    {/* Submit Button - Mobile & Tablet */}
+                    <div className="pt-6 border-t border-[#9B8FC7]/20">
+                      <button
+                        type="submit"
+                        disabled={cateringItems.length === 0}
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
+                      >
+                        Request Custom Quote
+                      </button>
+                    </div>
                   </div>
-                </div>
-                
-                {/* Fixed Submit Button */}
-                <div className="flex-shrink-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6">
-                  <button
-                    type="submit"
-                    disabled={cateringItems.length === 0}
-                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
-                  >
-                    Request Custom Quote
-                  </button>
                 </div>
               </form>
             </div>
