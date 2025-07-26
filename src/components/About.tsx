@@ -116,8 +116,11 @@ export default function About() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light">
+          <p className="text-[#A8C4A0] text-sm tracking-[0.3em] uppercase mb-4 font-light relative">
             Our Story
+            <svg className="absolute -top-2 -right-4 w-4 h-4 text-[#9B8FC7]/30" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
           </p>
           <h2 className="text-4xl md:text-6xl heading-primary text-[#F5F3F0] mb-6 relative">
             Crafting Culinary
@@ -168,8 +171,12 @@ export default function About() {
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
             }`}
           >
-            <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] mb-6">
+            <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] mb-6 relative">
               Where Passion Meets Perfection
+              <svg className="absolute -top-3 -right-8 w-6 h-6 text-[#9B8FC7]/30" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 4.533V9a.75.75 0 01-.75.75H4.5v4.5h6v4.467a.75.75 0 001.064.688l5.647-2.823a.75.75 0 000-1.354L11.314 11.6a.75.75 0 01-.064-.688V4.533a.75.75 0 00-1.5 0z" />
+              </svg>
             </h3>
             <div className="space-y-6">
               <p className="text-[#F5F3F0]/80 body-luxury leading-relaxed group hover:text-[#F5F3F0] transition-colors duration-300">
@@ -190,10 +197,38 @@ export default function About() {
             {/* Enhanced Feature List */}
             <div className="mt-8 space-y-4">
               {[
-                { text: "Award-winning culinary team" },
-                { text: "Locally sourced, premium ingredients" },
-                { text: "Personalized menu design" },
-                { text: "Full-service event coordination" }
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#9B8FC7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.228a25.628 25.628 0 012.916.52 6.003 6.003 0 00-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                    </svg>
+                  ),
+                  text: "Award-winning culinary team" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#A8C4A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                  ),
+                  text: "Locally sourced, premium ingredients" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#9B8FC7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                  ),
+                  text: "Personalized menu design" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#A8C4A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                    </svg>
+                  ),
+                  text: "Full-service event coordination" 
+                }
               ].map((item, index) => (
                 <div 
                   key={index}
@@ -202,7 +237,9 @@ export default function About() {
                   }`}
                   style={{ transitionDelay: `${800 + index * 100}ms` }}
                 >
-                  <div className="w-2 h-2 bg-gradient-to-br from-[#9B8FC7] to-[#A8C4A0] rounded-full group-hover:scale-110 transition-transform duration-300 mt-2 flex-shrink-0"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0 border border-[#9B8FC7]/30">
+                    {item.icon}
+                  </div>
                   <span className="text-[#F5F3F0]/90 body-luxury group-hover:text-[#A8C4A0] transition-colors duration-300">
                     {item.text}
                   </span>
