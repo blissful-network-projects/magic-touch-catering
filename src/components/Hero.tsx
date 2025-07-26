@@ -39,13 +39,19 @@ export default function Hero() {
   }, [heroImages.length]);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    setCurrentImageIndex((prev) => {
+      const newIndex = (prev + 1) % heroImages.length;
+      console.log('Next image:', newIndex); // Debug log
+      return newIndex;
+    });
   };
 
   const prevImage = () => {
-    setCurrentImageIndex(
-      (prev) => (prev - 1 + heroImages.length) % heroImages.length,
-    );
+    setCurrentImageIndex((prev) => {
+      const newIndex = (prev - 1 + heroImages.length) % heroImages.length;
+      console.log('Previous image:', newIndex); // Debug log
+      return newIndex;
+    });
   };
 
   if (loading) {
@@ -179,13 +185,14 @@ export default function Hero() {
       {/* Background Images with Smooth Transitions and Entrance Animation */}
       {heroImages.map((image, index) => (
         <div
-          key={image}
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-1500 ${
-            index === currentImageIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"
-          } ${
-            textVisible ? "animate-[fadeInScale_2s_ease-out_forwards]" : "opacity-0 scale-110"
+          key={`hero-image-${index}`}
+          className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
+            index === currentImageIndex ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0"
           }`}
-          style={{ backgroundImage: `url('${image}')` }}
+          style={{ 
+            backgroundImage: `url('${image}')`,
+            transitionProperty: 'opacity, transform'
+          }}
         />
       ))}
 
@@ -409,14 +416,18 @@ export default function Hero() {
         <div className="flex space-x-2">
           {heroImages.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
+              key={`indicator-${index}`}
+              onClick={() => {
+                console.log('Indicator clicked:', index); // Debug log
+                setCurrentImageIndex(index);
+              }}
               className={`w-2 h-2 rounded-full transition-all duration-500 ${
                 index === currentImageIndex
                   ? "bg-[#9B8FC7] w-8"
                   : "bg-[#F9F7F4]/30 hover:bg-[#F9F7F4]/60"
               } ${textVisible ? `animate-[fadeIn_0.6s_ease-out_${3800 + index * 100}ms_forwards]` : "opacity-0"}`}
               style={{ opacity: textVisible ? 1 : 0 }}
+              aria-label={`View image ${index + 1}`}
             />
           ))}
         </div>
