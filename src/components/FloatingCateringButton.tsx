@@ -47,8 +47,17 @@ export default function FloatingCateringButton() {
       setIsVisible(scrollY > 50);
     };
 
+    const handleOpenCateringPlanner = () => {
+      setPlannerOpen(true);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('openCateringPlanner', handleOpenCateringPlanner);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('openCateringPlanner', handleOpenCateringPlanner);
+    };
   }, []);
 
   const handleDragStart = (e: React.DragEvent, item: { id: string; name: string; category: string }) => {

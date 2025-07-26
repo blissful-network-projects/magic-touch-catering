@@ -256,16 +256,12 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
             <button
               onClick={() => {
-                const contactSection = document.getElementById("contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                } else {
-                  window.location.href = "/contact";
-                }
+                // Dispatch custom event to open catering planner
+                window.dispatchEvent(new CustomEvent('openCateringPlanner'));
               }}
               className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white body-luxury font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105"
             >
-              <span className="relative z-10">Elevate Your Next Event</span>
+              <span className="relative z-10">Request Custom Quote</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
             <button
