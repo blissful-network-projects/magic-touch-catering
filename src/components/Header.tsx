@@ -342,21 +342,7 @@ export default function Header() {
               <form onSubmit={handleSubmit} className="h-full flex flex-col">
                 {/* Scrollable Content */}
                 <div className="flex-1 overflow-y-auto">
-                  <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6"></div>
-                </div>
-                
-                {/* Fixed Submit Button */}
-                <div className="flex-shrink-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6">
-                  <button
-                    type="submit"
-                    disabled={cateringItems.length === 0}
-                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
-                  >
-                    Request Custom Quote
-                  </button>
-                </div>
-              </form>
-            </div>
+                  <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6">
                     {/* Available Items - Mobile & Tablet */}
                     <div>
                       <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
@@ -540,9 +526,21 @@ export default function Header() {
                         />
                       </div>
                     </div>
-
-                    </div>
+                  </div>
                 </div>
+                
+                {/* Fixed Submit Button */}
+                <div className="flex-shrink-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6">
+                  <button
+                    type="submit"
+                    disabled={cateringItems.length === 0}
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
+                  >
+                    Request Custom Quote
+                  </button>
+                </div>
+              </form>
+            </div>
 
             {/* Desktop Layout - Side by Side */}
             <div className="hidden lg:flex h-full">
