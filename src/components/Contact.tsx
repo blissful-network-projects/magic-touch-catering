@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Contact() {
   const [visible, setVisible] = useState(false);
@@ -76,7 +77,19 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-32 bg-[#1B1B1B]">
+    <section id="contact" className="relative py-32 bg-[#1B1B1B] overflow-hidden">
+      {/* Magical speckles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-24 left-1/5 w-1 h-1 bg-[#9B8FC7]/35 rounded-full animate-pulse" style={{ animationDelay: "0.3s", animationDuration: "3.2s" }}></div>
+        <div className="absolute top-40 right-1/4 w-1.5 h-1.5 bg-[#A8C4A0]/25 rounded-full animate-pulse" style={{ animationDelay: "1.3s", animationDuration: "4.1s" }}></div>
+        <div className="absolute top-12 left-3/4 w-0.5 h-0.5 bg-[#9B8FC7]/45 rounded-full animate-pulse" style={{ animationDelay: "2.1s", animationDuration: "5.3s" }}></div>
+        <div className="absolute top-56 left-1/8 w-1 h-1 bg-[#A8C4A0]/30 rounded-full animate-pulse" style={{ animationDelay: "2.7s", animationDuration: "3.7s" }}></div>
+        <div className="absolute top-36 right-1/6 w-0.5 h-0.5 bg-[#9B8FC7]/40 rounded-full animate-pulse" style={{ animationDelay: "1.7s", animationDuration: "4.7s" }}></div>
+        <div className="absolute top-72 right-1/8 w-1.5 h-1.5 bg-[#A8C4A0]/22 rounded-full animate-pulse" style={{ animationDelay: "0.7s", animationDuration: "6.2s" }}></div>
+        <div className="absolute top-1/2 left-2/5 w-1 h-1 bg-[#9B8FC7]/32 rounded-full animate-pulse" style={{ animationDelay: "3.2s", animationDuration: "4.2s" }}></div>
+        <div className="absolute bottom-40 left-1/3 w-0.5 h-0.5 bg-[#A8C4A0]/38 rounded-full animate-pulse" style={{ animationDelay: "1.4s", animationDuration: "3.9s" }}></div>
+        <div className="absolute bottom-24 right-2/5 w-1.5 h-1.5 bg-[#9B8FC7]/28 rounded-full animate-pulse" style={{ animationDelay: "2.9s", animationDuration: "5.1s" }}></div>
+      </div>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Menu() {
   const [visible, setVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('appetizers');
+  const [activeCategory, setActiveCategory] = useState("appetizers");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,10 +14,10 @@ export default function Menu() {
           setVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
-    const element = document.getElementById('menu');
+    const element = document.getElementById("menu");
     if (element) observer.observe(element);
 
     return () => observer.disconnect();
@@ -57,7 +58,22 @@ export default function Menu() {
   };
 
   return (
-    <section id="menu" className="relative py-32 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B]">
+    <section
+      id="menu"
+      className="relative py-32 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B] overflow-hidden"
+    >
+      {/* Magical speckles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-16 left-1/6 w-1 h-1 bg-[#9B8FC7]/38 rounded-full animate-pulse" style={{ animationDelay: "0.2s", animationDuration: "3.4s" }}></div>
+        <div className="absolute top-44 right-1/5 w-1.5 h-1.5 bg-[#A8C4A0]/28 rounded-full animate-pulse" style={{ animationDelay: "1.1s", animationDuration: "4.3s" }}></div>
+        <div className="absolute top-8 left-4/5 w-0.5 h-0.5 bg-[#9B8FC7]/48 rounded-full animate-pulse" style={{ animationDelay: "1.9s", animationDuration: "5.1s" }}></div>
+        <div className="absolute top-60 left-1/12 w-1 h-1 bg-[#A8C4A0]/33 rounded-full animate-pulse" style={{ animationDelay: "2.6s", animationDuration: "3.6s" }}></div>
+        <div className="absolute top-32 right-1/8 w-0.5 h-0.5 bg-[#9B8FC7]/42 rounded-full animate-pulse" style={{ animationDelay: "1.6s", animationDuration: "4.8s" }}></div>
+        <div className="absolute top-76 right-1/12 w-1.5 h-1.5 bg-[#A8C4A0]/24 rounded-full animate-pulse" style={{ animationDelay: "0.6s", animationDuration: "6.1s" }}></div>
+        <div className="absolute top-1/2 left-3/7 w-1 h-1 bg-[#9B8FC7]/34 rounded-full animate-pulse" style={{ animationDelay: "3.1s", animationDuration: "4.4s" }}></div>
+        <div className="absolute bottom-36 left-2/7 w-0.5 h-0.5 bg-[#A8C4A0]/36 rounded-full animate-pulse" style={{ animationDelay: "1.3s", animationDuration: "3.7s" }}></div>
+        <div className="absolute bottom-20 right-3/7 w-1.5 h-1.5 bg-[#9B8FC7]/26 rounded-full animate-pulse" style={{ animationDelay: "2.7s", animationDuration: "5.3s" }}></div>
+      </div>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-20 transition-all duration-1000 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
