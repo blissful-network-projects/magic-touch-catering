@@ -135,20 +135,8 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-32 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B] overflow-hidden"
+      className="relative py-32 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B]"
     >
-      {/* Magical speckles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-18 left-1/7 w-1 h-1 bg-[#9B8FC7]/36 rounded-full animate-pulse" style={{ animationDelay: "0.4s", animationDuration: "3.6s" }}></div>
-        <div className="absolute top-38 right-1/6 w-1.5 h-1.5 bg-[#A8C4A0]/26 rounded-full animate-pulse" style={{ animationDelay: "1.2s", animationDuration: "4.2s" }}></div>
-        <div className="absolute top-10 left-5/6 w-0.5 h-0.5 bg-[#9B8FC7]/46 rounded-full animate-pulse" style={{ animationDelay: "2.0s", animationDuration: "5.4s" }}></div>
-        <div className="absolute top-54 left-1/10 w-1 h-1 bg-[#A8C4A0]/31 rounded-full animate-pulse" style={{ animationDelay: "2.8s", animationDuration: "3.8s" }}></div>
-        <div className="absolute top-26 right-1/10 w-0.5 h-0.5 bg-[#9B8FC7]/41 rounded-full animate-pulse" style={{ animationDelay: "1.8s", animationDuration: "4.6s" }}></div>
-        <div className="absolute top-68 right-1/14 w-1.5 h-1.5 bg-[#A8C4A0]/23 rounded-full animate-pulse" style={{ animationDelay: "0.9s", animationDuration: "6.3s" }}></div>
-        <div className="absolute top-1/2 left-2/5 w-1 h-1 bg-[#9B8FC7]/33 rounded-full animate-pulse" style={{ animationDelay: "3.3s", animationDuration: "4.1s" }}></div>
-        <div className="absolute bottom-44 left-1/4 w-0.5 h-0.5 bg-[#A8C4A0]/37 rounded-full animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "3.8s" }}></div>
-        <div className="absolute bottom-28 right-1/3 w-1.5 h-1.5 bg-[#9B8FC7]/27 rounded-full animate-pulse" style={{ animationDelay: "2.8s", animationDuration: "5.0s" }}></div>
-      </div>
       <div className="max-w-4xl mx-auto px-6">
         <div
           className={`text-center mb-20 transition-all duration-1000 ${

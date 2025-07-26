@@ -39,19 +39,13 @@ export default function Hero() {
   }, [heroImages.length]);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => {
-      const newIndex = (prev + 1) % heroImages.length;
-      console.log('Next image:', newIndex); // Debug log
-      return newIndex;
-    });
+    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => {
-      const newIndex = (prev - 1 + heroImages.length) % heroImages.length;
-      console.log('Previous image:', newIndex); // Debug log
-      return newIndex;
-    });
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + heroImages.length) % heroImages.length,
+    );
   };
 
   if (loading) {
@@ -182,106 +176,67 @@ export default function Hero() {
       itemType="https://schema.org/LocalBusiness"
       aria-label="Magic Touch Catering Hero Section"
     >
-      {/* Background Images with Smooth Transitions and Entrance Animation */}
+      {/* Background Images with Smooth Transitions */}
       {heroImages.map((image, index) => (
         <div
-          key={`hero-image-${index}`}
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
-            index === currentImageIndex ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0"
+          key={image}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentImageIndex ? "opacity-100" : "opacity-0"
           }`}
-          style={{ 
-            backgroundImage: `url('${image}')`,
-            transitionProperty: 'opacity, transform'
-          }}
+          style={{ backgroundImage: `url('${image}')` }}
         />
       ))}
 
-      {/* Enhanced Multi-layer Gradient Overlay with Entrance Animation */}
-      <div className={`absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-[#1B1B1B]/50 to-[#1B1B1B]/85 transition-all duration-1000 ${
-        textVisible ? "opacity-100" : "opacity-0"
-      }`} />
-      <div className={`absolute inset-0 bg-gradient-to-r from-[#1B1B1B]/40 via-transparent to-[#1B1B1B]/40 transition-all duration-1200 delay-200 ${
-        textVisible ? "opacity-100" : "opacity-0"
-      }`} />
-      <div className={`absolute inset-0 bg-gradient-to-t from-[#9B8FC7]/8 via-transparent to-transparent transition-all duration-1400 delay-400 ${
-        textVisible ? "opacity-100" : "opacity-0"
-      }`} />
+      {/* Enhanced Multi-layer Gradient Overlay for Better Text Contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-[#1B1B1B]/50 to-[#1B1B1B]/85" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1B1B1B]/40 via-transparent to-[#1B1B1B]/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#9B8FC7]/8 via-transparent to-transparent" />
 
-      {/* Additional text readability overlay with entrance */}
-      <div className={`absolute inset-0 bg-[#000000]/15 transition-all duration-1600 delay-600 ${
-        textVisible ? "opacity-100" : "opacity-0"
-      }`} />
+      {/* Additional text readability overlay */}
+      <div className="absolute inset-0 bg-[#000000]/15" />
 
-      {/* Floating luxury elements with staggered entrances */}
-      <div className={`absolute top-20 left-10 w-2 h-2 bg-[#9B8FC7]/30 rounded-full animate-pulse transition-all duration-800 delay-1000 ${
-        textVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-      }`}></div>
+      {/* Floating luxury elements */}
+      <div className="absolute top-20 left-10 w-2 h-2 bg-[#9B8FC7]/30 rounded-full animate-pulse"></div>
       <div
-        className={`absolute top-40 right-16 w-1 h-1 bg-[#A8C4A0]/40 rounded-full animate-pulse transition-all duration-800 delay-1200 ${
-          textVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-        }`}
+        className="absolute top-40 right-16 w-1 h-1 bg-[#A8C4A0]/40 rounded-full animate-pulse"
         style={{ animationDelay: "1s" }}
       ></div>
       <div
-        className={`absolute bottom-32 left-20 w-1.5 h-1.5 bg-[#9B8FC7]/20 rounded-full animate-pulse transition-all duration-800 delay-1400 ${
-          textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
+        className="absolute bottom-32 left-20 w-1.5 h-1.5 bg-[#9B8FC7]/20 rounded-full animate-pulse"
         style={{ animationDelay: "2s" }}
       ></div>
 
       {/* Content */}
       <div
-        className={`relative z-20 flex flex-col justify-center items-center h-full px-4 text-center transition-all duration-1500 ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+        className={`relative z-20 flex flex-col justify-center items-center h-full px-4 text-center transition-all duration-1000 ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <div className="max-w-5xl mx-auto">
-          {/* Premium Brand Line with Sublime Entrance */}
-          <div className={`flex items-center justify-center mb-8 transition-all duration-1000 delay-700 ${
-            textVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"
-          }`}>
-            <div className={`w-12 h-px bg-gradient-to-r from-transparent to-[#A8C4A0]/80 transition-all duration-800 delay-900 ${
-              textVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-            }`}></div>
-            <p className={`mx-6 tracking-[0.5em] text-[#A8C4A0] text-xs uppercase font-medium drop-shadow-lg transition-all duration-1000 delay-1000 ${
-              textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}>
+          {/* Premium Brand Line with Enhanced Visibility */}
+          <div className="flex items-center justify-center mb-8 opacity-0 animate-[slideUp_0.8s_ease-out_0.3s_forwards]">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#A8C4A0]/80"></div>
+            <p className="mx-6 tracking-[0.5em] text-[#A8C4A0] text-xs uppercase font-medium drop-shadow-lg">
               Exquisite Culinary Artistry
             </p>
-            <div className={`w-12 h-px bg-gradient-to-l from-transparent to-[#A8C4A0]/80 transition-all duration-800 delay-1100 ${
-              textVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-            }`}></div>
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#A8C4A0]/80"></div>
           </div>
 
-          {/* Dramatic Typography with Spectacular Entrance */}
-          <h1 className={`relative transition-all duration-1200 delay-1200 ${
-            textVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-90"
-          }`} itemProp="name">
-            <span className={`block text-4xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl transition-all duration-1000 delay-1400 ${
-              textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-            }`}>
+          {/* Dramatic Typography with Enhanced Visibility */}
+          <h1 className="relative opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]" itemProp="name">
+            <span className="block text-4xl md:text-7xl lg:text-8xl heading-primary leading-none mb-2 text-white tracking-tight drop-shadow-2xl">
               Magic Touch
             </span>
-            <span className={`block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text subheading-luxury tracking-[0.2em] drop-shadow-lg transition-all duration-1000 delay-1600 ${
-              textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}>
+            <span className="block text-2xl md:text-4xl lg:text-5xl text-transparent bg-gradient-to-r from-[#A8C4A0] via-[#9B8FC7] to-[#A8C4A0] bg-clip-text subheading-luxury tracking-[0.2em] drop-shadow-lg">
               CATERING
             </span>
-            {/* Enhanced luxury underline with elegant entrance */}
-            <div className={`w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-6 drop-shadow-md transition-all duration-800 delay-1800 ${
-              textVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-            }`}></div>
+            {/* Enhanced luxury underline */}
+            <div className="w-32 h-px bg-gradient-to-r from-[#9B8FC7] via-[#A8C4A0] to-[#9B8FC7] mx-auto mt-6 drop-shadow-md"></div>
           </h1>
 
-          {/* Elevated Description with Smooth Entrance */}
-          <div className={`max-w-3xl mx-auto mt-12 mb-16 transition-all duration-1000 delay-2000 ${
-            textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}>
-            <p className={`text-lg md:text-xl text-white/95 body-luxury leading-relaxed tracking-wide drop-shadow-lg transition-all duration-1000 delay-2200 ${
-              textVisible ? "opacity-100" : "opacity-0"
-            }`} itemProp="description">
+          {/* Elevated Description with Better Contrast */}
+          <div className="max-w-3xl mx-auto mt-12 mb-16 opacity-0 animate-[slideUp_0.8s_ease-out_0.9s_forwards]">
+            <p className="text-lg md:text-xl text-white/95 body-luxury leading-relaxed tracking-wide drop-shadow-lg" itemProp="description">
               Where culinary mastery transcends expectation. We orchestrate
-              <span className={`text-[#A8C4A0] subheading-elegant drop-shadow-md transition-all duration-800 delay-2400 ${
-                textVisible ? "opacity-100" : "opacity-0"
-              }`}>
+              <span className="text-[#A8C4A0] subheading-elegant drop-shadow-md">
                 {" "}
                 extraordinary gastronomic symphonies{" "}
               </span>
@@ -297,18 +252,14 @@ export default function Hero() {
             <div className="hidden" itemProp="email">info@magictouchcatering.com</div>
           </div>
 
-          {/* Premium Call-to-Actions with Staggered Entrance */}
-          <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-2600 ${
-            textVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"
-          }`}>
+          {/* Premium Call-to-Actions */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-[slideUp_0.8s_ease-out_1.2s_forwards]">
             <button
               onClick={() => {
                 // Dispatch custom event to open catering planner
                 window.dispatchEvent(new CustomEvent('openCateringPlanner'));
               }}
-              className={`group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white body-luxury font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105 delay-2800 ${
-                textVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-              }`}
+              className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-[#9B8FC7] to-[#A8C4A0] text-white body-luxury font-medium tracking-[0.1em] text-sm uppercase overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#9B8FC7]/25 hover:scale-105"
             >
               <span className="relative z-10">Request Custom Quote</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8C4A0] to-[#9B8FC7] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -322,9 +273,7 @@ export default function Hero() {
                   window.location.href = "/about";
                 }
               }}
-              className={`group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-1000 body-luxury font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm delay-3000 ${
-                textVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-              }`}
+              className="group px-10 py-4 rounded-full border border-[#F9F7F4]/40 text-[#F9F7F4] hover:border-[#9B8FC7] hover:text-[#9B8FC7] hover:bg-[#9B8FC7]/10 transition-all duration-500 body-luxury font-light tracking-[0.1em] text-sm uppercase backdrop-blur-sm"
             >
               <span className="group-hover:tracking-[0.15em] transition-all duration-300">
                 Discover Excellence
@@ -332,13 +281,9 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Elegant Trust Indicators with Final Entrance */}
-          <div className={`flex justify-center items-center space-x-8 mt-16 transition-all duration-1000 delay-3200 ${
-            textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
-            <div className={`text-center transition-all duration-800 delay-3400 ${
-              textVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}>
+          {/* Elegant Trust Indicators */}
+          <div className="flex justify-center items-center space-x-8 mt-16 opacity-0 animate-[slideUp_0.8s_ease-out_1.5s_forwards]">
+            <div className="text-center">
               <div className="text-2xl font-light text-[#9B8FC7] mb-1">
                 500+
               </div>
@@ -346,12 +291,8 @@ export default function Hero() {
                 Premium Events
               </div>
             </div>
-            <div className={`w-px transition-all duration-600 delay-3600 ${
-              textVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-            }`}></div>
-            <div className={`text-center transition-all duration-800 delay-3800 ${
-              textVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}>
+            <div className="w-px"></div>
+            <div className="text-center">
               <div className="text-2xl font-light text-[#A8C4A0] mb-1">20+</div>
               <div className="text-xs text-[#F9F7F4]/60 tracking-wider uppercase">
                 Years Excellence
@@ -360,19 +301,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Premium Scroll Indicator with Graceful Entrance */}
-        <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-4000 ${
-          textVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-90"
-        }`}>
+        {/* Premium Scroll Indicator */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
           <div className="flex flex-col items-center group cursor-pointer">
-            <div className={`text-[#F9F7F4]/50 text-xs tracking-[0.3em] uppercase mb-3 group-hover:text-[#9B8FC7] transition-all duration-800 delay-4200 ${
-              textVisible ? "opacity-100" : "opacity-0"
-            }`}>
+            <div className="text-[#F9F7F4]/50 text-xs tracking-[0.3em] uppercase mb-3 group-hover:text-[#9B8FC7] transition-colors duration-300">
               Explore
             </div>
-            <div className={`relative transition-all duration-800 delay-4400 ${
-              textVisible ? "opacity-100" : "opacity-0"
-            }`}>
+            <div className="relative">
               <div className="w-px h-10 bg-gradient-to-b from-[#9B8FC7] via-[#A8C4A0] to-transparent group-hover:from-[#A8C4A0] group-hover:via-[#9B8FC7] transition-all duration-500"></div>
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#9B8FC7] rounded-full animate-bounce"></div>
             </div>
@@ -380,10 +315,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation Arrows with Sublime Entrance */}
-      <div className={`absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 transition-all duration-1000 delay-3000 ${
-        textVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-      }`}>
+      {/* Navigation Arrows with Enhanced Visibility */}
+      <div className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={prevImage}
           className="h-12 w-12 md:h-18 md:w-18 lg:h-24 lg:w-24 flex items-center justify-center border border-white/30 rounded-full 
@@ -395,9 +328,7 @@ export default function Hero() {
         </button>
       </div>
 
-      <div className={`absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 transition-all duration-1000 delay-3200 ${
-        textVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-      }`}>
+      <div className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30">
         <button
           onClick={nextImage}
           className="h-12 w-12 md:h-18 md:w-18 lg:h-24 lg:w-24 flex items-center justify-center border border-white/30 rounded-full 
@@ -409,25 +340,18 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Image Indicators with Elegant Entrance */}
-      <div className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 transition-all duration-1000 delay-3600 ${
-        textVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-90"
-      }`}>
+      {/* Image Indicators */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-2">
           {heroImages.map((_, index) => (
             <button
-              key={`indicator-${index}`}
-              onClick={() => {
-                console.log('Indicator clicked:', index); // Debug log
-                setCurrentImageIndex(index);
-              }}
-              className={`w-2 h-2 rounded-full transition-all duration-500 ${
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentImageIndex
                   ? "bg-[#9B8FC7] w-8"
                   : "bg-[#F9F7F4]/30 hover:bg-[#F9F7F4]/60"
-              } ${textVisible ? `animate-[fadeIn_0.6s_ease-out_${3800 + index * 100}ms_forwards]` : "opacity-0"}`}
-              style={{ opacity: textVisible ? 1 : 0 }}
-              aria-label={`View image ${index + 1}`}
+              }`}
             />
           ))}
         </div>
