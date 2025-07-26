@@ -138,7 +138,7 @@ export default function Header() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
-          
+
           {/* Clickable Logo */}
           <div className="flex items-center">
             <Link
@@ -148,17 +148,20 @@ export default function Header() {
               <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                width={200}
-                height={200}
+                width={400}
+                height={400}
                 className="
-                  w-12 h-12 object-contain origin-left
-                  sm:w-16 sm:h-16
-                  md:w-20 md:h-20
-                  lg:w-24 lg:h-24
-                  xl:w-28 xl:h-28
+                  w-16 h-16 object-contain origin-left
+                  sm:w-20 sm:h-20
+                  md:w-24 md:h-24
+                  lg:w-28 lg:h-28
+                  xl:w-32 xl:h-32
                 "
                 priority
-                style={{ imageRendering: 'crisp-edges' }}
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'none'
+                }}
               />
             </Link>
           </div>
@@ -299,7 +302,7 @@ export default function Header() {
               >
                 Contact
               </Link>
-              
+
               {/* Mobile Plan Catering Button */}
               <div className="pt-4 border-t border-[#9B8FC7]/20">
                 <button
@@ -718,7 +721,7 @@ export default function Header() {
                   </div>
                   <div>
                     <textarea
-                      placeholder="Additional Requirements or Special Requests"
+                      placeholder="Additional Requirements orSpecial Requests"
                       rows={3}
                       value={formData.message}
                       onChange={(e) =>
