@@ -717,10 +717,11 @@ export default function Header() {
                   </div>
                   <div>
                     <textarea
-                      placeholder="Additional Requirements orSpecial Requests"
+                      placeholder="Additional Requirements or Special Requests"
                       rows={3}
                       value={formData.message}
-                      onChange={(e) =>                        setFormData({ ...formData, message: e.target.value })
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
                       }
                       className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm resize-none"
                     />
