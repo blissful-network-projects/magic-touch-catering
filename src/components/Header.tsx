@@ -151,13 +151,12 @@ export default function Header() {
                 width={200}
                 height={200}
                 className="
-                  w-10 h-10 object-contain transform scale-150 origin-left
-                  sm:w-12 sm:h-12 sm:scale-[1.75]
-                  md:w-14 md:h-14 md:scale-[2]
-                  lg:w-16 lg:h-16 lg:scale-[2.25]
-                  xl:w-18 xl:h-18 xl:scale-[2.5]
+                  w-14 h-14 object-contain origin-left
+                  sm:w-16 sm:h-16
+                  md:w-20 md:h-20
+                  lg:w-24 lg:h-24
+                  xl:w-28 xl:h-28
                 "
-                style={{ transformOrigin: 'left center' }}
               />
             </Link>
           </div>
