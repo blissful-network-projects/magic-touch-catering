@@ -192,10 +192,38 @@ export default function About() {
             {/* Enhanced Feature List */}
             <div className="mt-8 space-y-4">
               {[
-                { icon: "👨‍🍳", text: "Award-winning culinary team" },
-                { icon: "🌱", text: "Locally sourced, premium ingredients" },
-                { icon: "📋", text: "Personalized menu design" },
-                { icon: "✨", text: "Full-service event coordination" }
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#9B8FC7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  ), 
+                  text: "Award-winning culinary team" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#A8C4A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  ), 
+                  text: "Locally sourced, premium ingredients" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#9B8FC7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                  ), 
+                  text: "Personalized menu design" 
+                },
+                { 
+                  icon: (
+                    <svg className="w-4 h-4 text-[#A8C4A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  ), 
+                  text: "Full-service event coordination" 
+                }
               ].map((item, index) => (
                 <div 
                   key={index}
@@ -205,7 +233,7 @@ export default function About() {
                   style={{ transitionDelay: `${800 + index * 100}ms` }}
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-[#9B8FC7]/20 to-[#A8C4A0]/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-sm">{item.icon}</span>
+                    {item.icon}
                   </div>
                   <span className="text-[#F5F3F0]/90 body-luxury group-hover:text-[#A8C4A0] transition-colors duration-300">
                     {item.text}
@@ -237,10 +265,20 @@ export default function About() {
         </div>
 
         {/* Interactive Timeline */}
-        <div className={`transition-all duration-1000 delay-900 ${
+        <div className={`relative transition-all duration-1000 delay-900 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}>
-          <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] text-center mb-12">
+          {/* Magical speckles around the title */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-1/4 w-1 h-1 bg-[#9B8FC7]/40 rounded-full animate-pulse" style={{ animationDelay: "0s", animationDuration: "3s" }}></div>
+            <div className="absolute top-6 right-1/3 w-1.5 h-1.5 bg-[#A8C4A0]/30 rounded-full animate-pulse" style={{ animationDelay: "1s", animationDuration: "4s" }}></div>
+            <div className="absolute top-2 left-2/3 w-0.5 h-0.5 bg-[#9B8FC7]/50 rounded-full animate-pulse" style={{ animationDelay: "2s", animationDuration: "5s" }}></div>
+            <div className="absolute top-8 left-1/6 w-1 h-1 bg-[#A8C4A0]/25 rounded-full animate-pulse" style={{ animationDelay: "2.5s", animationDuration: "3.5s" }}></div>
+            <div className="absolute top-4 right-1/4 w-0.5 h-0.5 bg-[#9B8FC7]/35 rounded-full animate-pulse" style={{ animationDelay: "1.5s", animationDuration: "4.5s" }}></div>
+            <div className="absolute top-10 right-1/6 w-1.5 h-1.5 bg-[#A8C4A0]/20 rounded-full animate-pulse" style={{ animationDelay: "0.5s", animationDuration: "6s" }}></div>
+          </div>
+          
+          <h3 className="text-2xl md:text-3xl subheading-elegant text-[#A8C4A0] text-center mb-12 relative">
             Our Journey of Excellence
           </h3>
           <div className="relative">
