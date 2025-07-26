@@ -337,197 +337,206 @@ export default function Header() {
             </div>
 
             {/* Mobile & Tablet Layout - Stacked */}
-            <div className="block lg:hidden h-full overflow-y-auto">
-              <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6">
-                {/* Available Items - Mobile & Tablet */}
-                <div>
-                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
-                    Available Items
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
-                    {availableItems.map((item) => (
-                      <div
-                        key={item.id}
-                        onClick={() => {
-                          const newItem: CateringItem = {
-                            ...item,
-                            id: `${item.id}-${Date.now()}`,
-                            quantity: 1,
-                          };
-                          setCateringItems([...cateringItems, newItem]);
-                        }}
-                        className="p-3 sm:p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-pointer hover:bg-[#9B8FC7]/20 transition-colors"
-                      >
-                        <div className="text-[#F1E6D1] font-medium text-xs sm:text-sm">
-                          {item.name}
-                        </div>
-                        <div className="text-[#9B8FC7] text-xs mt-1">
-                          {item.category}
-                        </div>
-                        <div className="text-[#F1E6D1]/60 text-xs mt-2">
-                          Tap to add
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Your Selection - Mobile & Tablet */}
-                <div>
-                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
-                    Your Selection ({cateringItems.length} items)
-                  </h3>
-                  <div className="min-h-24 sm:min-h-32 border-2 border-dashed border-[#9B8FC7]/30 rounded-lg p-3 sm:p-4">
-                    {cateringItems.length === 0 ? (
-                      <div className="text-center text-[#F1E6D1]/60 py-4 sm:py-8">
-                        <PlusIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 mx-auto mb-2 sm:mb-4 opacity-50" />
-                        <p className="text-xs sm:text-sm">Tap items above to add them</p>
-                      </div>
-                    ) : (
-                      <div className="space-y-2 sm:space-y-3">
-                        {cateringItems.map((item) => (
-                          <div
-                            key={item.id}
-                            className="flex items-center justify-between p-2 sm:p-3 bg-[#9B8FC7]/20 rounded-lg"
-                          >
-                            <div className="flex-1 min-w-0">
-                              <div className="text-[#F1E6D1] text-xs sm:text-sm font-medium truncate">
-                                {item.name}
-                              </div>
-                              <div className="text-[#9B8FC7] text-xs">
-                                {item.category}
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-1 sm:gap-2 ml-2">
-                              <input
-                                type="number"
-                                min="1"
-                                value={item.quantity}
-                                onChange={(e) =>
-                                  updateQuantity(
-                                    item.id,
-                                    parseInt(e.target.value),
-                                  )
-                                }
-                                className="w-12 sm:w-14 md:w-16 px-1 sm:px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F1E6D1] text-xs sm:text-sm"
-                              />
-                              <button
-                                onClick={() => removeItem(item.id)}
-                                className="text-red-400 hover:text-red-300 transition-colors p-1"
-                              >
-                                <TrashIcon className="h-3 w-3 sm:h-4 sm:w-4" />
-                              </button>
-                            </div>
+            <div className="block lg:hidden h-full flex flex-col">
+              {/* Scrollable Content */}
+              <div className="flex-1 overflow-y-auto">
+                <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6 pb-20">
+                  {/* Available Items - Mobile & Tablet */}
+                  <div>
+                    <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                      Available Items
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+                      {availableItems.map((item) => (
+                        <div
+                          key={item.id}
+                          onClick={() => {
+                            const newItem: CateringItem = {
+                              ...item,
+                              id: `${item.id}-${Date.now()}`,
+                              quantity: 1,
+                            };
+                            setCateringItems([...cateringItems, newItem]);
+                          }}
+                          className="p-3 sm:p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-pointer hover:bg-[#9B8FC7]/20 transition-colors"
+                        >
+                          <div className="text-[#F1E6D1] font-medium text-xs sm:text-sm">
+                            {item.name}
                           </div>
-                        ))}
+                          <div className="text-[#9B8FC7] text-xs mt-1">
+                            {item.category}
+                          </div>
+                          <div className="text-[#F1E6D1]/60 text-xs mt-2">
+                            Tap to add
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Your Selection - Mobile & Tablet */}
+                  <div>
+                    <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                      Your Selection ({cateringItems.length} items)
+                    </h3>
+                    <div className="min-h-24 sm:min-h-32 border-2 border-dashed border-[#9B8FC7]/30 rounded-lg p-3 sm:p-4">
+                      {cateringItems.length === 0 ? (
+                        <div className="text-center text-[#F1E6D1]/60 py-4 sm:py-8">
+                          <PlusIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 mx-auto mb-2 sm:mb-4 opacity-50" />
+                          <p className="text-xs sm:text-sm">Tap items above to add them</p>
+                        </div>
+                      ) : (
+                        <div className="space-y-2 sm:space-y-3">
+                          {cateringItems.map((item) => (
+                            <div
+                              key={item.id}
+                              className="flex items-center justify-between p-2 sm:p-3 bg-[#9B8FC7]/20 rounded-lg"
+                            >
+                              <div className="flex-1 min-w-0">
+                                <div className="text-[#F1E6D1] text-xs sm:text-sm font-medium truncate">
+                                  {item.name}
+                                </div>
+                                <div className="text-[#9B8FC7] text-xs">
+                                  {item.category}
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-1 sm:gap-2 ml-2">
+                                <input
+                                  type="number"
+                                  min="1"
+                                  value={item.quantity}
+                                  onChange={(e) =>
+                                    updateQuantity(
+                                      item.id,
+                                      parseInt(e.target.value),
+                                    )
+                                  }
+                                  className="w-12 sm:w-14 md:w-16 px-1 sm:px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F1E6D1] text-xs sm:text-sm"
+                                />
+                                <button
+                                  onClick={() => removeItem(item.id)}
+                                  className="text-red-400 hover:text-red-300 transition-colors p-1"
+                                >
+                                  <TrashIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Event Details Form - Mobile & Tablet */}
+                  <div>
+                    <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                      Event Details
+                    </h3>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <input
+                          type="text"
+                          placeholder="Full Name *"
+                          required
+                          value={formData.name}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        />
+                        <input
+                          type="email"
+                          placeholder="Email Address *"
+                          required
+                          value={formData.email}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        />
                       </div>
-                    )}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <input
+                          type="tel"
+                          placeholder="Phone Number *"
+                          required
+                          value={formData.phone}
+                          onChange={(e) =>
+                            setFormData({ ...formData, phone: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Company/Organization"
+                          value={formData.company}
+                          onChange={(e) =>
+                            setFormData({ ...formData, company: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <input
+                          type="date"
+                          required
+                          value={formData.eventDate}
+                          onChange={(e) =>
+                            setFormData({ ...formData, eventDate: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        />
+                        <select
+                          required
+                          value={formData.eventType}
+                          onChange={(e) =>
+                            setFormData({ ...formData, eventType: e.target.value })
+                          }
+                          className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                        >
+                          <option value="">Select Event Type *</option>
+                          <option value="corporate">Corporate Event</option>
+                          <option value="wedding">Wedding</option>
+                          <option value="private">Private Party</option>
+                          <option value="conference">Conference</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <input
+                        type="number"
+                        placeholder="Expected Guest Count *"
+                        required
+                        value={formData.guestCount}
+                        onChange={(e) =>
+                          setFormData({ ...formData, guestCount: e.target.value })
+                        }
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
+                      />
+                      <textarea
+                        placeholder="Additional Requirements or Special Requests"
+                        rows={3}
+                        value={formData.message}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm resize-none"
+                      />
+                    </div>
                   </div>
                 </div>
-
-                {/* Event Details Form - Mobile & Tablet */}
-                <div>
-                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
-                    Event Details
-                  </h3>
-                  <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                      <input
-                        type="text"
-                        placeholder="Full Name *"
-                        required
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      />
-                      <input
-                        type="email"
-                        placeholder="Email Address *"
-                        required
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                      <input
-                        type="tel"
-                        placeholder="Phone Number *"
-                        required
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Company/Organization"
-                        value={formData.company}
-                        onChange={(e) =>
-                          setFormData({ ...formData, company: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                      <input
-                        type="date"
-                        required
-                        value={formData.eventDate}
-                        onChange={(e) =>
-                          setFormData({ ...formData, eventDate: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      />
-                      <select
-                        required
-                        value={formData.eventType}
-                        onChange={(e) =>
-                          setFormData({ ...formData, eventType: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                      >
-                        <option value="">Select Event Type *</option>
-                        <option value="corporate">Corporate Event</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="private">Private Party</option>
-                        <option value="conference">Conference</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <input
-                      type="number"
-                      placeholder="Expected Guest Count *"
-                      required
-                      value={formData.guestCount}
-                      onChange={(e) =>
-                        setFormData({ ...formData, guestCount: e.target.value })
-                      }
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
-                    />
-                    <textarea
-                      placeholder="Additional Requirements or Special Requests"
-                      rows={3}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm resize-none"
-                    />
-                    <button
-                      type="submit"
-                      disabled={cateringItems.length === 0}
-                      className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
-                    >
-                      Request Custom Quote
-                    </button>
-                  </form>
-                </div>
+              </div>
+              
+              {/* Fixed Submit Button */}
+              <div className="border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6">
+                <form onSubmit={handleSubmit}>
+                  <button
+                    type="submit"
+                    disabled={cateringItems.length === 0}
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base shadow-lg"
+                  >
+                    Request Custom Quote
+                  </button>
+                </form>
               </div>
             </div>
 
