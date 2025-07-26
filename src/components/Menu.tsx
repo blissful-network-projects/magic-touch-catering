@@ -119,7 +119,12 @@ export default function Menu() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <p className="text-[#F1E6D1]/60 text-sm mb-6">All menus are customizable and pricing varies based on guest count and selections</p>
-          <button className="px-8 py-4 border border-[#A8C4A0] text-[#A8C4A0] rounded-full hover:bg-[#A8C4A0] hover:text-black transition-all duration-300 font-medium tracking-wide">
+          <button 
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('openCateringPlanner'));
+            }}
+            className="px-8 py-4 border border-[#A8C4A0] text-[#A8C4A0] rounded-full hover:bg-[#A8C4A0] hover:text-black transition-all duration-300 font-medium tracking-wide"
+          >
             Request Full Menu & Pricing
           </button>
         </div>
