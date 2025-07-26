@@ -25,7 +25,7 @@ export default function About() {
           animateStats();
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.1, rootMargin: '50px' },
     );
 
     const element = document.getElementById("about");
@@ -133,7 +133,7 @@ export default function About() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-20">
           {/* Image Section with Enhanced Effects */}
           <div
             className={`transition-all duration-1000 delay-300 ${
@@ -248,7 +248,7 @@ export default function About() {
         <div className={`mb-20 transition-all duration-1000 delay-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-gradient-to-br from-[#9B8FC7]/10 to-[#A8C4A0]/10 rounded-2xl p-6 border border-[#9B8FC7]/20 hover:border-[#9B8FC7]/40 transition-all duration-300 group-hover:scale-105">
@@ -301,7 +301,7 @@ export default function About() {
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-[#9B8FC7] to-[#A8C4A0] rounded-full border-4 border-[#1B1B1B] z-10"></div>
 
                   {/* Content Card */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-4 md:pr-8' : 'pl-4 md:pl-8'}`}>
                     <div className="bg-gradient-to-br from-[#2A2A2A] to-[#1B1B1B] rounded-xl p-6 border border-[#9B8FC7]/20 hover:border-[#9B8FC7]/40 transition-all duration-300 group hover:scale-105">
                       <div className="text-[#A8C4A0] font-bold text-lg mb-2">{milestone.year}</div>
                       <div className="text-[#F5F3F0] font-medium mb-2">{milestone.event}</div>
