@@ -148,15 +148,16 @@ export default function Header() {
               <Image
                 src="/magic-touch-catering-logo.svg"
                 alt="Magic Touch Catering"
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="
-                  w-14 h-14 object-contain origin-left
-                  sm:w-16 sm:h-16
-                  md:w-20 md:h-20
-                  lg:w-24 lg:h-24
-                  xl:w-28 xl:h-28
+                  w-16 h-16 object-contain origin-left
+                  sm:w-20 sm:h-20
+                  md:w-24 md:h-24
+                  lg:w-28 lg:h-28
+                  xl:w-32 xl:h-32
                 "
+                priority
               />
             </Link>
           </div>
