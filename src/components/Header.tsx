@@ -519,13 +519,14 @@ export default function Header() {
                       }
                       className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm resize-none"
                     />
-                    <button
-                      type="submit"
-                      disabled={cateringItems.length === 0}
-                      className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
-                    >
-                      Request Custom Quote
-                    </button>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={cateringItems.length === 0}
+                    className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
+                  >
+                    Request Custom Quote
+                  </button>
                   </form>
                 </div>
               </div>
@@ -720,8 +721,7 @@ export default function Header() {
                       placeholder="Additional Requirements orSpecial Requests"
                       rows={3}
                       value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
+                      onChange={(e) =>                        setFormData({ ...formData, message: e.target.value })
                       }
                       className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm resize-none"
                     />
