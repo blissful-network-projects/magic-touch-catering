@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -60,14 +59,20 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("openCateringPlanner", handleOpenCateringPlanner);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("openCateringPlanner", handleOpenCateringPlanner);
+      window.removeEventListener(
+        "openCateringPlanner",
+        handleOpenCateringPlanner,
+      );
     };
   }, []);
 
-  const handleDragStart = (e: React.DragEvent, item: { id: string; name: string; category: string }) => {
+  const handleDragStart = (
+    e: React.DragEvent,
+    item: { id: string; name: string; category: string },
+  ) => {
     e.dataTransfer.setData("text/plain", JSON.stringify(item));
   };
 
@@ -104,16 +109,18 @@ export default function Header() {
         cateringItems: cateringItems,
       };
 
-      const response = await fetch('/api/catering', {
-        method: 'POST',
+      const response = await fetch("/api/catering", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(requestData),
       });
 
       if (response.ok) {
-        alert("Thank you! Your catering request has been submitted. We'll contact you within 24 hours to discuss your event details.");
+        alert(
+          "Thank you! Your catering request has been submitted. We'll contact you within 24 hours to discuss your event details.",
+        );
         setFormData({
           name: "",
           email: "",
@@ -127,11 +134,13 @@ export default function Header() {
         setCateringItems([]);
         setPlannerOpen(false);
       } else {
-        throw new Error('Failed to submit catering request');
+        throw new Error("Failed to submit catering request");
       }
     } catch (error) {
-      console.error('Catering form error:', error);
-      alert('There was an error submitting your catering request. Please try again or call us directly.');
+      console.error("Catering form error:", error);
+      alert(
+        "There was an error submitting your catering request. Please try again or call us directly.",
+      );
     }
   };
 
@@ -148,7 +157,6 @@ export default function Header() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
-
           {/* Clickable Logo */}
           <div className="flex items-center">
             <Link
@@ -161,9 +169,9 @@ export default function Header() {
                 width={400}
                 height={400}
                 className="
-                  w-20 h-20 object-contain origin-left
-                  sm:w-24 sm:h-24
-                  md:w-28 md:h-28
+                  w-25 h-25 object-contain origin-left
+                  sm:w-30 sm:h-30
+                  md:w-30 md:h-30
                   lg:w-32 lg:h-32
                   xl:w-36 xl:h-36
                 "
@@ -174,50 +182,50 @@ export default function Header() {
 
           {/* Minimalist Desktop Navigation */}
           {/* Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              <Link
-                href="/"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                Services
-              </Link>
-              <Link
-                href="/menu"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                Menu
-              </Link>
-              <Link
-                href="/gallery"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                Gallery
-              </Link>
-              <Link
-                href="/faq"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contact"
-                className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
-              >
-                Contact
-              </Link>
-            </nav>
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link
+              href="/"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              Services
+            </Link>
+            <Link
+              href="/menu"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              Menu
+            </Link>
+            <Link
+              href="/gallery"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/faq"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/contact"
+              className="text-[#1B1B1B] hover:text-[#9B8FC7] transition-colors duration-300 font-medium tracking-wide"
+            >
+              Contact
+            </Link>
+          </nav>
 
           {/* Plan Catering Button */}
           <div className="flex items-center gap-2 sm:gap-4">
@@ -350,7 +358,10 @@ export default function Header() {
             <div className="block lg:hidden h-full">
               <form onSubmit={handleSubmit} className="h-full flex flex-col">
                 {/* Scrollable Content - Reduced height to make room for button */}
-                <div className="flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+                <div
+                  className="flex-1 overflow-y-auto"
+                  style={{ maxHeight: "calc(100vh - 200px)" }}
+                >
                   <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6 pb-6">
                     {/* Available Items - Mobile & Tablet */}
                     <div>
@@ -394,7 +405,9 @@ export default function Header() {
                         {cateringItems.length === 0 ? (
                           <div className="text-center text-[#F1E6D1]/60 py-4 sm:py-8">
                             <PlusIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 mx-auto mb-2 sm:mb-4 opacity-50" />
-                            <p className="text-xs sm:text-sm">Tap items above to add them</p>
+                            <p className="text-xs sm:text-sm">
+                              Tap items above to add them
+                            </p>
                           </div>
                         ) : (
                           <div className="space-y-2 sm:space-y-3">
@@ -462,7 +475,10 @@ export default function Header() {
                             required
                             value={formData.email}
                             onChange={(e) =>
-                              setFormData({ ...formData, email: e.target.value })
+                              setFormData({
+                                ...formData,
+                                email: e.target.value,
+                              })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                           />
@@ -474,7 +490,10 @@ export default function Header() {
                             required
                             value={formData.phone}
                             onChange={(e) =>
-                              setFormData({ ...formData, phone: e.target.value })
+                              setFormData({
+                                ...formData,
+                                phone: e.target.value,
+                              })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                           />
@@ -483,7 +502,10 @@ export default function Header() {
                             placeholder="Company/Organization"
                             value={formData.company}
                             onChange={(e) =>
-                              setFormData({ ...formData, company: e.target.value })
+                              setFormData({
+                                ...formData,
+                                company: e.target.value,
+                              })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                           />
@@ -494,7 +516,10 @@ export default function Header() {
                             required
                             value={formData.eventDate}
                             onChange={(e) =>
-                              setFormData({ ...formData, eventDate: e.target.value })
+                              setFormData({
+                                ...formData,
+                                eventDate: e.target.value,
+                              })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                           />
@@ -502,7 +527,10 @@ export default function Header() {
                             required
                             value={formData.eventType}
                             onChange={(e) =>
-                              setFormData({ ...formData, eventType: e.target.value })
+                              setFormData({
+                                ...formData,
+                                eventType: e.target.value,
+                              })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                           >
@@ -520,7 +548,10 @@ export default function Header() {
                           required
                           value={formData.guestCount}
                           onChange={(e) =>
-                            setFormData({ ...formData, guestCount: e.target.value })
+                            setFormData({
+                              ...formData,
+                              guestCount: e.target.value,
+                            })
                           }
                           className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                         />
@@ -529,7 +560,10 @@ export default function Header() {
                           rows={3}
                           value={formData.message}
                           onChange={(e) =>
-                            setFormData({ ...formData, message: e.target.value })
+                            setFormData({
+                              ...formData,
+                              message: e.target.value,
+                            })
                           }
                           className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm resize-none"
                         />
@@ -537,7 +571,7 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Fixed Submit Button - Always visible */}
                 <div className="flex-shrink-0 sticky bottom-0 border-t border-[#9B8FC7]/20 bg-[#1B1B1B] p-3 sm:p-4 md:p-6 shadow-lg">
                   <button
