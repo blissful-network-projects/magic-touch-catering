@@ -146,7 +146,7 @@ export default function Header() {
               className="hover:opacity-80 transition-opacity duration-300"
             >
               <Image
-                src="/magic-touch-catering-logo.svg"
+                src="/magic-touch-logo.png"
                 alt="Magic Touch Catering"
                 width={400}
                 height={400}
@@ -158,10 +158,6 @@ export default function Header() {
                   xl:w-32 xl:h-32
                 "
                 priority
-                style={{ 
-                  imageRendering: 'auto',
-                  filter: 'none'
-                }}
               />
             </Link>
           </div>
