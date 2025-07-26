@@ -321,10 +321,10 @@ export default function Header() {
       {/* Catering Planner Popup */}
       {plannerOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-center justify-center p-2 sm:p-4">
-          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-7xl h-[95vh] sm:h-[90vh] overflow-hidden relative">
+          <div className="bg-[#1B1B1B] border border-[#9B8FC7]/20 rounded-2xl w-full max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-7xl h-[95vh] sm:h-[90vh] overflow-hidden relative">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 sm:p-6 border-b border-[#9B8FC7]/20">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-light text-[#F1E6D1] tracking-wide">
+            <div className="flex items-center justify-between p-3 sm:p-4 md:p-6 border-b border-[#9B8FC7]/20">
+              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#F1E6D1] tracking-wide">
                 Create Your Catering Experience
               </h2>
               <button
@@ -335,15 +335,15 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Mobile Layout - Stacked */}
+            {/* Mobile & Tablet Layout - Stacked */}
             <div className="block lg:hidden h-full overflow-y-auto">
-              <div className="p-4 space-y-6">
-                {/* Available Items - Mobile */}
+              <div className="p-3 sm:p-4 md:p-6 space-y-4 sm:space-y-6">
+                {/* Available Items - Mobile & Tablet */}
                 <div>
-                  <h3 className="text-base sm:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
                     Available Items
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
                     {availableItems.map((item) => (
                       <div
                         key={item.id}
@@ -357,7 +357,7 @@ export default function Header() {
                         }}
                         className="p-3 sm:p-4 bg-[#9B8FC7]/10 border border-[#9B8FC7]/20 rounded-lg cursor-pointer hover:bg-[#9B8FC7]/20 transition-colors"
                       >
-                        <div className="text-[#F1E6D1] font-medium text-sm">
+                        <div className="text-[#F1E6D1] font-medium text-xs sm:text-sm">
                           {item.name}
                         </div>
                         <div className="text-[#9B8FC7] text-xs mt-1">
@@ -371,33 +371,33 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* Your Selection - Mobile */}
+                {/* Your Selection - Mobile & Tablet */}
                 <div>
-                  <h3 className="text-base sm:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
                     Your Selection ({cateringItems.length} items)
                   </h3>
-                  <div className="min-h-32 border-2 border-dashed border-[#9B8FC7]/30 rounded-lg p-3 sm:p-4">
+                  <div className="min-h-24 sm:min-h-32 border-2 border-dashed border-[#9B8FC7]/30 rounded-lg p-3 sm:p-4">
                     {cateringItems.length === 0 ? (
-                      <div className="text-center text-[#F1E6D1]/60 py-8">
-                        <PlusIcon className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-4 opacity-50" />
-                        <p className="text-sm">Tap items above to add them</p>
+                      <div className="text-center text-[#F1E6D1]/60 py-4 sm:py-8">
+                        <PlusIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 mx-auto mb-2 sm:mb-4 opacity-50" />
+                        <p className="text-xs sm:text-sm">Tap items above to add them</p>
                       </div>
                     ) : (
-                      <div className="space-y-3">
+                      <div className="space-y-2 sm:space-y-3">
                         {cateringItems.map((item) => (
                           <div
                             key={item.id}
-                            className="flex items-center justify-between p-3 bg-[#9B8FC7]/20 rounded-lg"
+                            className="flex items-center justify-between p-2 sm:p-3 bg-[#9B8FC7]/20 rounded-lg"
                           >
                             <div className="flex-1 min-w-0">
-                              <div className="text-[#F1E6D1] text-sm font-medium truncate">
+                              <div className="text-[#F1E6D1] text-xs sm:text-sm font-medium truncate">
                                 {item.name}
                               </div>
                               <div className="text-[#9B8FC7] text-xs">
                                 {item.category}
                               </div>
                             </div>
-                            <div className="flex items-center gap-2 ml-2">
+                            <div className="flex items-center gap-1 sm:gap-2 ml-2">
                               <input
                                 type="number"
                                 min="1"
@@ -408,13 +408,13 @@ export default function Header() {
                                     parseInt(e.target.value),
                                   )
                                 }
-                                className="w-14 sm:w-16 px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F1E6D1] text-sm"
+                                className="w-12 sm:w-14 md:w-16 px-1 sm:px-2 py-1 bg-black/30 border border-[#9B8FC7]/30 rounded text-[#F1E6D1] text-xs sm:text-sm"
                               />
                               <button
                                 onClick={() => removeItem(item.id)}
                                 className="text-red-400 hover:text-red-300 transition-colors p-1"
                               >
-                                <TrashIcon className="h-4 w-4" />
+                                <TrashIcon className="h-3 w-3 sm:h-4 sm:w-4" />
                               </button>
                             </div>
                           </div>
@@ -424,13 +424,13 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* Event Details Form - Mobile */}
+                {/* Event Details Form - Mobile & Tablet */}
                 <div>
-                  <h3 className="text-base sm:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
+                  <h3 className="text-sm sm:text-base md:text-lg font-light text-[#F9F7F4] mb-3 tracking-wide">
                     Event Details
                   </h3>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <input
                         type="text"
                         placeholder="Full Name *"
@@ -439,7 +439,7 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       />
                       <input
                         type="email"
@@ -449,10 +449,10 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <input
                         type="tel"
                         placeholder="Phone Number *"
@@ -461,7 +461,7 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       />
                       <input
                         type="text"
@@ -470,10 +470,10 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, company: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <input
                         type="date"
                         required
@@ -481,7 +481,7 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, eventDate: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       />
                       <select
                         required
@@ -489,7 +489,7 @@ export default function Header() {
                         onChange={(e) =>
                           setFormData({ ...formData, eventType: e.target.value })
                         }
-                        className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                       >
                         <option value="">Select Event Type *</option>
                         <option value="corporate">Corporate Event</option>
@@ -507,7 +507,7 @@ export default function Header() {
                       onChange={(e) =>
                         setFormData({ ...formData, guestCount: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm"
                     />
                     <textarea
                       placeholder="Additional Requirements or Special Requests"
@@ -516,12 +516,12 @@ export default function Header() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-sm resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-black/30 border border-[#9B8FC7]/30 rounded-lg text-[#F9F7F4] placeholder-[#F9F7F4]/50 focus:border-[#9B8FC7] focus:outline-none transition-colors text-xs sm:text-sm resize-none"
                     />
                     <button
                       type="submit"
                       disabled={cateringItems.length === 0}
-                      className="w-full px-6 py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      className="w-full px-4 sm:px-6 py-2 sm:py-3 bg-[#9B8FC7] text-white rounded-lg hover:bg-[#9B8FC7]/90 transition-colors font-medium tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
                     >
                       Request Custom Quote
                     </button>
