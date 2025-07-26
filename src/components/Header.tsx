@@ -137,7 +137,7 @@ export default function Header() {
         {/* Elegant top accent line */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#9B8FC7] via-[#F1E6D1] to-[#9B8FC7]"></div>
 
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
           
           {/* Clickable Logo */}
           <div className="flex items-center">
@@ -151,11 +151,11 @@ export default function Header() {
                 width={100}
                 height={100}
                 className="
-                  h-16 w-auto object-contain origin-left
-                  sm:h-20
-                  md:h-24
-                  lg:h-28
-                  xl:h-32
+                  h-10 w-auto object-contain origin-left
+                  sm:h-12
+                  md:h-14
+                  lg:h-16
+                  xl:h-18
                 "
               />
             </Link>
